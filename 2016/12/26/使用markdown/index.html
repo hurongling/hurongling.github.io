@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="markdown," />
 
 
 
@@ -84,15 +84,18 @@
 
 
 
-<meta name="description" content="喜欢我也没用，我只爱学习">
-<meta property="og:type" content="website">
-<meta property="og:title" content="胡荣玲个人博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="使用markdown笔记，原创">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用markdown">
+<meta property="og:url" content="http://yoursite.com/2016/12/26/使用markdown/index.html">
 <meta property="og:site_name" content="胡荣玲个人博客">
-<meta property="og:description" content="喜欢我也没用，我只爱学习">
+<meta property="og:description" content="使用markdown笔记，原创">
+<meta property="og:image" content="http://oi1ylq4ab.bkt.clouddn.com/reward">
+<meta property="og:updated_time" content="2016-12-26T03:12:43.781Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="胡荣玲个人博客">
-<meta name="twitter:description" content="喜欢我也没用，我只爱学习">
+<meta name="twitter:title" content="使用markdown">
+<meta name="twitter:description" content="使用markdown笔记，原创">
+<meta name="twitter:image" content="http://oi1ylq4ab.bkt.clouddn.com/reward">
 
 
 
@@ -113,10 +116,10 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/12/26/使用markdown/"/>
 
 
-  <title> 胡荣玲个人博客 </title>
+  <title> 使用markdown | 胡荣玲个人博客 </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -137,9 +140,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
@@ -210,9 +211,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -232,10 +233,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/12/26/使用markdown/" itemprop="url">
-                  使用markdown
-                </a>
+                使用markdown
               
             
           </h1>
@@ -301,408 +299,124 @@
       
 
       
-        
-          <p>使用markdown笔记，原创</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/12/26/使用markdown/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
+        <p>使用markdown笔记，原创</p>
+<a id="more"></a>
+<p>#Markdown使用</p>
+<p>##1.标题<br>标题的一种表示方式，在行首加入<code>#</code>号，多少个<code>#</code>号代表多少号标题。如：</p>
+<blockquote>
+<p><code>###</code>我是三号标题</p>
+<p><code>#####</code>我是四号标题</p>
+</blockquote>
+<p>##2.换行<br>在markdown里直接换行是没作用的，要使用双空格加回车  </p>
+<p>##3.引用<br>在每一行前都加入<code>&gt;</code>标记来显示引用效果。如：</p>
+<blockquote>
+<p><code>&gt;</code>我是引用</p>
+</blockquote>
+<p>跳出引用要用双回车，如果跳出后还是引用，markdown会自动把两个引用合二为一，如：</p>
+<blockquote>
+<p>我是引用一</p>
+<p>我是回了两次车后的引用</p>
+</blockquote>
+<p>引用可以嵌套。如果要在一个引用里插入一个引用，可以用两个(‘&gt;’)开头。依此类推，根据嵌套层次加相应数量的符号。如：</p>
+<blockquote>
+<p><code>&gt;</code>我是外面的引用</p>
+<blockquote>
+<p><code>&gt;&gt;</code>我是里面的引用</p>
+</blockquote>
+</blockquote>
+<p>同样双击回车退出引用</p>
+<p>##4.字体样式</p>
+<blockquote>
+<p><code>*</code><em>斜体</em><code>*</code></p>
+<p><code>**</code><strong>加粗</strong><code>**</code></p>
+<p><code>~~</code><del>删除线</del><code>~~</code></p>
+</blockquote>
+<p>##5.列表<br>无序列表使用<code>*</code>或者<code>+</code>或者<code>-</code>加空格作为列表标记。如：  </p>
+<ul>
+<li>第一点  </li>
+<li>第二点  </li>
+<li>第三点  </li>
+</ul>
+<p>有序列表使用数字.加空格加文字。如：</p>
+<ol>
+<li>第一点</li>
+<li>第二点</li>
+<li>第三点  </li>
+</ol>
+<p>列表可以使用嵌套，首行使用一个tab缩进。如：</p>
+<ol>
+<li>第一大点<ul>
+<li>第一小点</li>
+<li>第二小点</li>
+<li>第三小点</li>
+</ul>
+</li>
+<li>第二大点<ul>
+<li>第一小点</li>
+<li>第二小点  </li>
+</ul>
+</li>
+</ol>
+<p>##6.代码块<br>反引号`包住小范围文字可以起到强调的作用，包住行代码。块代码需要三个反引号来包住。如：</p>
+<pre><code>var a=&quot;块代码内容&quot;
+echo &quot;a&quot;
+</code></pre><p>##7.连接<br>格式:[链接在页面显示的内容]（url”鼠标移动到链接上方时显示的文字”），如：<br><a href="http://www.baidu.com&quot;百度一下&quot;" target="_blank" rel="external">点击进入百度</a></p>
+<p>##8.插入图片</p>
+<p><div id="donate_guide" class="donate_bar center hidden"><a href="http://oi1ylq4ab.bkt.clouddn.com/reward" title="微信打赏" class="fancybox" rel="external" target="_blank"><img src="http://oi1ylq4ab.bkt.clouddn.com/reward" title="微信打赏" height="164px" width="164px"></a> <div align="center">您的支持是对我最大的鼓励！</div></div> <script type="text/javascript">document.getElementById(‘btn_donate’).onclick = function(){$(‘#donate_board’).addClass(‘hidden’); $(‘#donate_guide’).removeClass(‘hidden’);}</script></p>
+
       
     </div>
 
     <div>
       
+        
+
+      
     </div>
 
     <div>
+      
+        
+
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/26/第二章-物理层/" itemprop="url">
-                  第二章 物理层
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-26T09:26:50+08:00" content="2016-12-26">
-              2016-12-26
-            </time>
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">笔记</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/12/26/第二章-物理层/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/26/第二章-物理层/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
+            <a href="/tags/markdown/" rel="tag">#markdown</a>
           
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <p>计算机网络（第6版）第二章 物理层学习笔记</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/12/26/第二章-物理层/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/12/26/第二章-物理层/" rel="next" title="第二章 物理层">
+                <i class="fa fa-chevron-left"></i> 第二章 物理层
+              </a>
+            
           </div>
-        
-      
-    </div>
 
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+          <div class="post-nav-prev post-nav-item">
             
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/19/第一章-概述/" itemprop="url">
-                  第一章 概述
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-19T10:19:50+08:00" content="2016-12-19">
-              2016-12-19
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">笔记</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/12/19/第一章-概述/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/19/第一章-概述/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <p>计算机网络（第6版）第一章 概述学习笔记</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/12/19/第一章-概述/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-      
 
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/12/11/胡荣玲的笔记共享平台！/" itemprop="url">
-                  胡荣玲的笔记共享平台！
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-11T17:31:42+08:00" content="2016-12-11">
-              2016-12-11
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/随笔/" itemprop="url" rel="index">
-                    <span itemprop="name">随笔</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/12/11/胡荣玲的笔记共享平台！/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/11/胡荣玲的笔记共享平台！/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="网站简介"><a href="#网站简介" class="headerlink" title="网站简介"></a>网站简介</h2><p>主要存放个人学习笔记而搭建的博客，要求自己至少每周末上传一篇笔记，立此为据！</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/12/11/胡荣玲的笔记共享平台！/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
+    <div class="post-spread">
       
     </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
@@ -710,6 +424,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/12/26/使用markdown/"
+           data-title="使用markdown" data-url="http://yoursite.com/2016/12/26/使用markdown/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -729,8 +451,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -780,6 +511,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -876,6 +618,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
 
   
 
