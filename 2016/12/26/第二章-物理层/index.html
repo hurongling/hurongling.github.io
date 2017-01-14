@@ -92,7 +92,7 @@
 <meta property="og:description" content="计算机网络（第6版）第二章 物理层学习笔记">
 <meta property="og:image" content="http://yoursite.com/images/信源.png">
 <meta property="og:image" content="http://yoursite.com/images/reward.jpeg">
-<meta property="og:updated_time" content="2016-12-27T10:45:45.023Z">
+<meta property="og:updated_time" content="2017-01-14T01:58:36.030Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第二章 物理层">
 <meta name="twitter:description" content="计算机网络（第6版）第二章 物理层学习笔记">
@@ -302,28 +302,22 @@
       
         <p>计算机网络（第6版）第二章 物理层学习笔记</p>
 <a id="more"></a>
-<h2 id="一-物理层的主要任务"><a href="#一-物理层的主要任务" class="headerlink" title="一.物理层的主要任务"></a>一.物理层的主要任务</h2><p>确定与传输媒体的接口有关的一些特性<br>1.机械特性  2.电气特性  3.功能特性  4.过程特性  5.完成传输方式的转换[计算机并行传输——&gt;通信链路串行传输]</p>
+<h2 id="一-物理层的主要任务"><a href="#一-物理层的主要任务" class="headerlink" title="一.物理层的主要任务"></a>一.物理层的主要任务</h2><p>确定与传输媒体的接口有关的一些特性<br>1.机械特性  2.电气特性  3.功能特性  4.过程特性  5.完成传输方式的转换[计算机并行传输——&gt;通信链路串行传输;由适配器完成该任务，适配器工作在物理层和数据链路层]</p>
 <h2 id="二-数据通信"><a href="#二-数据通信" class="headerlink" title="二.数据通信"></a>二.数据通信</h2><p>1.模型：源系统（信源）——&gt;传输系统（信道）——&gt;目的系统（信宿）<br>2.数据是运送消息的实体<br>3.信号：数据的电气或电磁的表现（模拟信号，数字信号）<br>4.码元：代表不同离散数值的基本波形；二进制编码只有0，1两种码元<br>5.信息交互方式：单向通信（单工通信），双向交替通信（半双工通信）,双向同时通信（全双工通信）<br>6.信源<br><img src="/images/信源.png" alt="信源">  </p>
 <h2 id="三-信道的极限容量"><a href="#三-信道的极限容量" class="headerlink" title="三.信道的极限容量"></a>三.信道的极限容量</h2><blockquote>
-<p><em>在任何信道中，码元传输速率有上限，超过会出现码间串扰  
-</em>香浓公式表明，信道的带宽（w）或信道中的信噪比越大，信息的极限传输速率就越高<br>*除了提高信道带宽或信噪比，还可用编码的方法让每一个码元携带更多比特的信息量  </p>
+<p>1.在任何信道中，码元传输速率有上限，超过会出现码间串扰<br>2.香浓公式表明，信道的带宽（w）或信道中的信噪比越大，信息的极限传输速率就越高<br>3.除了提高信道带宽或信噪比，还可用编码的方法让每一个码元携带更多比特的信息量  </p>
 </blockquote>
 <h2 id="四-物理层下面的传输媒体"><a href="#四-物理层下面的传输媒体" class="headerlink" title="四.物理层下面的传输媒体"></a>四.物理层下面的传输媒体</h2><blockquote>
-<p><em>导引型传输媒体：双绞线，同轴电缆，光缆  
-</em>非导引型传输媒体：自由空间（微波接力通信，卫星通信）  </p>
+<p>1.导引型传输媒体：双绞线，同轴电缆，光缆<br>2.非导引型传输媒体：自由空间（微波接力通信，卫星通信）  </p>
 </blockquote>
 <h2 id="五-信道复用技术"><a href="#五-信道复用技术" class="headerlink" title="五.信道复用技术"></a>五.信道复用技术</h2><blockquote>
-<p><em>频分复用（FDM）：将信道分为不同的频带，每个用户分配一定的频带  
-</em>时分复用（TDM）：将时间划分为一段段等长的时分复用帧<br><em>统计时分复用（STDM）：信道划分为等长的时分复用帧，但数据要先发往集中器的输入缓存，再发送出去，没有数据的帧跳过  
-</em>波分复用（WDM）：光的频分复用<br>*码分复用（CDM）/码分多址（CDMA）：各用户使用经过特殊挑选的不同码型，可在同样的频带同时进行通信而互不干扰  </p>
+<p>1.频分复用（FDM）：将信道分为不同的频带，每个用户分配一定的频带<br>2.时分复用（TDM）：将时间划分为一段段等长的时分复用帧<br>3.统计时分复用（STDM）：信道划分为等长的时分复用帧，但数据要先发往集中器的输入缓存，再发送出去，没有数据的帧跳过<br>4.波分复用（WDM）：光的频分复用<br>5.码分复用（CDM）/码分多址（CDMA）：各用户使用经过特殊挑选的不同码型，可在同样的频带同时进行通信而互不干扰  </p>
 </blockquote>
 <h2 id="六-数字传输系统"><a href="#六-数字传输系统" class="headerlink" title="六.数字传输系统"></a>六.数字传输系统</h2><blockquote>
-<p><em>SONET(Synchronous Optical Network)同步光纤网  
-</em>SDH(Synchronous Digital Hierarchy)同步数字系列，以SONET为基础  </p>
+<p>1.SONET(Synchronous Optical Network)同步光纤网<br>2.SDH(Synchronous Digital Hierarchy)同步数字系列，以SONET为基础  </p>
 </blockquote>
 <h2 id="七-宽带接入技术"><a href="#七-宽带接入技术" class="headerlink" title="七.宽带接入技术"></a>七.宽带接入技术</h2><blockquote>
-<p><em>ADDL技术：非对称数字用户线；采用自适应调制技术，不能保证固定的数据率  
-</em>光纤同轴混合网（HFC网）<br>*FTTx技术  </p>
+<p>1.ADDL技术：非对称数字用户线；采用自适应调制技术，不能保证固定的数据率<br>2.光纤同轴混合网（HFC网）<br>3.FTTx技术  </p>
 </blockquote>
 <p><div id="donate_guide" class="donate_bar center hidden"><a href="/images/reward.jpeg" title="微信打赏" class="fancybox" rel="article0"><img src="/images/reward.jpeg" title="微信打赏" height="164px" width="164px"></a> <div align="center">您的支持是对我最大的鼓励！</div></div> <script type="text/javascript">document.getElementById(‘btn_donate’).onclick = function(){$(‘#donate_board’).addClass(‘hidden’); $(‘#donate_guide’).removeClass(‘hidden’);}</script></p>
 
@@ -504,7 +498,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2016</span>
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
