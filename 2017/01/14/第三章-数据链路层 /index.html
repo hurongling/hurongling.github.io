@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="随笔," />
+  <meta name="keywords" content="计算机网络（第6版）," />
 
 
 
@@ -84,16 +84,19 @@
 
 
 
-<meta name="description" content="网站简介主要存放个人学习笔记而搭建的博客，要求自己至少每周末上传一篇笔记，立此为据！">
+<meta name="description" content="计算机网络（第6版）第三章 数据链路层学习笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="胡荣玲的笔记共享平台！">
-<meta property="og:url" content="http://yoursite.com/2016/12/11/胡荣玲的笔记共享平台！/index.html">
+<meta property="og:title" content="第二章 物理层">
+<meta property="og:url" content="http://yoursite.com/2017/01/14/第三章-数据链路层 /index.html">
 <meta property="og:site_name" content="胡荣玲个人博客">
-<meta property="og:description" content="网站简介主要存放个人学习笔记而搭建的博客，要求自己至少每周末上传一篇笔记，立此为据！">
-<meta property="og:updated_time" content="2016-12-19T05:58:16.653Z">
+<meta property="og:description" content="计算机网络（第6版）第三章 数据链路层学习笔记">
+<meta property="og:image" content="http://yoursite.com/images/PPP帧.png">
+<meta property="og:image" content="http://yoursite.com/images/reward.jpeg">
+<meta property="og:updated_time" content="2017-01-14T03:42:51.294Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="胡荣玲的笔记共享平台！">
-<meta name="twitter:description" content="网站简介主要存放个人学习笔记而搭建的博客，要求自己至少每周末上传一篇笔记，立此为据！">
+<meta name="twitter:title" content="第二章 物理层">
+<meta name="twitter:description" content="计算机网络（第6版）第三章 数据链路层学习笔记">
+<meta name="twitter:image" content="http://yoursite.com/images/PPP帧.png">
 
 
 
@@ -114,10 +117,10 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/12/11/胡荣玲的笔记共享平台！/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/01/14/第三章-数据链路层 /"/>
 
 
-  <title> 胡荣玲的笔记共享平台！ | 胡荣玲个人博客 </title>
+  <title> 第二章 物理层 | 胡荣玲个人博客 </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -231,7 +234,7 @@
             
             
               
-                胡荣玲的笔记共享平台！
+                第二章 物理层
               
             
           </h1>
@@ -243,8 +246,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-11T17:31:42+08:00" content="2016-12-11">
-              2016-12-11
+            <time itemprop="dateCreated" datetime="2017-01-14T10:04:50+08:00" content="2017-01-14">
+              2017-01-14
             </time>
           </span>
 
@@ -257,8 +260,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/随笔/" itemprop="url" rel="index">
-                    <span itemprop="name">随笔</span>
+                  <a href="/categories/笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">笔记</span>
                   </a>
                 </span>
 
@@ -273,8 +276,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/12/11/胡荣玲的笔记共享平台！/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/11/胡荣玲的笔记共享平台！/" itemprop="commentsCount"></span>
+                <a href="/2017/01/14/第三章-数据链路层 /#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/14/第三章-数据链路层 /" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -297,10 +300,22 @@
       
 
       
-        <h2 id="网站简介"><a href="#网站简介" class="headerlink" title="网站简介"></a>网站简介</h2><p>主要存放个人学习笔记而搭建的博客，要求自己至少每周末上传一篇笔记，立此为据！</p>
+        <p>计算机网络（第6版）第三章 数据链路层学习笔记</p>
 <a id="more"></a>
-<h2 id="就是开心呀！——纯粹记录心情"><a href="#就是开心呀！——纯粹记录心情" class="headerlink" title="就是开心呀！——纯粹记录心情"></a>就是开心呀！——纯粹记录心情</h2><p>2016年12月11日17:45</p>
-<p>周末，手痒痒想做点东西～难得的周日午觉2点准时起床，来到图书馆，传说中的午后时光一点都不慵懒，反倒是神清气爽！<br>开始动手搭建hexo啦～不出所料又遇到了问题，一个是之前安装node遇到过的，之前的做法很蠢，每次开启ghost手动移动目录，这次运气很好，找到了永久的办法，建立软连接！[ln -s /usr/bin/nodejs usr/bin/node]第二个问题是细节问题，不过还是记着上次的教训，这次我不断告诉自己，修改配置文档一定要细心细心再细心！原来是不小心被我删了一个字母。改过来后还是出错，问题出在————_config.yml中的内容，特别注意:后面需要有一个空格！<br>自己解决问题后幸福感爆棚！虽然是一个很简单的操作，但我花了一下午，不过还是挺满足的，此刻，我要赶着去吃饭，然后家教，有点赶，不过心情好，哼着小曲儿出发吧～</p>
+<h2 id="一-使用点对点信道的数据链路层——三个基本问题"><a href="#一-使用点对点信道的数据链路层——三个基本问题" class="headerlink" title="一.使用点对点信道的数据链路层——三个基本问题"></a>一.使用点对点信道的数据链路层——三个基本问题</h2><p>1.封装成帧：在一段数据的前后分别添加首部和尾部（用控制字符进行帧定）<br>2.透明传输  </p>
+<blockquote>
+<p>透明：某个实际存在的事物看起来却是好像不存在一样<br>透明传输要注意的问题：数据部分出现SOH（帧开始符00000001）和EOT（帧结束符00000100）被误认为控制符<br>解决办法：字节填充（插入转义字符ESC，到接收端再删掉）  </p>
+</blockquote>
+<p>3.差错检测（特指比特差错）  </p>
+<blockquote>
+<p>1.循环冗余检测CRC（Cyclic Redundancy Check）:根据CRC的生成多式得出除数P，在每组后面加（p-1）位冗余码，在接收端用p除接收到的数，如果除数为0说明无差错。FCS为（帧检验序列）<br>2.”无比特差错”与”无传输差错”的区别：无比特差错指无差错接受，还不是可靠传输<br>3.通信质量好的有线传输链路，数据链路层不使用确认和重传机制，改正差错的任务由上层协议完成，对于通信质量较差的无线传输链路，数据链路向上提供可靠传输的服务  </p>
+</blockquote>
+<h2 id="二-点对点协议PPP"><a href="#二-点对点协议PPP" class="headerlink" title="二.点对点协议PPP"></a>二.点对点协议PPP</h2><p>1.PPP协议：用户计算机和ISP进行通信时所使用的数据链路层协议<br>2.ppp协议应满足的需求  </p>
+<blockquote>
+<p>简单（首要需求）——CRC检验，无差错接受<br>封装成帧——帧定界符<br>透明性——字节填充，零比特填充（在发送方，只要连续出现5个1，即填入一个0，在接受端，只要连续出现5个1，即把后面的0去掉）<br>支持多种网络层协议<br>能在多种类型的链路上运行——串行或并行，同步或异步，高速或低速，电或光，交换或非交换的点对点链路<br>不支持多点线路，只支持全双工链路  </p>
+</blockquote>
+<p><img src="/images/PPP帧.png" alt="ppp帧"></p>
+<p><div id="donate_guide" class="donate_bar center hidden"><a href="/images/reward.jpeg" title="微信打赏" class="fancybox" rel="article0"><img src="/images/reward.jpeg" title="微信打赏" height="164px" width="164px"></a> <div align="center">您的支持是对我最大的鼓励！</div></div> <script type="text/javascript">document.getElementById(‘btn_donate’).onclick = function(){$(‘#donate_board’).addClass(‘hidden’); $(‘#donate_guide’).removeClass(‘hidden’);}</script></p>
 
       
     </div>
@@ -323,7 +338,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/随笔/" rel="tag">#随笔</a>
+            <a href="/tags/计算机网络（第6版）/" rel="tag">#计算机网络（第6版）</a>
           
         </div>
       
@@ -332,13 +347,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/12/26/使用markdown/" rel="next" title="使用markdown">
+                <i class="fa fa-chevron-left"></i> 使用markdown
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/12/19/第一章-概述/" rel="prev" title="第一章 概述">
-                第一章 概述 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -364,8 +379,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/12/11/胡荣玲的笔记共享平台！/"
-           data-title="胡荣玲的笔记共享平台！" data-url="http://yoursite.com/2016/12/11/胡荣玲的笔记共享平台！/">
+      <div class="ds-thread" data-thread-key="2017/01/14/第三章-数据链路层 /"
+           data-title="第二章 物理层" data-url="http://yoursite.com/2017/01/14/第三章-数据链路层 /">
       </div>
     
   </div>
@@ -456,7 +471,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#网站简介"><span class="nav-number">1.</span> <span class="nav-text">网站简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#就是开心呀！——纯粹记录心情"><span class="nav-number">2.</span> <span class="nav-text">就是开心呀！——纯粹记录心情</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-使用点对点信道的数据链路层——三个基本问题"><span class="nav-number">1.</span> <span class="nav-text">一.使用点对点信道的数据链路层——三个基本问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-点对点协议PPP"><span class="nav-number">2.</span> <span class="nav-text">二.点对点协议PPP</span></a></li></ol></div>
             
           </div>
         </section>
