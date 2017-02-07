@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="计算机网络（第6版）," />
+  <meta name="keywords" content="linux," />
 
 
 
@@ -84,19 +84,19 @@
 
 
 
-<meta name="description" content="计算机网络（第6版）第四章 网络层学习笔记">
+<meta name="description" content="linux基础知识，软连接与硬链接的区别">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第四章-网络层.md">
-<meta property="og:url" content="http://yoursite.com/2017/01/14/第四章-网络层-md/index.html">
+<meta property="og:title" content="软连接与硬链接的区别">
+<meta property="og:url" content="http://yoursite.com/2017/02/07/软连接与硬链接的区别/index.html">
 <meta property="og:site_name" content="胡荣玲个人博客">
-<meta property="og:description" content="计算机网络（第6版）第四章 网络层学习笔记">
-<meta property="og:image" content="http://oi1ylq4ab.bkt.clouddn.com/%E5%88%86%E7%B1%BB%E7%9A%84IP%E5%9C%B0%E5%9D%80.png">
+<meta property="og:description" content="linux基础知识，软连接与硬链接的区别">
+<meta property="og:image" content="http://oi1ylq4ab.bkt.clouddn.com/hard_soft.jpg">
 <meta property="og:image" content="http://yoursite.com/images/reward.jpeg">
-<meta property="og:updated_time" content="2017-02-07T11:43:08.515Z">
+<meta property="og:updated_time" content="2017-02-07T12:54:08.062Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第四章-网络层.md">
-<meta name="twitter:description" content="计算机网络（第6版）第四章 网络层学习笔记">
-<meta name="twitter:image" content="http://oi1ylq4ab.bkt.clouddn.com/%E5%88%86%E7%B1%BB%E7%9A%84IP%E5%9C%B0%E5%9D%80.png">
+<meta name="twitter:title" content="软连接与硬链接的区别">
+<meta name="twitter:description" content="linux基础知识，软连接与硬链接的区别">
+<meta name="twitter:image" content="http://oi1ylq4ab.bkt.clouddn.com/hard_soft.jpg">
 
 
 
@@ -117,10 +117,10 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/01/14/第四章-网络层-md/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/02/07/软连接与硬链接的区别/"/>
 
 
-  <title> 第四章-网络层.md | 胡荣玲个人博客 </title>
+  <title> 软连接与硬链接的区别 | 胡荣玲个人博客 </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -234,7 +234,7 @@
             
             
               
-                第四章-网络层.md
+                软连接与硬链接的区别
               
             
           </h1>
@@ -246,8 +246,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-01-14T16:15:07+08:00" content="2017-01-14">
-              2017-01-14
+            <time itemprop="dateCreated" datetime="2017-02-07T20:21:47+08:00" content="2017-02-07">
+              2017-02-07
             </time>
           </span>
 
@@ -260,8 +260,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">笔记</span>
+                  <a href="/categories/基础/" itemprop="url" rel="index">
+                    <span itemprop="name">基础</span>
                   </a>
                 </span>
 
@@ -276,8 +276,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/01/14/第四章-网络层-md/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/14/第四章-网络层-md/" itemprop="commentsCount"></span>
+                <a href="/2017/02/07/软连接与硬链接的区别/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/07/软连接与硬链接的区别/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -300,72 +300,9 @@
       
 
       
-        <p>计算机网络（第6版）第四章 网络层学习笔记</p>
-<a id="more"></a>
-<h2 id="一-网络层提供的两种服务"><a href="#一-网络层提供的两种服务" class="headerlink" title="一.网络层提供的两种服务"></a>一.网络层提供的两种服务</h2><p>“面向连接”虚电路（Virtual Circuit）服务和“无连接”的数据报服务  </p>
-<h2 id="二-网际协议IP"><a href="#二-网际协议IP" class="headerlink" title="二.网际协议IP"></a>二.网际协议IP</h2><p>1.与IP协议配套使用的三个协议  </p>
-<ul>
-<li>地址解析协议ARP  </li>
-<li>网际控制报文协议ICMP  </li>
-<li>网际组管理协议IGMP<br>逆地址解析协议已被淘汰<br>2.虚拟互联网络<br>网络互联的一些中间设备  </li>
-<li>转发器，集线器——物理层  </li>
-<li>网桥，桥接器——数据链路层  </li>
-<li>路由器——网络层  </li>
-<li>网关——网络层以上<br>互联网可以由多种异构网络互联组成<br>3.分类的IP地址<br>IP地址::={&lt;网络号&gt;,&lt;主机号&gt;}<br><img src="http://oi1ylq4ab.bkt.clouddn.com/%E5%88%86%E7%B1%BB%E7%9A%84IP%E5%9C%B0%E5%9D%80.png" alt="分类的IP地址">  </li>
-<li>A类地址：第一个字节表示的范围1-126  </li>
-<li>B类地址：128-191（127开头的网络号不是一个网络地址，保留为本地软件环回测试）  </li>
-<li>C类地址：192-233  </li>
-<li>D类地址：224-239，为多播地址  </li>
-<li>E类地址：保留为今后用<br>近年使用无分类IP地址，A，B，C类已成为历史<br>4.一般不使用的特殊IP地址  </li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>网络号</th>
-<th>主机号</th>
-<th>原地址使用</th>
-<th>目的地址使用</th>
-<th>代表意思</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>0</td>
-<td>可以</td>
-<td>不可</td>
-<td>本网络上的本主机</td>
-</tr>
-<tr>
-<td>0</td>
-<td>hostid</td>
-<td>可以</td>
-<td>不可</td>
-<td>本网络上某个主机hostid</td>
-</tr>
-<tr>
-<td>全1</td>
-<td>全1</td>
-<td>不可</td>
-<td>可以</td>
-<td>只在本网络进行广播</td>
-</tr>
-<tr>
-<td>netid</td>
-<td>全1</td>
-<td>不可</td>
-<td>可以</td>
-<td>对netid上的所有主机进行广播</td>
-</tr>
-<tr>
-<td>127</td>
-<td>非全0或全1的任何数</td>
-<td>可以</td>
-<td>可以</td>
-<td>用作本地软件环回测试只用</td>
-</tr>
-</tbody>
-</table>
+        <p>linux基础知识，软连接与硬链接的区别<br><a id="more"></a><br><img src="http://oi1ylq4ab.bkt.clouddn.com/hard_soft.jpg" alt="软链接与硬链接"></p>
+<h2 id="软链接的特征"><a href="#软链接的特征" class="headerlink" title="软链接的特征"></a>软链接的特征</h2><p>ln -s /root/file1 /tmp/file1.soft   创建软链接时，源文件的路径要用绝对路径<br>1.类似windows快捷方式<br>2.软链接拥有自己的I节点和Block块，但是数据块中只保存原文件的文件名和I节点号，并没有实际的文件数据<br>3.修改任意文件，另一个都改变<br>4.删除原文件，软链接不能使用<br>5.软链接文件权限都为rwxrwxrwx  </p>
+<h2 id="硬链接的特征"><a href="#硬链接的特征" class="headerlink" title="硬链接的特征"></a>硬链接的特征</h2><p>ln /root/file1 /tmp/file1.hard<br>1.拥有相同的I节点和存储block块，可以看做是同一个文件<br>2.可通过I节点识别<br>3.不能跨分区建立硬链接<br>4.不能针对目录使用  </p>
 <p><div id="donate_guide" class="donate_bar center hidden"><a href="/images/reward.jpeg" title="微信打赏" class="fancybox" rel="article0"><img src="/images/reward.jpeg" title="微信打赏" height="164px" width="164px"></a> <div align="center">您的支持是对我最大的鼓励！</div></div> <script type="text/javascript">document.getElementById(‘btn_donate’).onclick = function(){$(‘#donate_board’).addClass(‘hidden’); $(‘#donate_guide’).removeClass(‘hidden’);}</script></p>
 
       
@@ -389,7 +326,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/计算机网络（第6版）/" rel="tag">#计算机网络（第6版）</a>
+            <a href="/tags/linux/" rel="tag">#linux</a>
           
         </div>
       
@@ -398,17 +335,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/01/14/第三章-数据链路层 /" rel="next" title="第三章 数据链路层">
-                <i class="fa fa-chevron-left"></i> 第三章 数据链路层
+              <a href="/2017/02/07/三列布局/" rel="next" title="三列布局">
+                <i class="fa fa-chevron-left"></i> 三列布局
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/07/三列布局/" rel="prev" title="三列布局">
-                三列布局 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -434,8 +367,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/01/14/第四章-网络层-md/"
-           data-title="第四章-网络层.md" data-url="http://yoursite.com/2017/01/14/第四章-网络层-md/">
+      <div class="ds-thread" data-thread-key="2017/02/07/软连接与硬链接的区别/"
+           data-title="软连接与硬链接的区别" data-url="http://yoursite.com/2017/02/07/软连接与硬链接的区别/">
       </div>
     
   </div>
@@ -526,7 +459,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-网络层提供的两种服务"><span class="nav-number">1.</span> <span class="nav-text">一.网络层提供的两种服务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-网际协议IP"><span class="nav-number">2.</span> <span class="nav-text">二.网际协议IP</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#软链接的特征"><span class="nav-number">1.</span> <span class="nav-text">软链接的特征</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#硬链接的特征"><span class="nav-number">2.</span> <span class="nav-text">硬链接的特征</span></a></li></ol></div>
             
           </div>
         </section>
