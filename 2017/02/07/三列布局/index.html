@@ -91,7 +91,7 @@
 <meta property="og:site_name" content="胡荣玲个人博客">
 <meta property="og:description" content="经典的三列布局，俗称双飞燕布局,本文主要分析它是怎么实现的">
 <meta property="og:image" content="http://yoursite.com/images/reward.jpeg">
-<meta property="og:updated_time" content="2017-02-07T12:00:38.973Z">
+<meta property="og:updated_time" content="2017-02-07T12:03:11.248Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="三列布局">
 <meta name="twitter:description" content="经典的三列布局，俗称双飞燕布局,本文主要分析它是怎么实现的">
@@ -301,11 +301,7 @@
       
         <p>经典的三列布局，俗称双飞燕布局,本文主要分析它是怎么实现的<br><a id="more"></a><br>直接上代码</p>
 <blockquote>
-<p>`&lt;!DOCTYPE html&gt;</p>
-<html lang="en"><br><head><br><meta charset="UTF-8"><br><title>Document</title><br><style type="text/css"><br>    body{ margin: 0; padding: 0;}<br>    .left , .right{  height: 300px;   width: 200px; float: left;}<br>    .right{ margin-left: -200px; background-color: red; }<br>    .left{ margin-left: -100%;background-color: #080808; }<br>    .middle{  height: 300px;  width: 100%; float: left; background-color:    blue;}<br></style><br></head><br><body><br><div class="middle">middle</div><br><div class="left">left</div><br><div class="right">right</div><br></body><br></html>  
-
-
-
+<p><code>&lt;!DOCTYPE html&gt;</code><html lang="en"><br><code>&lt;head&gt;</code><meta charset="UTF-8"><br><code>&lt;title&gt;Document&lt;/title&gt;</code><style type="text/css"><br>    <code>body{ margin: 0; padding: 0;}</code>.left , .right{  height: 300px;   width: 200px; float: left;}<br>    <code>.right{ margin-left: -200px; background-color: red; }</code>.left{ margin-left: -100%;background-color: #080808; }<br>    <code>.middle{  height: 300px;  width: 100%; float: left; background-color:    blue;}</code></style><br><code>&lt;/head&gt;</code><body><br><code>&lt;div class=&quot;middle&quot;&gt;middle&lt;/div&gt;</code><div class="left">left</div><br><code>&lt;div class=&quot;right&quot;&gt;right&lt;/div&gt;</code></body><br>`</html>  </p>
 </blockquote>
 <p>1.一个元素的宽度为margin+padding+border+内容宽度<br>2.一个float:left的元素的左外边界必须再其前面出现的float:left元素的右外边界的后面，并且元素的的左边界不能超过其包裹元素的左内边界，右外边界也不能超过包括元素的右内边界<br>3.一个float:left元素的左外边界必须在其之前的任何一个float:left元素的右外边界的右边</p>
 <p>如题中的css的定义及float元素在DOM中的位置<br>按HTML代码的顺序，首先放middle元素，然后是left，最后是right<br>1..middle元素首先放置，占据整个父元素的宽度(container_width)<br>2..left元素接下来放置，其宽度为200px，margin-left:-100%<br>3..left元素的左外边界必须在middle元素右外边界的右边。margin-left:-100%形成的效果是元素的左外边界在.left元素的左内边界向左100%<em>container_width处，同时需要满足前面提到的规则,那么形成的效果是.left元素整体向左边移动了100%</em>container_width,其左内边界和middle的左外边界对齐。.left元素的右外边界位于middle元素的左外边界的的200处。<br>3..right元素接下来放置，宽度为200px,margin-left：-200px,.right的左外边界在其左内边界向右200px;<br>4..right元素的左外边界必须在之前出现的float:left右外边界的右边,对之前.left元素和.middle元素的分析，这个位置点就是.middle元素的右外边界;形成的效果就是.right元素左内边界向左移动了200px，这样把middle的两边都覆盖了。</p>
