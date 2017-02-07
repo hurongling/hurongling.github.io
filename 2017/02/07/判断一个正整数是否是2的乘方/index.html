@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="markdown," />
+  <meta name="keywords" content="数据结构与算法," />
 
 
 
@@ -84,17 +84,17 @@
 
 
 
-<meta name="description" content="使用markdown笔记，原创">
+<meta name="description" content="实现一个方法，判断一个正整数是否是2的乘方（比如16是2的4次方，返回True；18不是2的乘方，返回False）。要求性能尽可能高。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用markdown">
-<meta property="og:url" content="http://yoursite.com/2016/12/26/使用markdown/index.html">
+<meta property="og:title" content="判断一个正整数是否是2的乘方">
+<meta property="og:url" content="http://yoursite.com/2017/02/07/判断一个正整数是否是2的乘方/index.html">
 <meta property="og:site_name" content="胡荣玲个人博客">
-<meta property="og:description" content="使用markdown笔记，原创">
+<meta property="og:description" content="实现一个方法，判断一个正整数是否是2的乘方（比如16是2的4次方，返回True；18不是2的乘方，返回False）。要求性能尽可能高。">
 <meta property="og:image" content="http://yoursite.com/images/reward.jpeg">
-<meta property="og:updated_time" content="2016-12-27T10:09:33.187Z">
+<meta property="og:updated_time" content="2017-02-07T14:26:35.560Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用markdown">
-<meta name="twitter:description" content="使用markdown笔记，原创">
+<meta name="twitter:title" content="判断一个正整数是否是2的乘方">
+<meta name="twitter:description" content="实现一个方法，判断一个正整数是否是2的乘方（比如16是2的4次方，返回True；18不是2的乘方，返回False）。要求性能尽可能高。">
 <meta name="twitter:image" content="http://yoursite.com/images/reward.jpeg">
 
 
@@ -116,10 +116,10 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/12/26/使用markdown/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/02/07/判断一个正整数是否是2的乘方/"/>
 
 
-  <title> 使用markdown | 胡荣玲个人博客 </title>
+  <title> 判断一个正整数是否是2的乘方 | 胡荣玲个人博客 </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -233,7 +233,7 @@
             
             
               
-                使用markdown
+                判断一个正整数是否是2的乘方
               
             
           </h1>
@@ -245,8 +245,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-26T10:19:50+08:00" content="2016-12-26">
-              2016-12-26
+            <time itemprop="dateCreated" datetime="2017-02-07T21:15:04+08:00" content="2017-02-07">
+              2017-02-07
             </time>
           </span>
 
@@ -259,8 +259,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">笔记</span>
+                  <a href="/categories/数据结构与算法/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构与算法</span>
                   </a>
                 </span>
 
@@ -275,8 +275,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/12/26/使用markdown/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/26/使用markdown/" itemprop="commentsCount"></span>
+                <a href="/2017/02/07/判断一个正整数是否是2的乘方/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/07/判断一个正整数是否是2的乘方/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -299,104 +299,34 @@
       
 
       
-        <p>使用markdown笔记，原创</p>
-<a id="more"></a>
-<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>标题的一种表示方式，在行首加入<code>#</code>号，多少个<code>#</code>号代表多少号标题。如：</p>
-<blockquote>
-<p><code>###</code>我是三号标题</p>
-<p><code>#####</code>我是四号标题</p>
-</blockquote>
-<h2 id="换行"><a href="#换行" class="headerlink" title="换行"></a>换行</h2><p>在markdown里直接换行是没作用的，要使用双空格加回车  </p>
-<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><p>在每一行前都加入<code>&gt;</code>标记来显示引用效果。如：</p>
-<blockquote>
-<p><code>&gt;</code>我是引用</p>
-</blockquote>
-<p>跳出引用要用双回车，如果跳出后还是引用，markdown会自动把两个引用合二为一，如：</p>
-<blockquote>
-<p>我是引用一</p>
-<p>我是回了两次车后的引用</p>
-</blockquote>
-<p>引用可以嵌套。如果要在一个引用里插入一个引用，可以用两个(‘&gt;’)开头。依此类推，根据嵌套层次加相应数量的符号。如：</p>
-<blockquote>
-<p><code>&gt;</code>我是外面的引用</p>
-<blockquote>
-<p><code>&gt;&gt;</code>我是里面的引用</p>
-</blockquote>
-</blockquote>
-<p>同样双击回车退出引用</p>
-<h2 id="字体样式"><a href="#字体样式" class="headerlink" title="字体样式"></a>字体样式</h2><blockquote>
-<p><code>*</code><em>斜体</em><code>*</code></p>
-<p><code>**</code><strong>加粗</strong><code>**</code></p>
-<p><code>~~</code><del>删除线</del><code>~~</code></p>
-</blockquote>
-<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>无序列表使用<code>*</code>或者<code>+</code>或者<code>-</code>加空格作为列表标记。如：  </p>
-<ul>
-<li>第一点  </li>
-<li>第二点  </li>
-<li>第三点  </li>
-</ul>
-<p>有序列表使用数字.加空格加文字。如：</p>
-<ol>
-<li>第一点</li>
-<li>第二点</li>
-<li>第三点  </li>
-</ol>
-<p>列表可以使用嵌套，首行使用一个tab缩进。如：</p>
-<ol>
-<li>第一大点<ul>
-<li>第一小点</li>
-<li>第二小点</li>
-<li>第三小点</li>
-</ul>
-</li>
-<li>第二大点<ul>
-<li>第一小点</li>
-<li>第二小点  </li>
-</ul>
-</li>
-</ol>
-<h2 id="连接"><a href="#连接" class="headerlink" title="连接"></a>连接</h2><p>格式:[链接在页面显示的内容]（url”鼠标移动到链接上方时显示的文字”）</p>
-<h2 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h2><p>比链接多了个感叹号而已,在最前面加。</p>
-<h2 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h2><p>分割线的语法只需要另起一行，连续输入三个星号 <em>*</em> 即可</p>
-<hr>
-<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><blockquote>
-<p><code>|学号|姓名|专业|班级|  
-|----|----|----|----|  
-|001|小明|计网|1|  
-|002|小红|计网|2|</code>  </p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th>学号</th>
-<th>姓名</th>
-<th>专业</th>
-<th>班级</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>001</td>
-<td>小明</td>
-<td>计网</td>
-<td>1</td>
-</tr>
-<tr>
-<td>002</td>
-<td>小红</td>
-<td>计网</td>
-<td>2</td>
-</tr>
-</tbody>
-</table>
-<h2 id="任务完成表（马克飞象可以显示）"><a href="#任务完成表（马克飞象可以显示）" class="headerlink" title="任务完成表（马克飞象可以显示）"></a>任务完成表（马克飞象可以显示）</h2><p>-[x] jsp作业<br>-[x] 计算机网络笔记<br>-[ ] 前端学习<br>-[ ] 数据结构与算法<br>-[x] markdown简单使用方法  </p>
-<h2 id="12-绘制流程图-马克飞象可以显示"><a href="#12-绘制流程图-马克飞象可以显示" class="headerlink" title="12.绘制流程图  (马克飞象可以显示)"></a>12.绘制流程图  (马克飞象可以显示)</h2><pre><code class="flow">st=&gt;start: 开始
-e=&gt;end: 结束
-op=&gt;operation: 请选择
-cond=&gt;condition: 是或否?
-st-&gt;op-&gt;cond
-cond(yes)-&gt;e
-cond(no)-&gt;op
+        <p>实现一个方法，判断一个正整数是否是2的乘方（比如16是2的4次方，返回True；18不是2的乘方，返回False）。要求性能尽可能高。<br><a id="more"></a>  </p>
+<h2 id="解法一："><a href="#解法一：" class="headerlink" title="解法一："></a>解法一：</h2><p>创建一个中间变量Temp，初始值是1。然后进入一个循环，循环中每次让Temp和目标整数比较，如果相等，则说明目标整数是2的乘方；如果不相等，则让Temp增大一倍，继续循环比较。当Temp大于目标整数时，说明目标整数不是2的乘方。  </p>
+<pre><code class="javascript">public <span class="keyword">static</span> boolean isPowerOf2(int number){
+    int temp=<span class="number">1</span>;
+    <span class="keyword">while</span>(temp&lt;=number){
+    <span class="keyword">if</span>(temp==number){
+        <span class="keyword">return</span> <span class="literal">true</span>;
+    }
+    temp=temp*<span class="number">2</span>;   <span class="comment">//乘以2操作改成`&lt;&lt;1`移位的性能比乘法高，能提高性能，但时间复杂度还是O(LogN)</span>
+    }
+    <span class="keyword">return</span> <span class="literal">false</span>;
+}
+</code></pre>
+<p>如果目标整数的大小是N，则此方法的时间复杂度是O(LogN)  </p>
+<h2 id="解法二："><a href="#解法二：" class="headerlink" title="解法二："></a>解法二：</h2><p>如果一个整数是2的乘方，那么它转换成2进制的时候只有一位是1，把它减1，整个数减少1位，其他位变为1，N与(N-1)相与为0，因此可得：  </p>
+<pre><code class="javascript">public <span class="keyword">static</span> boolean isPowerOf2(int number){
+    <span class="keyword">return</span> (number&amp;(number<span class="number">-1</span>)==<span class="number">0</span>);
+}
+</code></pre>
+<p>时间复杂度为O(1)<br>类似的：实现一个方法，求出一个正整数转换成二进制后的数字“1”的个数。要求性能尽可能高。  </p>
+<pre><code class="javascript">public <span class="keyword">static</span> int count1(int number){
+    int count=<span class="number">0</span>;
+    <span class="keyword">while</span>(number!=<span class="number">0</span>){
+number=number&amp;(number<span class="number">-1</span>);
+count++;
+}
+    <span class="keyword">return</span> count;
+}
 </code></pre>
 <p><div id="donate_guide" class="donate_bar center hidden"><a href="/images/reward.jpeg" title="微信打赏" class="fancybox" rel="article0"><img src="/images/reward.jpeg" title="微信打赏" height="164px" width="164px"></a> <div align="center">您的支持是对我最大的鼓励！</div></div> <script type="text/javascript">document.getElementById(‘btn_donate’).onclick = function(){$(‘#donate_board’).addClass(‘hidden’); $(‘#donate_guide’).removeClass(‘hidden’);}</script></p>
 
@@ -421,7 +351,7 @@ cond(no)-&gt;op
       
         <div class="post-tags">
           
-            <a href="/tags/markdown/" rel="tag">#markdown</a>
+            <a href="/tags/数据结构与算法/" rel="tag">#数据结构与算法</a>
           
         </div>
       
@@ -430,17 +360,13 @@ cond(no)-&gt;op
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/12/26/第二章-物理层/" rel="next" title="第二章 物理层">
-                <i class="fa fa-chevron-left"></i> 第二章 物理层
+              <a href="/2017/02/07/软连接与硬链接的区别/" rel="next" title="软连接与硬链接的区别">
+                <i class="fa fa-chevron-left"></i> 软连接与硬链接的区别
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/01/14/第三章-数据链路层 /" rel="prev" title="第三章 数据链路层">
-                第三章 数据链路层 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -466,8 +392,8 @@ cond(no)-&gt;op
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/12/26/使用markdown/"
-           data-title="使用markdown" data-url="http://yoursite.com/2016/12/26/使用markdown/">
+      <div class="ds-thread" data-thread-key="2017/02/07/判断一个正整数是否是2的乘方/"
+           data-title="判断一个正整数是否是2的乘方" data-url="http://yoursite.com/2017/02/07/判断一个正整数是否是2的乘方/">
       </div>
     
   </div>
@@ -558,7 +484,7 @@ cond(no)-&gt;op
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#标题"><span class="nav-number">1.</span> <span class="nav-text">标题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#换行"><span class="nav-number">2.</span> <span class="nav-text">换行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用"><span class="nav-number">3.</span> <span class="nav-text">引用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字体样式"><span class="nav-number">4.</span> <span class="nav-text">字体样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#列表"><span class="nav-number">5.</span> <span class="nav-text">列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#连接"><span class="nav-number">6.</span> <span class="nav-text">连接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#插入图片"><span class="nav-number">7.</span> <span class="nav-text">插入图片</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分割线"><span class="nav-number">8.</span> <span class="nav-text">分割线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表格"><span class="nav-number">9.</span> <span class="nav-text">表格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#任务完成表（马克飞象可以显示）"><span class="nav-number">10.</span> <span class="nav-text">任务完成表（马克飞象可以显示）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12-绘制流程图-马克飞象可以显示"><span class="nav-number">11.</span> <span class="nav-text">12.绘制流程图  (马克飞象可以显示)</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#解法一："><span class="nav-number">1.</span> <span class="nav-text">解法一：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解法二："><span class="nav-number">2.</span> <span class="nav-text">解法二：</span></a></li></ol></div>
             
           </div>
         </section>
