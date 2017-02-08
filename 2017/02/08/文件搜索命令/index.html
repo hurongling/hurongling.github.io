@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="计算机网络," />
+  <meta name="keywords" content="linux," />
 
 
 
@@ -84,19 +84,18 @@
 
 
 
-<meta name="description" content="计算机网络（第6版）第二章 物理层学习笔记">
+<meta name="description" content="linux基础知识，常用文件搜索命令用法及区别">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第二章 物理层">
-<meta property="og:url" content="http://yoursite.com/2016/12/26/第二章-物理层/index.html">
+<meta property="og:title" content="文件搜索命令">
+<meta property="og:url" content="http://yoursite.com/2017/02/08/文件搜索命令/index.html">
 <meta property="og:site_name" content="胡荣玲个人博客">
-<meta property="og:description" content="计算机网络（第6版）第二章 物理层学习笔记">
-<meta property="og:image" content="http://yoursite.com/images/信源.png">
+<meta property="og:description" content="linux基础知识，常用文件搜索命令用法及区别">
 <meta property="og:image" content="http://yoursite.com/images/reward.jpeg">
-<meta property="og:updated_time" content="2017-02-08T06:43:33.294Z">
+<meta property="og:updated_time" content="2017-02-08T07:24:48.532Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第二章 物理层">
-<meta name="twitter:description" content="计算机网络（第6版）第二章 物理层学习笔记">
-<meta name="twitter:image" content="http://yoursite.com/images/信源.png">
+<meta name="twitter:title" content="文件搜索命令">
+<meta name="twitter:description" content="linux基础知识，常用文件搜索命令用法及区别">
+<meta name="twitter:image" content="http://yoursite.com/images/reward.jpeg">
 
 
 
@@ -117,10 +116,10 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/12/26/第二章-物理层/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/02/08/文件搜索命令/"/>
 
 
-  <title> 第二章 物理层 | 胡荣玲个人博客 </title>
+  <title> 文件搜索命令 | 胡荣玲个人博客 </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -234,7 +233,7 @@
             
             
               
-                第二章 物理层
+                文件搜索命令
               
             
           </h1>
@@ -246,8 +245,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-12-26T09:26:50+08:00" content="2016-12-26">
-              2016-12-26
+            <time itemprop="dateCreated" datetime="2017-02-08T14:55:49+08:00" content="2017-02-08">
+              2017-02-08
             </time>
           </span>
 
@@ -260,8 +259,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">笔记</span>
+                  <a href="/categories/基础/" itemprop="url" rel="index">
+                    <span itemprop="name">基础</span>
                   </a>
                 </span>
 
@@ -276,8 +275,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/12/26/第二章-物理层/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/26/第二章-物理层/" itemprop="commentsCount"></span>
+                <a href="/2017/02/08/文件搜索命令/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/08/文件搜索命令/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -300,25 +299,23 @@
       
 
       
-        <p>计算机网络（第6版）第二章 物理层学习笔记</p>
-<a id="more"></a>
-<h2 id="一-物理层的主要任务"><a href="#一-物理层的主要任务" class="headerlink" title="一.物理层的主要任务"></a>一.物理层的主要任务</h2><p>确定与传输媒体的接口有关的一些特性<br>1.机械特性  2.电气特性  3.功能特性  4.过程特性  5.完成传输方式的转换[计算机并行传输——&gt;通信链路串行传输;由适配器完成该任务，适配器工作在物理层和数据链路层]</p>
-<h2 id="二-数据通信"><a href="#二-数据通信" class="headerlink" title="二.数据通信"></a>二.数据通信</h2><p>1.模型：源系统（信源）——&gt;传输系统（信道）——&gt;目的系统（信宿）<br>2.数据是运送消息的实体<br>3.信号：数据的电气或电磁的表现（模拟信号，数字信号）<br>4.码元：代表不同离散数值的基本波形；二进制编码只有0，1两种码元<br>5.信息交互方式：单向通信（单工通信），双向交替通信（半双工通信）,双向同时通信（全双工通信）<br>6.信源<br><img src="/images/信源.png" alt="信源">  </p>
-<h2 id="三-信道的极限容量"><a href="#三-信道的极限容量" class="headerlink" title="三.信道的极限容量"></a>三.信道的极限容量</h2><blockquote>
-<p>1.在任何信道中，码元传输速率有上限，超过会出现码间串扰<br>2.香浓公式表明，信道的带宽（w）或信道中的信噪比越大，信息的极限传输速率就越高<br>3.除了提高信道带宽或信噪比，还可用编码的方法让每一个码元携带更多比特的信息量  </p>
+        <p>linux基础知识，常用文件搜索命令用法及区别<br><a id="more"></a></p>
+<h2 id="locate"><a href="#locate" class="headerlink" title="locate"></a>locate</h2><p>用法：locate 文件名<br>优点：搜索速度快<br>缺点：只能按文件名搜索。对于新建的文件，只有更新数据库后才能被检索到，系统自定义是每天检索一次（用户可以使用updatedb命令手动更新数据库）  </p>
+<h2 id="whereis-搜索命令所在路径及帮助文档所在位置"><a href="#whereis-搜索命令所在路径及帮助文档所在位置" class="headerlink" title="whereis 搜索命令所在路径及帮助文档所在位置"></a>whereis 搜索命令所在路径及帮助文档所在位置</h2><p>用法：whereis 命令名   </p>
+<h2 id="which-搜索命令所在路径及别名"><a href="#which-搜索命令所在路径及别名" class="headerlink" title="which 搜索命令所在路径及别名"></a>which 搜索命令所在路径及别名</h2><p>用法：which 命令名<br>whereis跟which找不到shell自带的命令，如cd  </p>
+<h2 id="find-搜索文件"><a href="#find-搜索文件" class="headerlink" title="find 搜索文件"></a>find 搜索文件</h2><p>用法：find 搜索范围 搜索条件 文件名  </p>
+<blockquote>
+<p>find  /  -name  in[ab].c  </p>
 </blockquote>
-<h2 id="四-物理层下面的传输媒体"><a href="#四-物理层下面的传输媒体" class="headerlink" title="四.物理层下面的传输媒体"></a>四.物理层下面的传输媒体</h2><blockquote>
-<p>1.导引型传输媒体：双绞线，同轴电缆，光缆<br>2.非导引型传输媒体：自由空间（微波接力通信，卫星通信）  </p>
+<p>find命令搜的是文件名完全一致的文件,如果想模糊匹配,需要用通配符<br>|字符|含义|<br>|—-|—-|<br>| * |匹配0或多个字符|<br>| ? |匹配任意一个字符|<br>|[list] |匹配list中的任意单一字符|<br>|[!list] |匹配除list中的任意单一字符以外的字符|<br>|[c1-c2] |匹配c1-c2中的任意单一字符,如：[0-9] [a-z]|<br>|{string1,string2,…}|匹配sring1或string2(或更多)其一字符串|<br>|{c1..c2} |匹配c1-c2中全部字符,如{1..10}|  </p>
+<p>搜索条件：  </p>
+<blockquote>
+<p>-name –i（文件名忽略大小写）<br>–atime（文件访问时间）<br>-ctime（文件属性改变时间）<br>-mtime（文件内容修改时间）  </p>
+<blockquote>
+<p>find /var/log/ -mtime +10   #查找10天前修改的文件<br>-size（文件大小）<br>find /etc/ -size +20k –a –size -50k<br>查找/etc/目录下大于20kb并且小于50kb的文件（-a是and逻辑与，-o是-or逻辑或，+是大于，-是小于，没有符号是等于）<br>-inum（i节点）<br>–exec 命令 {}\; （执行查找到的文件）<br>find  /root –inum 262421 –exec rm –rf {}\;  </p>
 </blockquote>
-<h2 id="五-信道复用技术"><a href="#五-信道复用技术" class="headerlink" title="五.信道复用技术"></a>五.信道复用技术</h2><blockquote>
-<p>1.频分复用（FDM）：将信道分为不同的频带，每个用户分配一定的频带<br>2.时分复用（TDM）：将时间划分为一段段等长的时分复用帧<br>3.统计时分复用（STDM）：信道划分为等长的时分复用帧，但数据要先发往集中器的输入缓存，再发送出去，没有数据的帧跳过<br>4.波分复用（WDM）：光的频分复用<br>5.码分复用（CDM）/码分多址（CDMA）：各用户使用经过特殊挑选的不同码型，可在同样的频带同时进行通信而互不干扰  </p>
 </blockquote>
-<h2 id="六-数字传输系统"><a href="#六-数字传输系统" class="headerlink" title="六.数字传输系统"></a>六.数字传输系统</h2><blockquote>
-<p>1.SONET(Synchronous Optical Network)同步光纤网<br>2.SDH(Synchronous Digital Hierarchy)同步数字系列，以SONET为基础  </p>
-</blockquote>
-<h2 id="七-宽带接入技术"><a href="#七-宽带接入技术" class="headerlink" title="七.宽带接入技术"></a>七.宽带接入技术</h2><blockquote>
-<p>1.ADDL技术：非对称数字用户线；采用自适应调制技术，不能保证固定的数据率<br>2.光纤同轴混合网（HFC网）<br>3.FTTx技术  </p>
-</blockquote>
+<h2 id="grep-在文件中匹配符合条件的字符串，为包含匹配，使用正则表达式进行匹配"><a href="#grep-在文件中匹配符合条件的字符串，为包含匹配，使用正则表达式进行匹配" class="headerlink" title="grep  在文件中匹配符合条件的字符串，为包含匹配，使用正则表达式进行匹配"></a>grep  在文件中匹配符合条件的字符串，为包含匹配，使用正则表达式进行匹配</h2><p>格式：grep [选项] 字符串 文件名<br>-i：忽略大小写<br>-v：排除指定字符串  </p>
 <p><div id="donate_guide" class="donate_bar center hidden"><a href="/images/reward.jpeg" title="微信打赏" class="fancybox" rel="article0"><img src="/images/reward.jpeg" title="微信打赏" height="164px" width="164px"></a> <div align="center">您的支持是对我最大的鼓励！</div></div> <script type="text/javascript">document.getElementById(‘btn_donate’).onclick = function(){$(‘#donate_board’).addClass(‘hidden’); $(‘#donate_guide’).removeClass(‘hidden’);}</script></p>
 
       
@@ -342,7 +339,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/计算机网络/" rel="tag">#计算机网络</a>
+            <a href="/tags/linux/" rel="tag">#linux</a>
           
         </div>
       
@@ -351,17 +348,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/12/19/第一章-概述/" rel="next" title="第一章 概述">
-                <i class="fa fa-chevron-left"></i> 第一章 概述
+              <a href="/2017/02/08/第六章-应用层-课后习题答案整理/" rel="next" title="第六章 应用层 课后习题答案整理">
+                <i class="fa fa-chevron-left"></i> 第六章 应用层 课后习题答案整理
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/12/26/使用markdown/" rel="prev" title="使用markdown">
-                使用markdown <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -387,8 +380,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/12/26/第二章-物理层/"
-           data-title="第二章 物理层" data-url="http://yoursite.com/2016/12/26/第二章-物理层/">
+      <div class="ds-thread" data-thread-key="2017/02/08/文件搜索命令/"
+           data-title="文件搜索命令" data-url="http://yoursite.com/2017/02/08/文件搜索命令/">
       </div>
     
   </div>
@@ -479,7 +472,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-物理层的主要任务"><span class="nav-number">1.</span> <span class="nav-text">一.物理层的主要任务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-数据通信"><span class="nav-number">2.</span> <span class="nav-text">二.数据通信</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三-信道的极限容量"><span class="nav-number">3.</span> <span class="nav-text">三.信道的极限容量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四-物理层下面的传输媒体"><span class="nav-number">4.</span> <span class="nav-text">四.物理层下面的传输媒体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五-信道复用技术"><span class="nav-number">5.</span> <span class="nav-text">五.信道复用技术</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六-数字传输系统"><span class="nav-number">6.</span> <span class="nav-text">六.数字传输系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#七-宽带接入技术"><span class="nav-number">7.</span> <span class="nav-text">七.宽带接入技术</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#locate"><span class="nav-number">1.</span> <span class="nav-text">locate</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#whereis-搜索命令所在路径及帮助文档所在位置"><span class="nav-number">2.</span> <span class="nav-text">whereis 搜索命令所在路径及帮助文档所在位置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#which-搜索命令所在路径及别名"><span class="nav-number">3.</span> <span class="nav-text">which 搜索命令所在路径及别名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#find-搜索文件"><span class="nav-number">4.</span> <span class="nav-text">find 搜索文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#grep-在文件中匹配符合条件的字符串，为包含匹配，使用正则表达式进行匹配"><span class="nav-number">5.</span> <span class="nav-text">grep  在文件中匹配符合条件的字符串，为包含匹配，使用正则表达式进行匹配</span></a></li></ol></div>
             
           </div>
         </section>
