@@ -91,7 +91,7 @@
 <meta property="og:site_name" content="胡荣玲个人博客">
 <meta property="og:description" content="linux基础知识，常用文件搜索命令用法及区别">
 <meta property="og:image" content="http://yoursite.com/images/reward.jpeg">
-<meta property="og:updated_time" content="2017-02-08T07:24:48.532Z">
+<meta property="og:updated_time" content="2017-02-08T07:37:10.270Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="文件搜索命令">
 <meta name="twitter:description" content="linux基础知识，常用文件搜索命令用法及区别">
@@ -307,14 +307,27 @@
 <blockquote>
 <p>find  /  -name  in[ab].c  </p>
 </blockquote>
-<p>find命令搜的是文件名完全一致的文件,如果想模糊匹配,需要用通配符<br>|字符|含义|<br>|—-|—-|<br>| * |匹配0或多个字符|<br>| ? |匹配任意一个字符|<br>|[list] |匹配list中的任意单一字符|<br>|[!list] |匹配除list中的任意单一字符以外的字符|<br>|[c1-c2] |匹配c1-c2中的任意单一字符,如：[0-9] [a-z]|<br>|{string1,string2,…}|匹配sring1或string2(或更多)其一字符串|<br>|{c1..c2} |匹配c1-c2中全部字符,如{1..10}|  </p>
+<p>find命令搜的是文件名完全一致的文件,如果想模糊匹配,需要用通配符<br>|字符|含义|<br>|—-|—-|<br>| <code>*</code> |匹配0或多个字符|<br>| <code>?</code> |匹配任意一个字符|<br>|<code>[list]</code> |匹配list中的任意单一字符|<br>|<code>[!list]</code> |匹配除list中的任意单一字符以外的字符|<br>|<code>[c1-c2]</code> |匹配c1<code>-</code>c2中的任意单一字符,如：<code>[0-9] [a-z]</code>|<br>|<code>{string1,string2,...}</code>|匹配sring1或string2(或更多)其一字符串|<br>|<code>{c1..c2}</code> |匹配<code>c1-c2</code>中全部字符,如<code>{1..10}</code>|  </p>
 <p>搜索条件：  </p>
-<blockquote>
-<p>-name –i（文件名忽略大小写）<br>–atime（文件访问时间）<br>-ctime（文件属性改变时间）<br>-mtime（文件内容修改时间）  </p>
-<blockquote>
-<p>find /var/log/ -mtime +10   #查找10天前修改的文件<br>-size（文件大小）<br>find /etc/ -size +20k –a –size -50k<br>查找/etc/目录下大于20kb并且小于50kb的文件（-a是and逻辑与，-o是-or逻辑或，+是大于，-是小于，没有符号是等于）<br>-inum（i节点）<br>–exec 命令 {}\; （执行查找到的文件）<br>find  /root –inum 262421 –exec rm –rf {}\;  </p>
-</blockquote>
-</blockquote>
+<ol>
+<li>-name –i（文件名忽略大小写）    </li>
+<li>–atime（文件访问时间）  </li>
+<li>-ctime（文件属性改变时间）   </li>
+<li>-mtime（文件内容修改时间）  <ul>
+<li>find /var/log/ -mtime +10   #查找10天前修改的文件  </li>
+</ul>
+</li>
+<li>-size（文件大小）  <ul>
+<li>find /etc/ -size +20k –a –size -50k   </li>
+<li>查找/etc/目录下大于20kb并且小于50kb的文件（-a是and逻辑与，-o是-or逻辑或，+是大于，-是小于，没有符号是等于）  </li>
+</ul>
+</li>
+<li>-inum（i节点）  </li>
+<li>–exec 命令 {}\; （执行查找到的文件）  <ul>
+<li>find  /root –inum 262421 –exec rm –rf {}\;  </li>
+</ul>
+</li>
+</ol>
 <h2 id="grep-在文件中匹配符合条件的字符串，为包含匹配，使用正则表达式进行匹配"><a href="#grep-在文件中匹配符合条件的字符串，为包含匹配，使用正则表达式进行匹配" class="headerlink" title="grep  在文件中匹配符合条件的字符串，为包含匹配，使用正则表达式进行匹配"></a>grep  在文件中匹配符合条件的字符串，为包含匹配，使用正则表达式进行匹配</h2><p>格式：grep [选项] 字符串 文件名<br>-i：忽略大小写<br>-v：排除指定字符串  </p>
 <p><div id="donate_guide" class="donate_bar center hidden"><a href="/images/reward.jpeg" title="微信打赏" class="fancybox" rel="article0"><img src="/images/reward.jpeg" title="微信打赏" height="164px" width="164px"></a> <div align="center">您的支持是对我最大的鼓励！</div></div> <script type="text/javascript">document.getElementById(‘btn_donate’).onclick = function(){$(‘#donate_board’).addClass(‘hidden’); $(‘#donate_guide’).removeClass(‘hidden’);}</script></p>
 
