@@ -91,7 +91,7 @@
 <meta property="og:site_name" content="胡荣玲个人博客">
 <meta property="og:description" content="linux基础知识，常用文件搜索命令用法及区别">
 <meta property="og:image" content="http://yoursite.com/images/reward.jpeg">
-<meta property="og:updated_time" content="2017-02-08T07:37:10.270Z">
+<meta property="og:updated_time" content="2017-02-08T07:48:26.822Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="文件搜索命令">
 <meta name="twitter:description" content="linux基础知识，常用文件搜索命令用法及区别">
@@ -307,7 +307,7 @@
 <blockquote>
 <p>find  /  -name  in[ab].c  </p>
 </blockquote>
-<p>find命令搜的是文件名完全一致的文件,如果想模糊匹配,需要用通配符<br>|字符|含义|<br>|—-|—-|<br>| <code>*</code> |匹配0或多个字符|<br>| <code>?</code> |匹配任意一个字符|<br>|<code>[list]</code> |匹配list中的任意单一字符|<br>|<code>[!list]</code> |匹配除list中的任意单一字符以外的字符|<br>|<code>[c1-c2]</code> |匹配c1<code>-</code>c2中的任意单一字符,如：<code>[0-9] [a-z]</code>|<br>|<code>{string1,string2,...}</code>|匹配sring1或string2(或更多)其一字符串|<br>|<code>{c1..c2}</code> |匹配<code>c1-c2</code>中全部字符,如<code>{1..10}</code>|  </p>
+<p>find命令搜的是文件名完全一致的文件,如果想模糊匹配,需要用通配符<br><code>*</code>       匹配0或多个字符<br><code>?</code>       匹配任意一个字符<br><code>[list]</code>  匹配list中的任意单一字符<br><code>[!list]</code> 匹配除list中的任意单一字符以外的字符<br><code>[c1-c2]</code> 匹配c1-c2中的任意单一字符,如：[0-9] [a-z]<br><code>{string1,string2,...}</code>匹配sring1或string2(或更多)其一字符串<br><code>{c1..c2}</code> 匹配c1-c2中全部字符,如{1..10}  </p>
 <p>搜索条件：  </p>
 <ol>
 <li>-name –i（文件名忽略大小写）    </li>
@@ -328,7 +328,11 @@
 </ul>
 </li>
 </ol>
-<h2 id="grep-在文件中匹配符合条件的字符串，为包含匹配，使用正则表达式进行匹配"><a href="#grep-在文件中匹配符合条件的字符串，为包含匹配，使用正则表达式进行匹配" class="headerlink" title="grep  在文件中匹配符合条件的字符串，为包含匹配，使用正则表达式进行匹配"></a>grep  在文件中匹配符合条件的字符串，为包含匹配，使用正则表达式进行匹配</h2><p>格式：grep [选项] 字符串 文件名<br>-i：忽略大小写<br>-v：排除指定字符串  </p>
+<h2 id="grep-在文件中匹配符合条件的字符串"><a href="#grep-在文件中匹配符合条件的字符串" class="headerlink" title="grep 在文件中匹配符合条件的字符串"></a>grep 在文件中匹配符合条件的字符串</h2><p>格式：grep [选项] 字符串 文件名<br>-i：忽略大小写<br>-v：排除指定字符串  </p>
+<h2 id="find命令与grep命令的区别"><a href="#find命令与grep命令的区别" class="headerlink" title="find命令与grep命令的区别"></a>find命令与grep命令的区别</h2><ul>
+<li>find命令：在系统中搜索符合条件的文件名，如果需要匹配，使用通配符匹配，通配符是完全匹配  </li>
+<li>grep命令：在文件当中搜索符合条件的字符串，如果需要匹配，使用正则表达式进行匹配，为包含匹配  </li>
+</ul>
 <p><div id="donate_guide" class="donate_bar center hidden"><a href="/images/reward.jpeg" title="微信打赏" class="fancybox" rel="article0"><img src="/images/reward.jpeg" title="微信打赏" height="164px" width="164px"></a> <div align="center">您的支持是对我最大的鼓励！</div></div> <script type="text/javascript">document.getElementById(‘btn_donate’).onclick = function(){$(‘#donate_board’).addClass(‘hidden’); $(‘#donate_guide’).removeClass(‘hidden’);}</script></p>
 
       
@@ -368,6 +372,10 @@
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/02/08/帮助命令/" rel="prev" title="帮助命令">
+                帮助命令 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -439,7 +447,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">16</span>
+              <span class="site-state-item-count">17</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -485,7 +493,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#locate"><span class="nav-number">1.</span> <span class="nav-text">locate</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#whereis-搜索命令所在路径及帮助文档所在位置"><span class="nav-number">2.</span> <span class="nav-text">whereis 搜索命令所在路径及帮助文档所在位置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#which-搜索命令所在路径及别名"><span class="nav-number">3.</span> <span class="nav-text">which 搜索命令所在路径及别名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#find-搜索文件"><span class="nav-number">4.</span> <span class="nav-text">find 搜索文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#grep-在文件中匹配符合条件的字符串，为包含匹配，使用正则表达式进行匹配"><span class="nav-number">5.</span> <span class="nav-text">grep  在文件中匹配符合条件的字符串，为包含匹配，使用正则表达式进行匹配</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#locate"><span class="nav-number">1.</span> <span class="nav-text">locate</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#whereis-搜索命令所在路径及帮助文档所在位置"><span class="nav-number">2.</span> <span class="nav-text">whereis 搜索命令所在路径及帮助文档所在位置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#which-搜索命令所在路径及别名"><span class="nav-number">3.</span> <span class="nav-text">which 搜索命令所在路径及别名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#find-搜索文件"><span class="nav-number">4.</span> <span class="nav-text">find 搜索文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#grep-在文件中匹配符合条件的字符串"><span class="nav-number">5.</span> <span class="nav-text">grep 在文件中匹配符合条件的字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#find命令与grep命令的区别"><span class="nav-number">6.</span> <span class="nav-text">find命令与grep命令的区别</span></a></li></ol></div>
             
           </div>
         </section>

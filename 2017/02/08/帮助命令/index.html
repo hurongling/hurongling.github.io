@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="计算机网络," />
+  <meta name="keywords" content="linux," />
 
 
 
@@ -84,21 +84,18 @@
 
 
 
-<meta name="description" content="计算机网络（第6版）第三章 数据链路层学习笔记">
+<meta name="description" content="linux基础知识，常用帮助命令用法及区别">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第三章 数据链路层">
-<meta property="og:url" content="http://yoursite.com/2017/01/14/第三章-数据链路层 /index.html">
+<meta property="og:title" content="帮助命令">
+<meta property="og:url" content="http://yoursite.com/2017/02/08/帮助命令/index.html">
 <meta property="og:site_name" content="胡荣玲个人博客">
-<meta property="og:description" content="计算机网络（第6版）第三章 数据链路层学习笔记">
-<meta property="og:image" content="http://yoursite.com/images/ppp帧.png">
-<meta property="og:image" content="http://oi1ylq4ab.bkt.clouddn.com/%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%80%9A%E8%BF%87%E9%80%82%E9%85%8D%E5%99%A8%E5%92%8C%E5%B1%80%E5%9F%9F%E7%BD%91%E8%BF%9B%E8%A1%8C%E9%80%9A%E4%BF%A1.png">
-<meta property="og:image" content="http://oi1ylq4ab.bkt.clouddn.com/MAC%E5%B8%A7%20%E7%9A%84%E6%A0%BC%E5%BC%8F.png">
+<meta property="og:description" content="linux基础知识，常用帮助命令用法及区别">
 <meta property="og:image" content="http://yoursite.com/images/reward.jpeg">
-<meta property="og:updated_time" content="2017-02-08T06:43:53.743Z">
+<meta property="og:updated_time" content="2017-02-08T09:10:46.293Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第三章 数据链路层">
-<meta name="twitter:description" content="计算机网络（第6版）第三章 数据链路层学习笔记">
-<meta name="twitter:image" content="http://yoursite.com/images/ppp帧.png">
+<meta name="twitter:title" content="帮助命令">
+<meta name="twitter:description" content="linux基础知识，常用帮助命令用法及区别">
+<meta name="twitter:image" content="http://yoursite.com/images/reward.jpeg">
 
 
 
@@ -119,10 +116,10 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/01/14/第三章-数据链路层 /"/>
+  <link rel="canonical" href="http://yoursite.com/2017/02/08/帮助命令/"/>
 
 
-  <title> 第三章 数据链路层 | 胡荣玲个人博客 </title>
+  <title> 帮助命令 | 胡荣玲个人博客 </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -236,7 +233,7 @@
             
             
               
-                第三章 数据链路层
+                帮助命令
               
             
           </h1>
@@ -248,8 +245,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-01-14T10:04:50+08:00" content="2017-01-14">
-              2017-01-14
+            <time itemprop="dateCreated" datetime="2017-02-08T15:49:14+08:00" content="2017-02-08">
+              2017-02-08
             </time>
           </span>
 
@@ -262,8 +259,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">笔记</span>
+                  <a href="/categories/基础/" itemprop="url" rel="index">
+                    <span itemprop="name">基础</span>
                   </a>
                 </span>
 
@@ -278,8 +275,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/01/14/第三章-数据链路层 /#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/14/第三章-数据链路层 /" itemprop="commentsCount"></span>
+                <a href="/2017/02/08/帮助命令/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/08/帮助命令/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -302,57 +299,48 @@
       
 
       
-        <p>计算机网络（第6版）第三章 数据链路层学习笔记</p>
-<a id="more"></a>
-<h2 id="一-使用点对点信道的数据链路层——三个基本问题"><a href="#一-使用点对点信道的数据链路层——三个基本问题" class="headerlink" title="一.使用点对点信道的数据链路层——三个基本问题"></a>一.使用点对点信道的数据链路层——三个基本问题</h2><p>1.封装成帧：在一段数据的前后分别添加首部和尾部（用控制字符进行帧定）<br>2.透明传输  </p>
-<blockquote>
-<p>透明：某个实际存在的事物看起来却是好像不存在一样<br>透明传输要注意的问题：数据部分出现SOH（帧开始符00000001）和EOT（帧结束符00000100）被误认为控制符<br>解决办法：字节填充（插入转义字符ESC，到接收端再删掉）  </p>
+        <p>linux基础知识，常用帮助命令用法及区别<br><a id="more"></a></p>
+<h2 id="man"><a href="#man" class="headerlink" title="man"></a>man</h2><ol>
+<li><p>区段及说明</p>
+<ul>
+<li>1 一般命令<ul>
+<li>2 统调用</li>
+<li>3 库函数，涵盖了C标准函数库</li>
+<li>4 特殊文件（通常是/dev中的设备）和驱动程序</li>
+<li>5 文件格式和约定</li>
+<li>6 游戏和屏保</li>
+<li>7 杂项</li>
+<li>8 系统管理命令和守护进程<blockquote>
+<p>man –f 命令<br>查看该命令提供哪些帮助区段，相当于<code>whatis 命令</code><br>要查看相应区段的内容，在man后面加上相应区段的数字即可，如：<br>man 1 ls  </p>
 </blockquote>
-<p>3.差错检测（特指比特差错）  </p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>区段1格式</p>
+<ul>
+<li>NAME（名称） 该命令或函数的名称，接着是一行简介。</li>
+<li>SYNOPSIS（概要） 对于命令，正式的描述它如何运行，以及需要什么样的命令行参数。对于函数，介绍函数所需的参数，以及哪个头文件包含该函数的定义。</li>
+<li>DESCRIPTION（说明） 命令或函数功能的文本描述。</li>
+<li>EXAMPLES（示例） 常用的一些示例。</li>
+<li>SEE ALSO（参见)  相关命令或函数的列表。</li>
+</ul>
+</li>
+<li><p>在 man 中使用搜索</p>
 <blockquote>
-<p>1.循环冗余检测CRC（Cyclic Redundancy Check）:根据CRC的生成多式得出除数P，在每组后面加（p-1）位冗余码，在接收端用p除接收到的数，如果除数为0说明无差错。FCS为（帧检验序列）<br>2.”无比特差错”与”无传输差错”的区别：无比特差错指无差错接受，还不是可靠传输<br>3.通信质量好的有线传输链路，数据链路层不使用确认和重传机制，改正差错的任务由上层协议完成，对于通信质量较差的无线传输链路，数据链路向上提供可靠传输的服务  </p>
+<p>/&lt;你要搜索的关键字&gt;<br>n键切换到下一个关键字所在处<br>shift+n切到上一个关键字所在处<br>Space(空格键)翻页<br>Enter(回车键)向下滚动一行<br>j,k（vim编辑器的移动键）进行向前向后滚动一行<br>h键显示使用帮助(因为man使用less作为阅读器，实为less工具的帮助)<br>q退出  </p>
 </blockquote>
-<h2 id="二-点对点协议PPP"><a href="#二-点对点协议PPP" class="headerlink" title="二.点对点协议PPP"></a>二.点对点协议PPP</h2><p>1.PPP协议：用户计算机和ISP进行通信时所使用的数据链路层协议<br>2.ppp协议应满足的需求  </p>
+</li>
+<li><p><code>man –k 命令</code>相当于<code>apropos 命令</code>  </p>
 <blockquote>
-<p>简单（首要需求）——CRC检验，无差错接受<br>封装成帧——帧定界符<br>透明性——字节填充，零比特填充（在发送方，只要连续出现5个1，即填入一个0，在接受端，只要连续出现5个1，即把后面的0去掉）<br>支持多种网络层协议<br>能在多种类型的链路上运行——串行或并行，同步或异步，高速或低速，电或光，交换或非交换的点对点链路<br>不支持多点线路，只支持全双工链路  </p>
+<p>列出所有包含该命令关键字帮助信息  </p>
 </blockquote>
-<p><img src="/images/ppp帧.png" alt="ppp帧">  </p>
-<h2 id="三-使用广播信道的数据链路层"><a href="#三-使用广播信道的数据链路层" class="headerlink" title="三.使用广播信道的数据链路层"></a>三.使用广播信道的数据链路层</h2><p>1.传统以太网指DIX Ethernet V2标准的局域网，速率为10mb/s<br>2.适配器的重要功能  </p>
-<blockquote>
-<p>进行数据串行传输和并行传输的转换（工作在数据链路层+物理层）<br>过滤功能，所有适配器能识别一对一的<strong>单播帧</strong>和一对多的<strong>广播帧</strong>，部分适配器能用编程的方法识别<strong>多播帧</strong>（一对多）  </p>
-</blockquote>
-<p><img src="http://oi1ylq4ab.bkt.clouddn.com/%E8%AE%A1%E7%AE%97%E6%9C%BA%E9%80%9A%E8%BF%87%E9%80%82%E9%85%8D%E5%99%A8%E5%92%8C%E5%B1%80%E5%9F%9F%E7%BD%91%E8%BF%9B%E8%A1%8C%E9%80%9A%E4%BF%A1.png" alt="计算机通过适配器和局域网进行通信"><br>3.CSMA/CD协议(载波监听多点接入/碰撞检测)要点：  </p>
-<blockquote>
-<p>发送前先监听，边发送边监听，一旦发现总线上出现了碰撞，就立即停止发送，然后按照退避算法等待一段随机时间后再次发送。以太网上各站点都平等地争用以太网信道  </p>
-</blockquote>
-<p>4.10MB/s以太网规定最短帧长64字节，即512bit，帧间最短间隔为96bit，争用期为512bit  </p>
-<h2 id="四-使用广播信道的以太网"><a href="#四-使用广播信道的以太网" class="headerlink" title="四.使用广播信道的以太网"></a>四.使用广播信道的以太网</h2><p>1.使用集线器的星型拓扑10BASE-T双绞线以太网的出现是局域网发展史上一个非常重要的历程杯。<br>2.集线器的一些特点：  </p>
-<blockquote>
-<p>使用双绞线的以太网在逻辑上仍是一个总线网（各站中的适配器使用CSMA/CD协议）<br>一个集线器有很多接口<br>集线器工作在物理层，不进行碰撞检测<br>集线器采用专门芯片，进行自适串音回拨抵消  </p>
-</blockquote>
-<p>3.参数a=单程端到端时延/帧的发送时间<br>  a越大表明争用期所占比例增大，使得信道利用率降低，a的值应尽可能小些。单程端到端时延与以太网连线长度有关，帧的发送时间与帧的长短有关<br>4.以太网的MAC层——48位的全球地址<br><img src="http://oi1ylq4ab.bkt.clouddn.com/MAC%E5%B8%A7%20%E7%9A%84%E6%A0%BC%E5%BC%8F.png" alt="MAC帧的格式">  </p>
-<blockquote>
-<p>MAC帧有效长度为64~1518字节，合理长度为512字节<br>数据字段小于46会进行填充（因为MAC头部加FCS尾部一共占了18字节），由IP数据报的”总长度”字段知道是否需要进行填充<br>以太网在传送帧时，不需要帧结束符，因为各帧间有间隙96bit<br>在SONET/SD进行同步传输时不需要前同步码  </p>
-</blockquote>
-<h2 id="五-扩展的以太网"><a href="#五-扩展的以太网" class="headerlink" title="五.扩展的以太网"></a>五.扩展的以太网</h2><p>1.在物理层扩展以太网，使用集线器<br>2.在数据链路层扩展以太网，使用网桥（过滤，转发）  </p>
-<blockquote>
-<p>网桥依靠转发来转发帧<br>网桥使各网段成为隔离开的碰撞域<br>目前使用最多的网桥——透明网桥  </p>
-<blockquote>
-<p>以太网上的站点不知道所发送的帧将进过哪几个网桥<br>即插即用设备<br>自学习算法，生成树算法（避免兜圈子）<br>多接口网桥——以太网交换机<br>n个端口实现n倍带宽<br>实现虚拟局域网VLAN（逻辑组）——限制广播风暴  </p>
-</blockquote>
-</blockquote>
-<h2 id="六-高速以太网"><a href="#六-高速以太网" class="headerlink" title="六.高速以太网"></a>六.高速以太网</h2><p>1.100BASE-T以太网  </p>
-<blockquote>
-<p>不使用CSMA/CD协议，可在全双工下工作而无冲突发生<br>使用是帧格式仍是IEEE802.3标准规定是帧格式，所以还属于以太网局域网<br>最短帧长64字节，争用期51.2bit，帧间最短间隔9.6bit  </p>
-</blockquote>
-<p>2.吉比特以太网  </p>
-<blockquote>
-<p>允许在1Gb/s下全双工和半双工两种方式工作<br>帧格式也是使用IEEE802.3标准规定是帧格式，为此，与10BASE-T与100BASE-T技术向后兼容<br>半双工用CSMA/CD协议，全双工不用<br>采用<strong>载波延伸</strong>和<strong>分组突发</strong>,且将争用期改为512字节，使得在加快速率的情况下，最短帧仍为64字节  </p>
-</blockquote>
-<p>3.10吉比特以太网  </p>
-<blockquote>
-<p>只工作在全双工方式<br>帧格式不变  </p>
-</blockquote>
+</li>
+</ol>
+<h2 id="选项帮助命令–-help"><a href="#选项帮助命令–-help" class="headerlink" title="选项帮助命令– help"></a>选项帮助命令– help</h2><p>命令  –help  </p>
+<h2 id="Shell-内部命令帮助"><a href="#Shell-内部命令帮助" class="headerlink" title="Shell 内部命令帮助"></a>Shell 内部命令帮助</h2><p>help  shell内部命令  </p>
+<h2 id="详细命令帮助"><a href="#详细命令帮助" class="headerlink" title="详细命令帮助"></a>详细命令帮助</h2><p>info  命令  </p>
 <p><div id="donate_guide" class="donate_bar center hidden"><a href="/images/reward.jpeg" title="微信打赏" class="fancybox" rel="article0"><img src="/images/reward.jpeg" title="微信打赏" height="164px" width="164px"></a> <div align="center">您的支持是对我最大的鼓励！</div></div> <script type="text/javascript">document.getElementById(‘btn_donate’).onclick = function(){$(‘#donate_board’).addClass(‘hidden’); $(‘#donate_guide’).removeClass(‘hidden’);}</script></p>
 
       
@@ -376,7 +364,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/计算机网络/" rel="tag">#计算机网络</a>
+            <a href="/tags/linux/" rel="tag">#linux</a>
           
         </div>
       
@@ -385,17 +373,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/12/26/使用markdown/" rel="next" title="使用markdown">
-                <i class="fa fa-chevron-left"></i> 使用markdown
+              <a href="/2017/02/08/文件搜索命令/" rel="next" title="文件搜索命令">
+                <i class="fa fa-chevron-left"></i> 文件搜索命令
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/01/14/第四章-网络层-md/" rel="prev" title="第四章-网络层.md">
-                第四章-网络层.md <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -421,8 +405,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/01/14/第三章-数据链路层 /"
-           data-title="第三章 数据链路层" data-url="http://yoursite.com/2017/01/14/第三章-数据链路层 /">
+      <div class="ds-thread" data-thread-key="2017/02/08/帮助命令/"
+           data-title="帮助命令" data-url="http://yoursite.com/2017/02/08/帮助命令/">
       </div>
     
   </div>
@@ -513,7 +497,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-使用点对点信道的数据链路层——三个基本问题"><span class="nav-number">1.</span> <span class="nav-text">一.使用点对点信道的数据链路层——三个基本问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-点对点协议PPP"><span class="nav-number">2.</span> <span class="nav-text">二.点对点协议PPP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三-使用广播信道的数据链路层"><span class="nav-number">3.</span> <span class="nav-text">三.使用广播信道的数据链路层</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四-使用广播信道的以太网"><span class="nav-number">4.</span> <span class="nav-text">四.使用广播信道的以太网</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五-扩展的以太网"><span class="nav-number">5.</span> <span class="nav-text">五.扩展的以太网</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六-高速以太网"><span class="nav-number">6.</span> <span class="nav-text">六.高速以太网</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#man"><span class="nav-number">1.</span> <span class="nav-text">man</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选项帮助命令–-help"><span class="nav-number">2.</span> <span class="nav-text">选项帮助命令– help</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Shell-内部命令帮助"><span class="nav-number">3.</span> <span class="nav-text">Shell 内部命令帮助</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#详细命令帮助"><span class="nav-number">4.</span> <span class="nav-text">详细命令帮助</span></a></li></ol></div>
             
           </div>
         </section>
