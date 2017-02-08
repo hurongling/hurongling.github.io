@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="linux," />
+  <meta name="keywords" content="计算机网络," />
 
 
 
@@ -84,19 +84,18 @@
 
 
 
-<meta name="description" content="linux基础知识，软连接与硬链接的区别">
+<meta name="description" content="《计算机网络（第六版）》部分课后习题答案整理，第五章 传输层">
 <meta property="og:type" content="article">
-<meta property="og:title" content="软连接与硬链接的区别">
-<meta property="og:url" content="http://yoursite.com/2017/02/07/软连接与硬链接的区别/index.html">
+<meta property="og:title" content="第五章 传输层 课后习题答案整理">
+<meta property="og:url" content="http://yoursite.com/2017/02/08/第五章-传输层-课后习题答案整理/index.html">
 <meta property="og:site_name" content="胡荣玲个人博客">
-<meta property="og:description" content="linux基础知识，软连接与硬链接的区别">
-<meta property="og:image" content="http://oi1ylq4ab.bkt.clouddn.com/hard_soft.jpg">
+<meta property="og:description" content="《计算机网络（第六版）》部分课后习题答案整理，第五章 传输层">
 <meta property="og:image" content="http://yoursite.com/images/reward.jpeg">
-<meta property="og:updated_time" content="2017-02-07T12:54:08.062Z">
+<meta property="og:updated_time" content="2017-02-08T06:34:28.803Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="软连接与硬链接的区别">
-<meta name="twitter:description" content="linux基础知识，软连接与硬链接的区别">
-<meta name="twitter:image" content="http://oi1ylq4ab.bkt.clouddn.com/hard_soft.jpg">
+<meta name="twitter:title" content="第五章 传输层 课后习题答案整理">
+<meta name="twitter:description" content="《计算机网络（第六版）》部分课后习题答案整理，第五章 传输层">
+<meta name="twitter:image" content="http://yoursite.com/images/reward.jpeg">
 
 
 
@@ -117,10 +116,10 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/07/软连接与硬链接的区别/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/02/08/第五章-传输层-课后习题答案整理/"/>
 
 
-  <title> 软连接与硬链接的区别 | 胡荣玲个人博客 </title>
+  <title> 第五章 传输层 课后习题答案整理 | 胡荣玲个人博客 </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -234,7 +233,7 @@
             
             
               
-                软连接与硬链接的区别
+                第五章 传输层 课后习题答案整理
               
             
           </h1>
@@ -246,8 +245,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-02-07T20:21:47+08:00" content="2017-02-07">
-              2017-02-07
+            <time itemprop="dateCreated" datetime="2017-02-08T14:29:18+08:00" content="2017-02-08">
+              2017-02-08
             </time>
           </span>
 
@@ -260,8 +259,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/基础/" itemprop="url" rel="index">
-                    <span itemprop="name">基础</span>
+                  <a href="/categories/习题答案整理/" itemprop="url" rel="index">
+                    <span itemprop="name">习题答案整理</span>
                   </a>
                 </span>
 
@@ -276,8 +275,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/02/07/软连接与硬链接的区别/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/07/软连接与硬链接的区别/" itemprop="commentsCount"></span>
+                <a href="/2017/02/08/第五章-传输层-课后习题答案整理/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/08/第五章-传输层-课后习题答案整理/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -300,9 +299,10 @@
       
 
       
-        <p>linux基础知识，软连接与硬链接的区别<br><a id="more"></a><br><img src="http://oi1ylq4ab.bkt.clouddn.com/hard_soft.jpg" alt="软链接与硬链接"></p>
-<h2 id="软链接的特征"><a href="#软链接的特征" class="headerlink" title="软链接的特征"></a>软链接的特征</h2><p>ln -s /root/file1 /tmp/file1.soft   创建软链接时，源文件的路径要用绝对路径<br>1.类似windows快捷方式<br>2.软链接拥有自己的I节点和Block块，但是数据块中只保存原文件的文件名和I节点号，并没有实际的文件数据<br>3.修改任意文件，另一个都改变<br>4.删除原文件，软链接不能使用<br>5.软链接文件权限都为rwxrwxrwx  </p>
-<h2 id="硬链接的特征"><a href="#硬链接的特征" class="headerlink" title="硬链接的特征"></a>硬链接的特征</h2><p>ln /root/file1 /tmp/file1.hard<br>1.拥有相同的I节点和存储block块，可以看做是同一个文件<br>2.可通过I节点识别<br>3.不能跨分区建立硬链接<br>4.不能针对目录使用  </p>
+        <p>《计算机网络（第六版）》部分课后习题答案整理，第五章 传输层<br><a id="more"></a></p>
+<h2 id="5—01-试说明运输层在协议栈中的地位和作用，运输层的通信和网络层的通信有什么重要区别？为什么运输层是必不可少的？"><a href="#5—01-试说明运输层在协议栈中的地位和作用，运输层的通信和网络层的通信有什么重要区别？为什么运输层是必不可少的？" class="headerlink" title="5—01 试说明运输层在协议栈中的地位和作用，运输层的通信和网络层的通信有什么重要区别？为什么运输层是必不可少的？"></a>5—01 试说明运输层在协议栈中的地位和作用，运输层的通信和网络层的通信有什么重要区别？为什么运输层是必不可少的？</h2><p>答：运输层处于面向通信部分的最高层，同时也是用户功能中的最低层，向它上面的应用层提供服务运输层为应用进程之间提供端到端的逻辑通信，但网络层是为主机之间提供逻辑通信（面向主机，承担路由功能，即主机寻址及有效的分组交换）。各种应用进程之间通信需要“可靠或尽力而为”的两类服务质量，必须由运输层以复用和分用的形式加载到网络层。  </p>
+<h2 id="5—09-端口的作用是什么？为什么端口要划分为三种？"><a href="#5—09-端口的作用是什么？为什么端口要划分为三种？" class="headerlink" title="5—09 端口的作用是什么？为什么端口要划分为三种？"></a>5—09 端口的作用是什么？为什么端口要划分为三种？</h2><p>答：端口的作用是对TCP/IP 体系的应用进程进行统一的标志，使运行不同操作系统的计算机的应用进程能够互相通信。<br>服务器端使用的端口号：熟知端口，数值一般为0~1023.标记常规的服务进程；登记端口号，数值为1024~49151，标记没有熟知端口号的非常规的服务进程；<br>客户端使用的端口号：49152~65535，仅在客户进程运行时才动态选择又叫短暂端口号。  </p>
+<h2 id="5—37-在TCP-的拥塞控制中，什么是慢开始、拥塞避免、快重传和快恢复算法-这里每一种算法各起什么作用-“乘法减小”和“加法增大”各用在什么情况下"><a href="#5—37-在TCP-的拥塞控制中，什么是慢开始、拥塞避免、快重传和快恢复算法-这里每一种算法各起什么作用-“乘法减小”和“加法增大”各用在什么情况下" class="headerlink" title="5—37 在TCP 的拥塞控制中，什么是慢开始、拥塞避免、快重传和快恢复算法?这里每一种算法各起什么作用? “乘法减小”和“加法增大”各用在什么情况下?"></a>5—37 在TCP 的拥塞控制中，什么是慢开始、拥塞避免、快重传和快恢复算法?这里每一种算法各起什么作用? “乘法减小”和“加法增大”各用在什么情况下?</h2><p>答：慢开始：<br>在主机刚刚开始发送报文段时可先将拥塞窗口cwnd设置为一个最大报文段MSS的数值。在每收到一个对新的报文段的确认后，将拥塞窗口增加至多一个MSS 的数值。用这样的方法逐步增大发送端的拥塞窗口cwnd，可以分组注入到网络的速率更加合理。<br>拥塞避免：<br>当拥塞窗口值大于慢开始门限时，停止使用慢开始算法而改用拥塞避免算法。拥塞避免算法使发送的拥塞窗口每经过一个往返时延RTT 就增加一个MSS 的大小。<br>快重传算法规定：<br>发送端只要一连收到三个重复的ACK 即可断定有分组丢失了，就应该立即重传丢失的报文段而不必继续等待为该报文段设置的重传计时器的超时。<br>快恢复算法：<br>当发送端收到连续三个重复的ACK 时，就重新设置慢开始门限ssthresh<br>与慢开始不同之处是拥塞窗口cwnd 不是设置为1，而是设置为ssthresh<br>若收到的重复的AVK 为n 个（n&gt;3），则将cwnd 设置为ssthresh<br>若发送窗口值还容许发送报文段，就按拥塞避免算法继续发送报文段。<br>若收到了确认新的报文段的ACK，就将cwnd 缩小到ssthresh<br>乘法减小：<br>是指不论在慢开始阶段还是拥塞避免阶段，只要出现一次超时（即出现一次网络拥塞），就把慢开始门限值ssthresh 设置为当前的拥塞窗口值乘以0.5。当网络频繁出现拥塞时，ssthresh 值就下降得很快，以大大减少注入到网络中的分组数。<br>加法增大：<br>是指执行拥塞避免算法后，在收到对所有报文段的确认后（即经过一个往返时间），就把拥塞窗口cwnd 增加一个MSS 大小，使拥塞窗口缓慢增大，以防止网络过早出现拥塞。  </p>
 <p><div id="donate_guide" class="donate_bar center hidden"><a href="/images/reward.jpeg" title="微信打赏" class="fancybox" rel="article0"><img src="/images/reward.jpeg" title="微信打赏" height="164px" width="164px"></a> <div align="center">您的支持是对我最大的鼓励！</div></div> <script type="text/javascript">document.getElementById(‘btn_donate’).onclick = function(){$(‘#donate_board’).addClass(‘hidden’); $(‘#donate_guide’).removeClass(‘hidden’);}</script></p>
 
       
@@ -326,7 +326,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/linux/" rel="tag">#linux</a>
+            <a href="/tags/计算机网络/" rel="tag">#计算机网络</a>
           
         </div>
       
@@ -335,16 +335,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/07/三列布局/" rel="next" title="三列布局">
-                <i class="fa fa-chevron-left"></i> 三列布局
+              <a href="/2017/02/08/第四章-网络层-课后习题答案整理/" rel="next" title="第四章 网络层 课后习题答案整理">
+                <i class="fa fa-chevron-left"></i> 第四章 网络层 课后习题答案整理
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/02/07/判断一个正整数是否是2的乘方/" rel="prev" title="判断一个正整数是否是2的乘方">
-                判断一个正整数是否是2的乘方 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/02/08/第六章-应用层-课后习题答案整理/" rel="prev" title="第六章 应用层 课后习题答案整理">
+                第六章 应用层 课后习题答案整理 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -371,8 +371,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/02/07/软连接与硬链接的区别/"
-           data-title="软连接与硬链接的区别" data-url="http://yoursite.com/2017/02/07/软连接与硬链接的区别/">
+      <div class="ds-thread" data-thread-key="2017/02/08/第五章-传输层-课后习题答案整理/"
+           data-title="第五章 传输层 课后习题答案整理" data-url="http://yoursite.com/2017/02/08/第五章-传输层-课后习题答案整理/">
       </div>
     
   </div>
@@ -463,7 +463,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#软链接的特征"><span class="nav-number">1.</span> <span class="nav-text">软链接的特征</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#硬链接的特征"><span class="nav-number">2.</span> <span class="nav-text">硬链接的特征</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#5—01-试说明运输层在协议栈中的地位和作用，运输层的通信和网络层的通信有什么重要区别？为什么运输层是必不可少的？"><span class="nav-number">1.</span> <span class="nav-text">5—01 试说明运输层在协议栈中的地位和作用，运输层的通信和网络层的通信有什么重要区别？为什么运输层是必不可少的？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5—09-端口的作用是什么？为什么端口要划分为三种？"><span class="nav-number">2.</span> <span class="nav-text">5—09 端口的作用是什么？为什么端口要划分为三种？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5—37-在TCP-的拥塞控制中，什么是慢开始、拥塞避免、快重传和快恢复算法-这里每一种算法各起什么作用-“乘法减小”和“加法增大”各用在什么情况下"><span class="nav-number">3.</span> <span class="nav-text">5—37 在TCP 的拥塞控制中，什么是慢开始、拥塞避免、快重传和快恢复算法?这里每一种算法各起什么作用? “乘法减小”和“加法增大”各用在什么情况下?</span></a></li></ol></div>
             
           </div>
         </section>
