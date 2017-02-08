@@ -84,17 +84,17 @@
 
 
 
-<meta name="description" content="linux基础知识，常用帮助命令用法及区别">
+<meta name="description" content="linux基础知识，常用帮助命令用法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="帮助命令">
 <meta property="og:url" content="http://yoursite.com/2017/02/08/帮助命令/index.html">
 <meta property="og:site_name" content="胡荣玲个人博客">
-<meta property="og:description" content="linux基础知识，常用帮助命令用法及区别">
+<meta property="og:description" content="linux基础知识，常用帮助命令用法">
 <meta property="og:image" content="http://yoursite.com/images/reward.jpeg">
-<meta property="og:updated_time" content="2017-02-08T09:10:46.293Z">
+<meta property="og:updated_time" content="2017-02-08T09:18:22.105Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="帮助命令">
-<meta name="twitter:description" content="linux基础知识，常用帮助命令用法及区别">
+<meta name="twitter:description" content="linux基础知识，常用帮助命令用法">
 <meta name="twitter:image" content="http://yoursite.com/images/reward.jpeg">
 
 
@@ -299,10 +299,9 @@
       
 
       
-        <p>linux基础知识，常用帮助命令用法及区别<br><a id="more"></a></p>
+        <p>linux基础知识，常用帮助命令用法<br><a id="more"></a></p>
 <h2 id="man"><a href="#man" class="headerlink" title="man"></a>man</h2><ol>
-<li><p>区段及说明</p>
-<ul>
+<li>区段及说明<ul>
 <li>1 一般命令<ul>
 <li>2 统调用</li>
 <li>3 库函数，涵盖了C标准函数库</li>
@@ -311,13 +310,19 @@
 <li>6 游戏和屏保</li>
 <li>7 杂项</li>
 <li>8 系统管理命令和守护进程<blockquote>
-<p>man –f 命令<br>查看该命令提供哪些帮助区段，相当于<code>whatis 命令</code><br>要查看相应区段的内容，在man后面加上相应区段的数字即可，如：<br>man 1 ls  </p>
+<p>man –f 命令  </p>
 </blockquote>
 </li>
 </ul>
 </li>
 </ul>
 </li>
+</ol>
+<p>查看该命令提供哪些帮助区段，相当于<code>whatis 命令</code><br>要查看相应区段的内容，在man后面加上相应区段的数字即可，如：  </p>
+<blockquote>
+<p>man 1 ls  </p>
+</blockquote>
+<ol>
 <li><p>区段1格式</p>
 <ul>
 <li>NAME（名称） 该命令或函数的名称，接着是一行简介。</li>
@@ -328,17 +333,23 @@
 </ul>
 </li>
 <li><p>在 man 中使用搜索</p>
-<blockquote>
-<p>/&lt;你要搜索的关键字&gt;<br>n键切换到下一个关键字所在处<br>shift+n切到上一个关键字所在处<br>Space(空格键)翻页<br>Enter(回车键)向下滚动一行<br>j,k（vim编辑器的移动键）进行向前向后滚动一行<br>h键显示使用帮助(因为man使用less作为阅读器，实为less工具的帮助)<br>q退出  </p>
-</blockquote>
+<ul>
+<li>/&lt;你要搜索的关键字&gt;  </li>
+<li>n键切换到下一个关键字所在处  </li>
+<li>shift+n切到上一个关键字所在处  </li>
+<li>Space(空格键)翻页  </li>
+<li>Enter(回车键)向下滚动一行</li>
+<li>j,k（vim编辑器的移动键）进行向前向后滚动一行  </li>
+<li>h键显示使用帮助(因为man使用less作为阅读器，实为less工具的帮助)  </li>
+<li>q退出  </li>
+</ul>
 </li>
-<li><p><code>man –k 命令</code>相当于<code>apropos 命令</code>  </p>
-<blockquote>
+<li><code>man –k 命令</code>相当于<code>apropos 命令</code>  <blockquote>
 <p>列出所有包含该命令关键字帮助信息  </p>
 </blockquote>
 </li>
 </ol>
-<h2 id="选项帮助命令–-help"><a href="#选项帮助命令–-help" class="headerlink" title="选项帮助命令– help"></a>选项帮助命令– help</h2><p>命令  –help  </p>
+<h2 id="选项帮助命令-–help"><a href="#选项帮助命令-–help" class="headerlink" title="选项帮助命令 –help"></a>选项帮助命令 –help</h2><p>命令  –help  </p>
 <h2 id="Shell-内部命令帮助"><a href="#Shell-内部命令帮助" class="headerlink" title="Shell 内部命令帮助"></a>Shell 内部命令帮助</h2><p>help  shell内部命令  </p>
 <h2 id="详细命令帮助"><a href="#详细命令帮助" class="headerlink" title="详细命令帮助"></a>详细命令帮助</h2><p>info  命令  </p>
 <p><div id="donate_guide" class="donate_bar center hidden"><a href="/images/reward.jpeg" title="微信打赏" class="fancybox" rel="article0"><img src="/images/reward.jpeg" title="微信打赏" height="164px" width="164px"></a> <div align="center">您的支持是对我最大的鼓励！</div></div> <script type="text/javascript">document.getElementById(‘btn_donate’).onclick = function(){$(‘#donate_board’).addClass(‘hidden’); $(‘#donate_guide’).removeClass(‘hidden’);}</script></p>
@@ -380,6 +391,10 @@
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/02/08/压缩命令/" rel="prev" title="压缩命令">
+                压缩命令 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -451,7 +466,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">17</span>
+              <span class="site-state-item-count">18</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -497,7 +512,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#man"><span class="nav-number">1.</span> <span class="nav-text">man</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选项帮助命令–-help"><span class="nav-number">2.</span> <span class="nav-text">选项帮助命令– help</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Shell-内部命令帮助"><span class="nav-number">3.</span> <span class="nav-text">Shell 内部命令帮助</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#详细命令帮助"><span class="nav-number">4.</span> <span class="nav-text">详细命令帮助</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#man"><span class="nav-number">1.</span> <span class="nav-text">man</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选项帮助命令-–help"><span class="nav-number">2.</span> <span class="nav-text">选项帮助命令 –help</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Shell-内部命令帮助"><span class="nav-number">3.</span> <span class="nav-text">Shell 内部命令帮助</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#详细命令帮助"><span class="nav-number">4.</span> <span class="nav-text">详细命令帮助</span></a></li></ol></div>
             
           </div>
         </section>

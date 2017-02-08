@@ -84,19 +84,18 @@
 
 
 
-<meta name="description" content="linux基础知识，软连接与硬链接的区别">
+<meta name="description" content="linux基础知识，常用压缩打包及解压缩解打包命令">
 <meta property="og:type" content="article">
-<meta property="og:title" content="软连接与硬链接的区别">
-<meta property="og:url" content="http://yoursite.com/2017/02/07/软连接与硬链接的区别/index.html">
+<meta property="og:title" content="压缩命令">
+<meta property="og:url" content="http://yoursite.com/2017/02/08/压缩命令/index.html">
 <meta property="og:site_name" content="胡荣玲个人博客">
-<meta property="og:description" content="linux基础知识，软连接与硬链接的区别">
-<meta property="og:image" content="http://oi1ylq4ab.bkt.clouddn.com/hard_soft.jpg">
+<meta property="og:description" content="linux基础知识，常用压缩打包及解压缩解打包命令">
 <meta property="og:image" content="http://yoursite.com/images/reward.jpeg">
-<meta property="og:updated_time" content="2017-02-07T12:54:08.062Z">
+<meta property="og:updated_time" content="2017-02-08T10:02:37.246Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="软连接与硬链接的区别">
-<meta name="twitter:description" content="linux基础知识，软连接与硬链接的区别">
-<meta name="twitter:image" content="http://oi1ylq4ab.bkt.clouddn.com/hard_soft.jpg">
+<meta name="twitter:title" content="压缩命令">
+<meta name="twitter:description" content="linux基础知识，常用压缩打包及解压缩解打包命令">
+<meta name="twitter:image" content="http://yoursite.com/images/reward.jpeg">
 
 
 
@@ -117,10 +116,10 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/07/软连接与硬链接的区别/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/02/08/压缩命令/"/>
 
 
-  <title> 软连接与硬链接的区别 | 胡荣玲个人博客 </title>
+  <title> 压缩命令 | 胡荣玲个人博客 </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -234,7 +233,7 @@
             
             
               
-                软连接与硬链接的区别
+                压缩命令
               
             
           </h1>
@@ -246,8 +245,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-02-07T20:21:47+08:00" content="2017-02-07">
-              2017-02-07
+            <time itemprop="dateCreated" datetime="2017-02-08T17:17:10+08:00" content="2017-02-08">
+              2017-02-08
             </time>
           </span>
 
@@ -276,8 +275,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/02/07/软连接与硬链接的区别/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/07/软连接与硬链接的区别/" itemprop="commentsCount"></span>
+                <a href="/2017/02/08/压缩命令/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/08/压缩命令/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -300,9 +299,49 @@
       
 
       
-        <p>linux基础知识，软连接与硬链接的区别<br><a id="more"></a><br><img src="http://oi1ylq4ab.bkt.clouddn.com/hard_soft.jpg" alt="软链接与硬链接"></p>
-<h2 id="软链接的特征"><a href="#软链接的特征" class="headerlink" title="软链接的特征"></a>软链接的特征</h2><p>ln -s /root/file1 /tmp/file1.soft   创建软链接时，源文件的路径要用绝对路径<br>1.类似windows快捷方式<br>2.软链接拥有自己的I节点和Block块，但是数据块中只保存原文件的文件名和I节点号，并没有实际的文件数据<br>3.修改任意文件，另一个都改变<br>4.删除原文件，软链接不能使用<br>5.软链接文件权限都为rwxrwxrwx  </p>
-<h2 id="硬链接的特征"><a href="#硬链接的特征" class="headerlink" title="硬链接的特征"></a>硬链接的特征</h2><p>ln /root/file1 /tmp/file1.hard<br>1.拥有相同的I节点和存储block块，可以看做是同一个文件<br>2.可通过I节点识别<br>3.不能跨分区建立硬链接<br>4.不能针对目录使用  </p>
+        <p>linux基础知识，常用压缩打包及解压缩解打包命令<br><a id="more"></a><br>Linux常见的压缩格式有.zip .gz .bz2 .tar.gz .ter.bz2  </p>
+<h2 id="zip格式压缩"><a href="#zip格式压缩" class="headerlink" title=".zip格式压缩"></a>.zip格式压缩</h2><p>压缩文件  </p>
+<blockquote>
+<p>zip 压缩文件名 源文件  </p>
+</blockquote>
+<p>压缩目录  </p>
+<blockquote>
+<p>zip -r 压缩文件名 源目录  </p>
+</blockquote>
+<p>解压缩  </p>
+<blockquote>
+<p>unzip 压缩文件  </p>
+</blockquote>
+<h2 id="gz格式压缩"><a href="#gz格式压缩" class="headerlink" title=".gz格式压缩"></a>.gz格式压缩</h2><p>压缩文件，源文件会消失  </p>
+<blockquote>
+<p>gzip 源文件  </p>
+</blockquote>
+<p>压缩文件，源文件保留  </p>
+<blockquote>
+<p>gzip -c 源文件 &gt; 压缩文件  </p>
+</blockquote>
+<p>压缩目录下的子文件，gzip不能压缩文件  </p>
+<blockquote>
+<p>gzip -r 目录  </p>
+</blockquote>
+<p>解压缩文件  </p>
+<blockquote>
+<p>gzip -d 压缩文件  </p>
+</blockquote>
+<h2 id="bz2格式压缩"><a href="#bz2格式压缩" class="headerlink" title=".bz2格式压缩"></a>.bz2格式压缩</h2><p>压缩文件，源文件会消失  </p>
+<blockquote>
+<p>bzip2 源文件  </p>
+</blockquote>
+<p>压缩文件，源文件保留  </p>
+<blockquote>
+<p>bzip2 -k 源文件  </p>
+</blockquote>
+<p>bzip2不能压缩目录，会出错  </p>
+<h2 id="tar打包"><a href="#tar打包" class="headerlink" title="tar打包"></a>tar打包</h2><p>打包是为了解决目录无法通过gzip,bzip2压缩的问题  </p>
+<blockquote>
+<p>tar -zcvf 压缩包名.tar.gz 源文件  #压缩.gz文件<br>tar -zxvf 压缩包名.tar.gz         #解压缩.gz文件<br>tar -jcvf 压缩包名.tar.bz2 源文件  #压缩.bz2文件<br>tar -jxvf 压缩包名.tar.bz2         #解压缩.bz2文件   </p>
+</blockquote>
+<p>如果想指定解压缩位置，在后面加-C目标位置即可，如<code>tar -jxvf jp.tar.bz2 -C /tem/</code></p>
 <p><div id="donate_guide" class="donate_bar center hidden"><a href="/images/reward.jpeg" title="微信打赏" class="fancybox" rel="article0"><img src="/images/reward.jpeg" title="微信打赏" height="164px" width="164px"></a> <div align="center">您的支持是对我最大的鼓励！</div></div> <script type="text/javascript">document.getElementById(‘btn_donate’).onclick = function(){$(‘#donate_board’).addClass(‘hidden’); $(‘#donate_guide’).removeClass(‘hidden’);}</script></p>
 
       
@@ -335,17 +374,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/07/三列布局/" rel="next" title="三列布局">
-                <i class="fa fa-chevron-left"></i> 三列布局
+              <a href="/2017/02/08/帮助命令/" rel="next" title="帮助命令">
+                <i class="fa fa-chevron-left"></i> 帮助命令
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/07/判断一个正整数是否是2的乘方/" rel="prev" title="判断一个正整数是否是2的乘方">
-                判断一个正整数是否是2的乘方 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -371,8 +406,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/02/07/软连接与硬链接的区别/"
-           data-title="软连接与硬链接的区别" data-url="http://yoursite.com/2017/02/07/软连接与硬链接的区别/">
+      <div class="ds-thread" data-thread-key="2017/02/08/压缩命令/"
+           data-title="压缩命令" data-url="http://yoursite.com/2017/02/08/压缩命令/">
       </div>
     
   </div>
@@ -463,7 +498,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#软链接的特征"><span class="nav-number">1.</span> <span class="nav-text">软链接的特征</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#硬链接的特征"><span class="nav-number">2.</span> <span class="nav-text">硬链接的特征</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#zip格式压缩"><span class="nav-number">1.</span> <span class="nav-text">.zip格式压缩</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gz格式压缩"><span class="nav-number">2.</span> <span class="nav-text">.gz格式压缩</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bz2格式压缩"><span class="nav-number">3.</span> <span class="nav-text">.bz2格式压缩</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tar打包"><span class="nav-number">4.</span> <span class="nav-text">tar打包</span></a></li></ol></div>
             
           </div>
         </section>
