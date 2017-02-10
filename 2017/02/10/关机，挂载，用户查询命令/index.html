@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="数据结构与算法," />
+  <meta name="keywords" content="linux," />
 
 
 
@@ -84,17 +84,17 @@
 
 
 
-<meta name="description" content="实现一个方法，判断一个正整数是否是2的乘方（比如16是2的4次方，返回True；18不是2的乘方，返回False）。要求性能尽可能高。">
+<meta name="description" content="linux基础知识，介绍常见关机，重启命令，挂载命令及用户登录查看命令">
 <meta property="og:type" content="article">
-<meta property="og:title" content="判断一个正整数是否是2的乘方">
-<meta property="og:url" content="http://yoursite.com/2017/02/07/判断一个正整数是否是2的乘方/index.html">
+<meta property="og:title" content="关机，挂载，用户查询命令">
+<meta property="og:url" content="http://yoursite.com/2017/02/10/关机，挂载，用户查询命令/index.html">
 <meta property="og:site_name" content="胡荣玲个人博客">
-<meta property="og:description" content="实现一个方法，判断一个正整数是否是2的乘方（比如16是2的4次方，返回True；18不是2的乘方，返回False）。要求性能尽可能高。">
+<meta property="og:description" content="linux基础知识，介绍常见关机，重启命令，挂载命令及用户登录查看命令">
 <meta property="og:image" content="http://yoursite.com/images/reward.jpeg">
-<meta property="og:updated_time" content="2017-02-07T14:29:13.587Z">
+<meta property="og:updated_time" content="2017-02-10T06:56:07.849Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="判断一个正整数是否是2的乘方">
-<meta name="twitter:description" content="实现一个方法，判断一个正整数是否是2的乘方（比如16是2的4次方，返回True；18不是2的乘方，返回False）。要求性能尽可能高。">
+<meta name="twitter:title" content="关机，挂载，用户查询命令">
+<meta name="twitter:description" content="linux基础知识，介绍常见关机，重启命令，挂载命令及用户登录查看命令">
 <meta name="twitter:image" content="http://yoursite.com/images/reward.jpeg">
 
 
@@ -116,10 +116,10 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/07/判断一个正整数是否是2的乘方/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/02/10/关机，挂载，用户查询命令/"/>
 
 
-  <title> 判断一个正整数是否是2的乘方 | 胡荣玲个人博客 </title>
+  <title> 关机，挂载，用户查询命令 | 胡荣玲个人博客 </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -233,7 +233,7 @@
             
             
               
-                判断一个正整数是否是2的乘方
+                关机，挂载，用户查询命令
               
             
           </h1>
@@ -245,8 +245,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-02-07T21:15:04+08:00" content="2017-02-07">
-              2017-02-07
+            <time itemprop="dateCreated" datetime="2017-02-10T10:59:01+08:00" content="2017-02-10">
+              2017-02-10
             </time>
           </span>
 
@@ -259,8 +259,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/数据结构与算法/" itemprop="url" rel="index">
-                    <span itemprop="name">数据结构与算法</span>
+                  <a href="/categories/基础/" itemprop="url" rel="index">
+                    <span itemprop="name">基础</span>
                   </a>
                 </span>
 
@@ -275,8 +275,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/02/07/判断一个正整数是否是2的乘方/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/07/判断一个正整数是否是2的乘方/" itemprop="commentsCount"></span>
+                <a href="/2017/02/10/关机，挂载，用户查询命令/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/10/关机，挂载，用户查询命令/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -299,35 +299,61 @@
       
 
       
-        <p>实现一个方法，判断一个正整数是否是2的乘方（比如16是2的4次方，返回True；18不是2的乘方，返回False）。要求性能尽可能高。<br><a id="more"></a>  </p>
-<h2 id="解法一："><a href="#解法一：" class="headerlink" title="解法一："></a>解法一：</h2><p>创建一个中间变量Temp，初始值是1。然后进入一个循环，循环中每次让Temp和目标整数比较，如果相等，则说明目标整数是2的乘方；如果不相等，则让Temp增大一倍，继续循环比较。当Temp大于目标整数时，说明目标整数不是2的乘方。  </p>
-<pre><code class="javascript">public <span class="keyword">static</span> boolean isPowerOf2(int number){
-    int temp=<span class="number">1</span>;
-    <span class="keyword">while</span>(temp&lt;=number){
-    <span class="keyword">if</span>(temp==number){
-        <span class="keyword">return</span> <span class="literal">true</span>;
-    }
-    temp=temp*<span class="number">2</span>;   <span class="comment">//乘以2操作改成`&lt;&lt;1`移位的性能比乘法高，能提高性能，但时间复杂度还是O(LogN)</span>
-    }
-    <span class="keyword">return</span> <span class="literal">false</span>;
-}
-</code></pre>
-<p>如果目标整数的大小是N，则此方法的时间复杂度是O(LogN)  </p>
-<h2 id="解法二："><a href="#解法二：" class="headerlink" title="解法二："></a>解法二：</h2><p>如果一个整数是2的乘方，那么它转换成2进制的时候只有一位是1，把它减1，整个数减少1位，其他位变为1，N与(N-1)相与为0，因此可得：  </p>
-<pre><code class="javascript">public <span class="keyword">static</span> boolean isPowerOf2(int number){
-    <span class="keyword">return</span> (number&amp;(number<span class="number">-1</span>)==<span class="number">0</span>);
-}
-</code></pre>
-<p>时间复杂度为O(1)  </p>
-<h2 id="类似的：实现一个方法，求出一个正整数转换成二进制后的数字“1”的个数。要求性能尽可能高。"><a href="#类似的：实现一个方法，求出一个正整数转换成二进制后的数字“1”的个数。要求性能尽可能高。" class="headerlink" title="类似的：实现一个方法，求出一个正整数转换成二进制后的数字“1”的个数。要求性能尽可能高。"></a>类似的：实现一个方法，求出一个正整数转换成二进制后的数字“1”的个数。要求性能尽可能高。</h2><pre><code class="javascript">public <span class="keyword">static</span> int count1(int number){
-    int count=<span class="number">0</span>;
-    <span class="keyword">while</span>(number!=<span class="number">0</span>){
-number=number&amp;(number<span class="number">-1</span>);
-count++;
-}
-    <span class="keyword">return</span> count;
-}
-</code></pre>
+        <p>linux基础知识，介绍常见关机，重启命令，挂载命令及用户登录查看命令<br><a id="more"></a></p>
+<h2 id="一-关机重启命令"><a href="#一-关机重启命令" class="headerlink" title="一.关机重启命令"></a>一.关机重启命令</h2><p>用法：shutdown [选项] 时间<br>选项：  </p>
+<blockquote>
+<p>-c:取消<br>-h:关机<br>-r:重启  </p>
+</blockquote>
+<p>其他关机命令：halt,poweroff,init 0<br>其他重启命令:reboot,init 6<br>退出登录命令:logout<br>ps:系统运行级别（etc/initiab修改系统默认运行级别；runlevel查询系统运行级别）  </p>
+<blockquote>
+<p>0    关机<br>1    单用户<br>2    不完全多用户，不含NFS服务<br>3    完全多用户<br>4    未分配<br>5    图形界面<br>6    重启  </p>
+</blockquote>
+<p>不过，需要注意的是，在systemd掌权后，inittab不再起作用，也没有了“运行级”的概念。也就是说，以上有点过时了。  </p>
+<h2 id="挂载命令"><a href="#挂载命令" class="headerlink" title="挂载命令"></a>挂载命令</h2><p>查询系统中已经挂载的设备  </p>
+<blockquote>
+<p>mount  </p>
+</blockquote>
+<p>依据配置文件/etc/fstab的内容，自动挂载  </p>
+<blockquote>
+<p>mount -a  </p>
+</blockquote>
+<p>挂载命令格式  </p>
+<blockquote>
+<p>mount [-t 文件系统] [-o 特殊选项] 设备文件名 挂载点  </p>
+<blockquote>
+<p>-t 文件系统：加入文件系统类型来指定挂载的类型，如ext3,ext4,iso96660(光盘的标准文件系统，U盘文件系统为FAT32)<br>-o 特殊选项：指定挂载的额外选项，如exec/noexec等  </p>
+</blockquote>
+</blockquote>
+<p>挂载光盘  </p>
+<blockquote>
+<p>mkdir /mnt/cdrom/   #先建立挂载点<br>mount -t iso9660 /dev/sr0 /mnt/cdrom/    #挂载光盘  </p>
+</blockquote>
+<p>挂载U盘  </p>
+<blockquote>
+<p>fdisk -l   #查看U盘设备文件名<br>mount -t vfat /dev/sdb1 /mnt/usb/  </p>
+</blockquote>
+<p>卸载命令  </p>
+<blockquote>
+<p>umount 设备文件名或挂载点<br>umount /mnt/cdrom  </p>
+</blockquote>
+<h2 id="查看登录用户信息"><a href="#查看登录用户信息" class="headerlink" title="查看登录用户信息"></a>查看登录用户信息</h2><blockquote>
+<p>w 用户名  </p>
+<blockquote>
+<p>命令输出：<br>USER：登录的用户名<br>TTY: 登录终端<br>FROM: 登录IP<br>LOGIN: 登录时间<br>IDLE: 用户闲置时间<br>JCPU: 和该终端连接的所有进程占用时间<br>PCPU: 当前进程所占用时间<br>WHAT: 当前正在运行的命令   </p>
+</blockquote>
+<p>who 用户名  </p>
+<blockquote>
+<p>命令输出<br>用户名<br>登录终端<br>登录时间（登录来源IP地址）  </p>
+</blockquote>
+<p>last  </p>
+<blockquote>
+<p>命令输出（last默认是读取/var/log/wtmp文件数据）<br>用户名<br>登录终端<br>登录IP<br>登录时间<br>退出时间  </p>
+</blockquote>
+<p>lastlog  </p>
+<blockquote>
+<p>命令输出（lastlog默认是读取/var/log/lastlog文件数据）<br>用户名<br>登录终端<br>登录IP<br>最后一次登录时间  </p>
+</blockquote>
+</blockquote>
 <p><div id="donate_guide" class="donate_bar center hidden"><a href="/images/reward.jpeg" title="微信打赏" class="fancybox" rel="article0"><img src="/images/reward.jpeg" title="微信打赏" height="164px" width="164px"></a> <div align="center">您的支持是对我最大的鼓励！</div></div> <script type="text/javascript">document.getElementById(‘btn_donate’).onclick = function(){$(‘#donate_board’).addClass(‘hidden’); $(‘#donate_guide’).removeClass(‘hidden’);}</script></p>
 
       
@@ -351,7 +377,7 @@ count++;
       
         <div class="post-tags">
           
-            <a href="/tags/数据结构与算法/" rel="tag">#数据结构与算法</a>
+            <a href="/tags/linux/" rel="tag">#linux</a>
           
         </div>
       
@@ -360,16 +386,16 @@ count++;
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/07/软连接与硬链接的区别/" rel="next" title="软连接与硬链接的区别">
-                <i class="fa fa-chevron-left"></i> 软连接与硬链接的区别
+              <a href="/2017/02/08/压缩命令/" rel="next" title="压缩命令">
+                <i class="fa fa-chevron-left"></i> 压缩命令
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/02/08/第一章 概述 课后习题答案整理/" rel="prev" title="第一章 概述 课后习题答案整理">
-                第一章 概述 课后习题答案整理 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/02/10/shell基础/" rel="prev" title="shell基础">
+                shell基础 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -396,8 +422,8 @@ count++;
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/02/07/判断一个正整数是否是2的乘方/"
-           data-title="判断一个正整数是否是2的乘方" data-url="http://yoursite.com/2017/02/07/判断一个正整数是否是2的乘方/">
+      <div class="ds-thread" data-thread-key="2017/02/10/关机，挂载，用户查询命令/"
+           data-title="关机，挂载，用户查询命令" data-url="http://yoursite.com/2017/02/10/关机，挂载，用户查询命令/">
       </div>
     
   </div>
@@ -488,7 +514,7 @@ count++;
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#解法一："><span class="nav-number">1.</span> <span class="nav-text">解法一：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解法二："><span class="nav-number">2.</span> <span class="nav-text">解法二：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类似的：实现一个方法，求出一个正整数转换成二进制后的数字“1”的个数。要求性能尽可能高。"><span class="nav-number">3.</span> <span class="nav-text">类似的：实现一个方法，求出一个正整数转换成二进制后的数字“1”的个数。要求性能尽可能高。</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-关机重启命令"><span class="nav-number">1.</span> <span class="nav-text">一.关机重启命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#挂载命令"><span class="nav-number">2.</span> <span class="nav-text">挂载命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看登录用户信息"><span class="nav-number">3.</span> <span class="nav-text">查看登录用户信息</span></a></li></ol></div>
             
           </div>
         </section>
