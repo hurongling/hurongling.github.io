@@ -91,7 +91,7 @@
 <meta property="og:site_name" content="胡荣玲个人博客">
 <meta property="og:description" content="简单的介绍十一种css选择器">
 <meta property="og:image" content="http://yoursite.com/images/reward.jpeg">
-<meta property="og:updated_time" content="2017-02-13T06:18:29.531Z">
+<meta property="og:updated_time" content="2017-02-13T06:37:14.150Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="css选择器">
 <meta name="twitter:description" content="简单的介绍十一种css选择器">
@@ -312,7 +312,7 @@
 <p>   first-child 选中同级别中的第一个标签<br>    last-child  选中同级别中的最后一个标签<br>    nth-child(n)选中同级别中的第n个标签<br>    nth-last-child(n)选中同级别中的倒数第n个标签<br>    only-child 选中父元素中唯一的子元素（例：只有一个p，不存在其他元素才可选中）<br>    only-of-type 选中父元素中唯一的制定元素（只存在一个p，可存在其他标签，就可选中）<br>    nth-child(odd)选中同级别中的奇数标签<br>    nth-child(even)选中同级别中的偶数标签<br>    nth-child(xn+y)选中同级别中的xn+y个标签，n从0开始自增，如：2n+1，3n+0等函数  </p>
 </blockquote>
 <p>格式2：p:first-of-type{color: red;}<br>作用2：选中级别中同类型的第n个标签<br>last-of-type,nth-of-type(n),nth-last-of-type(n)，nth-of-type(odd)，nth-of-type(even)  </p>
-<h2 id="九、属性选择器"><a href="#九、属性选择器" class="headerlink" title="九、属性选择器"></a>九、属性选择器</h2><p>1.根据指定的属性名称找到对应的标签，然后设置属性，如：<br>p[class]{font-size: 30px;}给有class属性的标签设置字体大小<br>p[class=”pa2”]<br>input[type=”password”]指定<input type="password" name="" id=""><br>2.属性的取值以什么开头<br>[attribute|=value] css2中的用法<br>[attribute^=value] css3中的用法<br>3.属性的取值以什么结尾<br>[attribute$=value] css3中的用法<br>4.属性的取值是否包含某个特定的值<br>[attribute~=value] css2中的用法<br>[attribute*=value] css3中的用法<br>如：p[class^=pa]{……}  </p>
+<h2 id="九、属性选择器"><a href="#九、属性选择器" class="headerlink" title="九、属性选择器"></a>九、属性选择器</h2><p>1.根据指定的属性名称找到对应的标签，然后设置属性，如：<br>p[class]{font-size: 30px;}给有class属性的标签设置字体大小<br>p[class=”pa2”]<br>input[type=”password”]指定<code>&lt;input type=&quot;password&quot; name=&quot;&quot; id=&quot;&quot;&gt;</code><br>2.属性的取值以什么开头<br>[attribute|=value] css2中的用法<br>[attribute^=value] css3中的用法<br>3.属性的取值以什么结尾<br>[attribute$=value] css3中的用法<br>4.属性的取值是否包含某个特定的值<br>[attribute~=value] css2中的用法<br>[attribute*=value] css3中的用法<br>如：p[class^=pa]{……}  </p>
 <h2 id="十、通配符选择器"><a href="#十、通配符选择器" class="headerlink" title="十、通配符选择器"></a>十、通配符选择器</h2><p>1.格式：<em>{……}给当前页面所有标签设置属性，如：  
 </em>{margin: 0;padding:0;}<br>2.若当前页面标签较多，通配符选择器性能变差，企业开发中一般不使用  </p>
 <h2 id="十一、结构性伪类选择器"><a href="#十一、结构性伪类选择器" class="headerlink" title="十一、结构性伪类选择器"></a>十一、结构性伪类选择器</h2><p>1.root<br>:root{background:orange} 等同于html {background:orange;}<br>2.:not否定选择器，可以选择除某个元素之外的所有元素<br>如给表单中除submit按钮之外的input元素添加红色边框，CSS代码可以写成：  </p>

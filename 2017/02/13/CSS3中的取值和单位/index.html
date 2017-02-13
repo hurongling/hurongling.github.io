@@ -91,7 +91,7 @@
 <meta property="og:site_name" content="胡荣玲个人博客">
 <meta property="og:description" content="介绍css3中的取值和单位">
 <meta property="og:image" content="http://yoursite.com/images/reward.jpeg">
-<meta property="og:updated_time" content="2017-02-13T06:23:58.251Z">
+<meta property="og:updated_time" content="2017-02-13T06:34:43.773Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS3中的取值和单位">
 <meta name="twitter:description" content="介绍css3中的取值和单位">
@@ -307,15 +307,7 @@
 <blockquote>
 <p>R：红色值。正整数 | 百分数<br>G：绿色值。正整数 | 百分数<br>B：蓝色值。正整数 | 百分数<br>A：Alpha透明度。取值0~1之间  </p>
 </blockquote>
-<h2 id="5-图像值linear-gradient"><a href="#5-图像值linear-gradient" class="headerlink" title="5.图像值linear-gradient()"></a>5.图像值linear-gradient()</h2><p>（1）语法：  </p>
-<p><linear-gradient> = linear-gradient([ [ <angle> | to <side-or-corner> ] ,]? <color-stop>[, <color-stop>]+)  </color-stop></color-stop></side-or-corner></angle></linear-gradient></p>
-<p><side-or-corner> = [left | right] || [top | bottom]  </side-or-corner></p>
-<p><color-stop> = <color> [ <length> | <percentage> ]?<br>[]匹配其中1个<br>？取零或1个<br>+取1至多个<br>*取零至多个<br>&lt;&gt;普通字符<br>（2）取值：   </percentage></length></color></color-stop></p>
-<p><angle>：用角度值指定渐变的方向（或角度）<br>to left：设置渐变从右到左。相当于: 270deg<br>to right：设置渐变从左到右。相当于: 90deg<br>to top：设置渐变从下到上。相当于: 0deg<br>to bottom：设置渐变从上到下。相当于: 180deg。这是默认值，等同于留空不写  </angle></p>
-<p><color-stop>：用于指定渐变的起止颜色  </color-stop></p>
-<p><color>：指定颜色  </color></p>
-<p><length>：用长度值指定起止色位置。不允许负值  </length></p>
-<p><percentage>：用百分比指定起止色位置  </percentage></p>
+<h2 id="5-图像值linear-gradient"><a href="#5-图像值linear-gradient" class="headerlink" title="5.图像值linear-gradient()"></a>5.图像值linear-gradient()</h2><p>（1）语法：<br><code>&lt;linear-gradient&gt; = linear-gradient([ [ &lt;angle&gt; | to &lt;side-or-corner&gt; ] ,]? &lt;color-stop&gt;[, &lt;color-stop&gt;]+)</code><br><code>&lt;side-or-corner&gt; = [left | right] || [top | bottom]</code><br><code>&lt;color-stop&gt; = &lt;color&gt; [ &lt;length&gt; | &lt;percentage&gt; ]?</code><br>[]匹配其中1个<br>？取零或1个<br>+取1至多个<br>*取零至多个<br>&lt;&gt;普通字符<br>（2）取值：<br><code>&lt;angle&gt;：用角度值指定渐变的方向（或角度）</code><br><code>to left：设置渐变从右到左。相当于: 270deg</code><br><code>to right：设置渐变从左到右。相当于: 90deg</code><br><code>to top：设置渐变从下到上。相当于: 0deg</code><br><code>to bottom：设置渐变从上到下。相当于: 180deg。这是默认值，等同于留空不写</code><br><code>&lt;color-stop&gt;：用于指定渐变的起止颜色</code><br><code>&lt;color&gt;：指定颜色</code><br><code>&lt;length&gt;：用长度值指定起止色位置。不允许负值</code><br><code>&lt;percentage&gt;：用百分比指定起止色位置</code>  </p>
 <blockquote>
 <p>.test2 {background: linear-gradient(45deg, #000, #f00 50%, #090);}  </p>
 </blockquote>
