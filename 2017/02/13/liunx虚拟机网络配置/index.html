@@ -84,17 +84,17 @@
 
 
 
-<meta name="description" content="linux基础知识，常用压缩打包及解压缩解打包命令">
+<meta name="description" content="在虚拟机上配置刚安装的centos6.3系统的网络">
 <meta property="og:type" content="article">
-<meta property="og:title" content="压缩命令">
-<meta property="og:url" content="http://yoursite.com/2017/02/08/压缩命令/index.html">
+<meta property="og:title" content="liunx虚拟机网络配置">
+<meta property="og:url" content="http://yoursite.com/2017/02/13/liunx虚拟机网络配置/index.html">
 <meta property="og:site_name" content="胡荣玲个人博客">
-<meta property="og:description" content="linux基础知识，常用压缩打包及解压缩解打包命令">
+<meta property="og:description" content="在虚拟机上配置刚安装的centos6.3系统的网络">
 <meta property="og:image" content="http://yoursite.com/images/reward.jpeg">
-<meta property="og:updated_time" content="2017-02-08T10:02:37.246Z">
+<meta property="og:updated_time" content="2017-02-13T11:05:38.992Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="压缩命令">
-<meta name="twitter:description" content="linux基础知识，常用压缩打包及解压缩解打包命令">
+<meta name="twitter:title" content="liunx虚拟机网络配置">
+<meta name="twitter:description" content="在虚拟机上配置刚安装的centos6.3系统的网络">
 <meta name="twitter:image" content="http://yoursite.com/images/reward.jpeg">
 
 
@@ -116,10 +116,10 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/08/压缩命令/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/02/13/liunx虚拟机网络配置/"/>
 
 
-  <title> 压缩命令 | 胡荣玲个人博客 </title>
+  <title> liunx虚拟机网络配置 | 胡荣玲个人博客 </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -233,7 +233,7 @@
             
             
               
-                压缩命令
+                liunx虚拟机网络配置
               
             
           </h1>
@@ -245,8 +245,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-02-08T17:17:10+08:00" content="2017-02-08">
-              2017-02-08
+            <time itemprop="dateCreated" datetime="2017-02-13T17:54:50+08:00" content="2017-02-13">
+              2017-02-13
             </time>
           </span>
 
@@ -259,8 +259,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/基础/" itemprop="url" rel="index">
-                    <span itemprop="name">基础</span>
+                  <a href="/categories/linux/" itemprop="url" rel="index">
+                    <span itemprop="name">linux</span>
                   </a>
                 </span>
 
@@ -275,8 +275,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/02/08/压缩命令/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/08/压缩命令/" itemprop="commentsCount"></span>
+                <a href="/2017/02/13/liunx虚拟机网络配置/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/13/liunx虚拟机网络配置/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -299,49 +299,25 @@
       
 
       
-        <p>linux基础知识，常用压缩打包及解压缩解打包命令<br><a id="more"></a><br>Linux常见的压缩格式有.zip .gz .bz2 .tar.gz .ter.bz2  </p>
-<h2 id="zip格式压缩"><a href="#zip格式压缩" class="headerlink" title=".zip格式压缩"></a>.zip格式压缩</h2><p>压缩文件  </p>
+        <p>在虚拟机上配置刚安装的centos6.3系统的网络<br><a id="more"></a></p>
+<h2 id="1-修改配置文件"><a href="#1-修改配置文件" class="headerlink" title="1.修改配置文件"></a>1.修改配置文件</h2><p>(1)/etc/sysconfig/network-scripts/ifcfg-eth0 网卡配置文件的内容  </p>
 <blockquote>
-<p>zip 压缩文件名 源文件  </p>
+<p>DEVICE=eth0     #网卡设备名称，此处的名称与文件名中的名字要相同<br>HWADDR=00:23:54:68:84:DA     #MAC地址<br>TYPE=Ethernet     #类型，类型为以太网<br>UUID=674a7aa6-8829-431b-84c8-b2daf6cfa7bc     #唯一识别码用于识别是否是同一台计算机，若一个局域网内存在多台同样UUID的计算机将无法正常上网<br>ONBOOT=yes     #是否随网络服务启动，eth0生效<br>NM_CONTROLLED=yes     #是否可以由Network Manager 图形管理工具托管<br>BOOTPROTO=static     #是否自动获取IP(none、static、dhcp)<br>IPADDR=192.168.0.37     #IP地址<br>NETMASK=255.255.255.0     #子网掩码<br>GATEWAY=192.168.0.1     #网关<br>DNS=192.168.0.1     #DNS<br>IPV6INIT=no     #IPv6是否启用<br>USERCTL=no     #不允许非root用户控制此网卡  </p>
 </blockquote>
-<p>压缩目录  </p>
+<p>(2)主机名修改文件/etc/sysconfig/network   </p>
 <blockquote>
-<p>zip -r 压缩文件名 源目录  </p>
+<p>NETWORKING=yes   #注意看这一行是不是yes，默认是yes<br> HOSTNAME=localhost.localdomain  </p>
 </blockquote>
-<p>解压缩  </p>
-<blockquote>
-<p>unzip 压缩文件  </p>
-</blockquote>
-<h2 id="gz格式压缩"><a href="#gz格式压缩" class="headerlink" title=".gz格式压缩"></a>.gz格式压缩</h2><p>压缩文件，源文件会消失  </p>
-<blockquote>
-<p>gzip 源文件  </p>
-</blockquote>
-<p>压缩文件，源文件保留  </p>
-<blockquote>
-<p>gzip -c 源文件 &gt; 压缩文件  </p>
-</blockquote>
-<p>压缩目录下的子文件，gzip不能压缩文件  </p>
-<blockquote>
-<p>gzip -r 目录  </p>
-</blockquote>
-<p>解压缩文件  </p>
-<blockquote>
-<p>gzip -d 压缩文件  </p>
-</blockquote>
-<h2 id="bz2格式压缩"><a href="#bz2格式压缩" class="headerlink" title=".bz2格式压缩"></a>.bz2格式压缩</h2><p>压缩文件，源文件会消失  </p>
-<blockquote>
-<p>bzip2 源文件  </p>
-</blockquote>
-<p>压缩文件，源文件保留  </p>
-<blockquote>
-<p>bzip2 -k 源文件  </p>
-</blockquote>
-<p>bzip2不能压缩目录，会出错  </p>
-<h2 id="tar打包"><a href="#tar打包" class="headerlink" title="tar打包"></a>tar打包</h2><p>打包是为了解决目录无法通过gzip,bzip2压缩的问题  </p>
-<blockquote>
-<p>tar -zcvf 压缩包名.tar.gz 源文件  #压缩.gz文件<br>tar -zxvf 压缩包名.tar.gz         #解压缩.gz文件<br>tar -jcvf 压缩包名.tar.bz2 源文件  #压缩.bz2文件<br>tar -jxvf 压缩包名.tar.bz2         #解压缩.bz2文件   </p>
-</blockquote>
-<p>如果想指定解压缩位置，在后面加-C目标位置即可，如<code>tar -jxvf jp.tar.bz2 -C /tem/</code></p>
+<p>(3)DNS配置文件/etc/resolv.conf<br>resolv.conf的关键字主要有四个，分别是：  </p>
+<ul>
+<li>nameserver    //最主要关键字,定义DNS服务器的IP地址,可定义多个，且只有当第一个nameserver没有反应时才查询下面的nameserver  </li>
+<li>domain       //定义本地域名，很多程序用到它，如邮件系统；当为没有域名的主机进行DNS查询时，也要用到。如果没有域名，主机名将被使用，删除所有在第一个点( .)前面的内容  </li>
+<li>search        //定义域名的搜索列表,当要查询没有域名的主机，主机将在由search声明的域中分别查找,domain和search不能共存；如果同时存在，后面出现的将会被使用  </li>
+<li>sortlist        //对返回的域名进行排序<br><strong>修改完文件记得service network restart重启网络服务</strong>  <h2 id="2-修改UUID-克隆机才需要修改"><a href="#2-修改UUID-克隆机才需要修改" class="headerlink" title="2.修改UUID(克隆机才需要修改)"></a>2.修改UUID(克隆机才需要修改)</h2>1)删除/etc/sysconfig/network-scripts/ifcfg-eth0中的MAC地址行<br>2)rm -rf /etc/udev/rules.d/70-persistent-net.rules删除网卡和MAC地址绑定文件<br>3)重启系统  <h2 id="3-设置虚拟机网络连接方式"><a href="#3-设置虚拟机网络连接方式" class="headerlink" title="3.设置虚拟机网络连接方式"></a>3.设置虚拟机网络连接方式</h2>虚拟机选择网络设置三种方式  </li>
+<li>桥接：相当于虚拟机与真实机利用真实的网卡进行通信，虚拟机与真实机在同一网段时可以使用，占用真实网段的一个ip地址，桥接可以和局域网通信也可以访问外网  </li>
+<li>NAT模式：真实机与虚拟机通信利用虚拟网卡，nat能访问外网，但不能和局域网内的计算机通信  </li>
+<li>仅主机模式:真实机与虚拟机通信利用虚拟网卡，仅主机模式指只能和自己本机通信<br><strong>在选择桥接模式之后，需要选择桥接的网卡（即需要确定虚拟机需要通过哪个真实网卡连接网络），一般的虚拟机都是自动桥接，但是这种方式不靠谱，所以你需要自己选择，如果你是通过有线接入网络，则选择有线桥接，若是通过无线接入网络，则通过无线接入。</strong>  </li>
+</ul>
 <p><div id="donate_guide" class="donate_bar center hidden"><a href="/images/reward.jpeg" title="微信打赏" class="fancybox" rel="article0"><img src="/images/reward.jpeg" title="微信打赏" height="164px" width="164px"></a> <div align="center">您的支持是对我最大的鼓励！</div></div> <script type="text/javascript">document.getElementById(‘btn_donate’).onclick = function(){$(‘#donate_board’).addClass(‘hidden’); $(‘#donate_guide’).removeClass(‘hidden’);}</script></p>
 
       
@@ -374,17 +350,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/08/帮助命令/" rel="next" title="帮助命令">
-                <i class="fa fa-chevron-left"></i> 帮助命令
+              <a href="/2017/02/13/CSS3中3D变换效果概述/" rel="next" title="CSS3中3D变换效果概述">
+                <i class="fa fa-chevron-left"></i> CSS3中3D变换效果概述
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/10/关机，挂载，用户查询命令/" rel="prev" title="关机，挂载，用户查询命令">
-                关机，挂载，用户查询命令 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -410,8 +382,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/02/08/压缩命令/"
-           data-title="压缩命令" data-url="http://yoursite.com/2017/02/08/压缩命令/">
+      <div class="ds-thread" data-thread-key="2017/02/13/liunx虚拟机网络配置/"
+           data-title="liunx虚拟机网络配置" data-url="http://yoursite.com/2017/02/13/liunx虚拟机网络配置/">
       </div>
     
   </div>
@@ -502,7 +474,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#zip格式压缩"><span class="nav-number">1.</span> <span class="nav-text">.zip格式压缩</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gz格式压缩"><span class="nav-number">2.</span> <span class="nav-text">.gz格式压缩</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bz2格式压缩"><span class="nav-number">3.</span> <span class="nav-text">.bz2格式压缩</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tar打包"><span class="nav-number">4.</span> <span class="nav-text">tar打包</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-修改配置文件"><span class="nav-number">1.</span> <span class="nav-text">1.修改配置文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-修改UUID-克隆机才需要修改"><span class="nav-number">2.</span> <span class="nav-text">2.修改UUID(克隆机才需要修改)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-设置虚拟机网络连接方式"><span class="nav-number">3.</span> <span class="nav-text">3.设置虚拟机网络连接方式</span></a></li></ol></div>
             
           </div>
         </section>
