@@ -1,0 +1,638 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="css3," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="CSS3中3D变换效果概述">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS3中3D变换效果概述">
+<meta property="og:url" content="http://yoursite.com/2017/02/13/CSS3中3D变换效果概述/index.html">
+<meta property="og:site_name" content="胡荣玲个人博客">
+<meta property="og:description" content="CSS3中3D变换效果概述">
+<meta property="og:image" content="http://oi1ylq4ab.bkt.clouddn.com/cube.png">
+<meta property="og:image" content="http://oi1ylq4ab.bkt.clouddn.com/result.png">
+<meta property="og:image" content="http://yoursite.com/images/reward.jpeg">
+<meta property="og:updated_time" content="2017-02-13T09:38:46.051Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS3中3D变换效果概述">
+<meta name="twitter:description" content="CSS3中3D变换效果概述">
+<meta name="twitter:image" content="http://oi1ylq4ab.bkt.clouddn.com/cube.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '6363030363597440000',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/02/13/CSS3中3D变换效果概述/"/>
+
+
+  <title> CSS3中3D变换效果概述 | 胡荣玲个人博客 </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">胡荣玲个人博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                CSS3中3D变换效果概述
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-02-13T17:12:54+08:00" content="2017-02-13">
+              2017-02-13
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/css3/" itemprop="url" rel="index">
+                    <span itemprop="name">css3</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/02/13/CSS3中3D变换效果概述/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/13/CSS3中3D变换效果概述/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>CSS3中3D变换效果概述<br><a id="more"></a></p>
+<h2 id="1-transform-style-指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化"><a href="#1-transform-style-指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化" class="headerlink" title="1.transform-style 指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化"></a>1.transform-style 指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化</h2><p>取值：flat | preserve-3d  </p>
+<ul>
+<li>flat：默认值，指定子元素位于此元素所在平面内  </li>
+<li>preserve-3d：指定子元素定位在三维空间内<br>示例代码：  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">&lt;meta charset="utf-8" /&gt;</div><div class="line">&lt;title&gt;transform-style&lt;/title&gt;</div><div class="line">&lt;style&gt;</div><div class="line">  body &#123;</div><div class="line">    perspective: 1000px;</div><div class="line">  &#125;</div><div class="line">  .cube &#123;</div><div class="line">    position: relative;</div><div class="line">    font-size: 80px;</div><div class="line">    width: 2em;</div><div class="line">    margin: 1.5em auto;</div><div class="line">    transform-style: preserve-3d;</div><div class="line">    transform: rotateX(-30deg) rotateY(30deg);</div><div class="line">  &#125;</div><div class="line">  .cube &gt; div &#123;</div><div class="line">    position: absolute;</div><div class="line">    width: 2em;</div><div class="line">    height: 2em;</div><div class="line">    background: rgba(0, 0, 0, .3);</div><div class="line">    border: 1px solid #999;</div><div class="line">    color: white;</div><div class="line">    text-align: center;</div><div class="line">    line-height: 2em;</div><div class="line">  &#125;</div><div class="line">  .front &#123;</div><div class="line">    transform: translateZ(1em);</div><div class="line">  &#125;</div><div class="line">  .top &#123;</div><div class="line">    transform: rotateX(90deg) translateZ(1em);</div><div class="line">  &#125;</div><div class="line">  .right &#123;</div><div class="line">    transform: rotateY(90deg) translateZ(1em);</div><div class="line">  &#125;</div><div class="line">  .left &#123;</div><div class="line">    transform: rotateY(-90deg) translateZ(1em);</div><div class="line">  &#125;</div><div class="line">  .bottom &#123;</div><div class="line">    transform: rotateX(-90deg) translateZ(1em);</div><div class="line">  &#125;</div><div class="line">  .back &#123;</div><div class="line">    transform: rotateY(-180deg) translateZ(1em);</div><div class="line">  &#125;</div><div class="line">&lt;/style&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">  &lt;div class="cube"&gt;</div><div class="line">    &lt;div class="front"&gt;1&lt;/div&gt;</div><div class="line">    &lt;div class="back"&gt;2&lt;/div&gt;</div><div class="line">    &lt;div class="right"&gt;3&lt;/div&gt;</div><div class="line">    &lt;div class="left"&gt;4&lt;/div&gt;</div><div class="line">    &lt;div class="top"&gt;5&lt;/div&gt;</div><div class="line">    &lt;div class="bottom"&gt;6&lt;/div&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="http://oi1ylq4ab.bkt.clouddn.com/cube.png" alt="示例代码效果截图">  </p>
+<h2 id="2-perspective-指定观察者与「z-0」平面的距离，使具有三维位置变换的元素产生透视效果"><a href="#2-perspective-指定观察者与「z-0」平面的距离，使具有三维位置变换的元素产生透视效果" class="headerlink" title="2.perspective 指定观察者与「z=0」平面的距离，使具有三维位置变换的元素产生透视效果"></a>2.perspective 指定观察者与「z=0」平面的距离，使具有三维位置变换的元素产生透视效果</h2><p>「z&gt;0」的三维元素比正常大，而<code>「z&lt;0」</code>时则比正常小，大小程度由该属性的值决定。当该属性值为「非none」时，元素将会创建局部堆叠上下文。<br>取值：none | <length>  </length></p>
+<ul>
+<li><code>none：不指定透视</code>  </li>
+<li><code>&lt;length&gt;：指定观察者距离「z=0」平面的距离，为元素及其内容应用透视变换。不允许负值</code>  <h2 id="3-perspective-origin-指定透视点的位置"><a href="#3-perspective-origin-指定透视点的位置" class="headerlink" title="3.perspective-origin 指定透视点的位置"></a>3.perspective-origin 指定透视点的位置</h2>取值：<code>[ &lt;percentage&gt; | &lt;length&gt; | left | center | right ] [ &lt;percentage&gt; | &lt;length&gt; | top | center | bottom ]</code><br>该属性提供2个参数值。如果提供两个，第一个用于横坐标，第二个用于纵坐标。如果只提供一个，该值将用于横坐标；纵坐标将默认为center。<br>（1）<code>&lt;percentage&gt;</code>：用百分比指定透视点坐标值，相对于元素宽度。可以为负值。<br>（2）<code>&lt;length&gt;</code>：用长度值指定透视点坐标值。可以为负值。  </li>
+<li>left：指定透视点的横坐标为left  </li>
+<li>center：指定透视点的横坐标为center  </li>
+<li>right：指定透视点的横坐标为right  </li>
+<li>top：指定透视点的纵坐标为top  </li>
+<li>center：指定透视点的纵坐标为center  </li>
+<li>bottom：指定透视点的纵坐标为bottom  <h2 id="4-backface-visibility-指定元素背面面向用户时是否可见"><a href="#4-backface-visibility-指定元素背面面向用户时是否可见" class="headerlink" title="4.backface-visibility 指定元素背面面向用户时是否可见"></a>4.backface-visibility 指定元素背面面向用户时是否可见</h2>取值：visible | hidden<br>决定一个元素背面面向用户时是否可见，需要直接在该元素上定义 &lt;’ backface-visibility ‘&gt; 属性，而不能在其父元素上，因为该属性默认为不可继承。  </li>
+<li>visible：指定元素背面可见，允许显示正面的镜像  </li>
+<li>hidden：指定元素背面不可见<br>示例代码：  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">  &lt;meta charset="utf-8" /&gt;</div><div class="line">  &lt;title&gt;backface-visibility&lt;/title&gt;</div><div class="line">  &lt;style&gt;</div><div class="line">    body &#123;</div><div class="line">      perspective: 800px;</div><div class="line">      perspective-origin: 50%;</div><div class="line">    &#125;</div><div class="line">    .wrapper&#123;</div><div class="line">      width: 500px;</div><div class="line">      margin:30px auto 0;</div><div class="line">    &#125;</div><div class="line">    .cube &#123;</div><div class="line">      display: inline-block;</div><div class="line">      width: 100px;</div><div class="line">      height: 100px;</div><div class="line">      margin: 50px;</div><div class="line">      transform-style: preserve-3d;</div><div class="line">      animation: rotate 5s infinite;</div><div class="line">    &#125;</div><div class="line">    .cube &gt; div &#123;</div><div class="line">      position: absolute;</div><div class="line">      width: 100%;</div><div class="line">      height: 100%;</div><div class="line">      border:1px #ff0 solid;</div><div class="line">      background-color: rgba(0, 0, 0, .3);</div><div class="line">      color: gray;</div><div class="line">      font-size: 40px;</div><div class="line">      line-height: 100px;</div><div class="line">      text-align: center;</div><div class="line">      color: #ff0;</div><div class="line">      font-family: Arial;</div><div class="line">    &#125;</div><div class="line">    .front &#123;</div><div class="line">      transform: translatez(50px);</div><div class="line">    &#125;</div><div class="line">    .back &#123;</div><div class="line">      transform: rotatey(180deg) translatez(50px);</div><div class="line">    &#125;</div><div class="line">    .right &#123;</div><div class="line">      transform: rotatey(90deg) translatez(50px);</div><div class="line">    &#125;</div><div class="line">    .left &#123;</div><div class="line">      transform: rotatey(-90deg) translatez(50px);</div><div class="line">    &#125;</div><div class="line">    .top &#123;</div><div class="line">      transform: rotatex(90deg) translatez(50px);</div><div class="line">    &#125;</div><div class="line">    .bottom &#123;</div><div class="line">      transform: rotatex(-90deg) translatez(50px);</div><div class="line">    &#125;</div><div class="line">    @keyframes rotate &#123;</div><div class="line">      from &#123;</div><div class="line">        transform: rotatey(0);</div><div class="line">      &#125;</div><div class="line">      to &#123;</div><div class="line">        transform: rotatey(360deg);</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">    .c1 &gt; div &#123;</div><div class="line">      backface-visibility: visible;</div><div class="line">    &#125;</div><div class="line">    .c2 &gt; div &#123;</div><div class="line">      backface-visibility: hidden;</div><div class="line">    &#125;</div><div class="line">  &lt;/style&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">  &lt;div class="wrapper"&gt;</div><div class="line">    &lt;div class="cube c1"&gt;</div><div class="line">      &lt;div class="front"&gt;1&lt;/div&gt;</div><div class="line">      &lt;div class="back"&gt;2&lt;/div&gt;</div><div class="line">      &lt;div class="right"&gt;3&lt;/div&gt;</div><div class="line">      &lt;div class="left"&gt;4&lt;/div&gt;</div><div class="line">      &lt;div class="top"&gt;5&lt;/div&gt;</div><div class="line">      &lt;div class="bottom"&gt;6&lt;/div&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line"></div><div class="line">    &lt;div class="cube c2"&gt;</div><div class="line">      &lt;div class="front"&gt;1&lt;/div&gt;</div><div class="line">      &lt;div class="back"&gt;2&lt;/div&gt;</div><div class="line">      &lt;div class="right"&gt;3&lt;/div&gt;</div><div class="line">      &lt;div class="left"&gt;4&lt;/div&gt;</div><div class="line">      &lt;div class="top"&gt;5&lt;/div&gt;</div><div class="line">      &lt;div class="bottom"&gt;6&lt;/div&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="http://oi1ylq4ab.bkt.clouddn.com/result.png" alt="示例代码效果截图"></p>
+<p><div id="donate_guide" class="donate_bar center hidden"><a href="/images/reward.jpeg" title="微信打赏" class="fancybox" rel="article0"><img src="/images/reward.jpeg" title="微信打赏" height="164px" width="164px"></a> <div align="center">您的支持是对我最大的鼓励！</div></div> <script type="text/javascript">document.getElementById(‘btn_donate’).onclick = function(){$(‘#donate_board’).addClass(‘hidden’); $(‘#donate_guide’).removeClass(‘hidden’);}</script></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/css3/" rel="tag">#css3</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/02/13/css3过渡效果之transition/" rel="next" title="css3过渡效果之transition">
+                <i class="fa fa-chevron-left"></i> css3过渡效果之transition
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/02/13/CSS3中3D变换效果概述/"
+           data-title="CSS3中3D变换效果概述" data-url="http://yoursite.com/2017/02/13/CSS3中3D变换效果概述/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="huhu" />
+          <p class="site-author-name" itemprop="name">huhu</p>
+          <p class="site-description motion-element" itemprop="description">喜欢我也没用，我只爱学习</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">26</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-transform-style-指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化"><span class="nav-number">1.</span> <span class="nav-text">1.transform-style 指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-perspective-指定观察者与「z-0」平面的距离，使具有三维位置变换的元素产生透视效果"><span class="nav-number">2.</span> <span class="nav-text">2.perspective 指定观察者与「z=0」平面的距离，使具有三维位置变换的元素产生透视效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-perspective-origin-指定透视点的位置"><span class="nav-number">3.</span> <span class="nav-text">3.perspective-origin 指定透视点的位置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-backface-visibility-指定元素背面面向用户时是否可见"><span class="nav-number">4.</span> <span class="nav-text">4.backface-visibility 指定元素背面面向用户时是否可见</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">huhu</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"hurongling"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>

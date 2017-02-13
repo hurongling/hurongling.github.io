@@ -1,0 +1,713 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="css3," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="css3动画之animation的使用方法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="css3动画之animation">
+<meta property="og:url" content="http://yoursite.com/2017/02/13/css3动画之animation/index.html">
+<meta property="og:site_name" content="胡荣玲个人博客">
+<meta property="og:description" content="css3动画之animation的使用方法">
+<meta property="og:image" content="http://yoursite.com/images/reward.jpeg">
+<meta property="og:updated_time" content="2017-02-13T09:02:43.887Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="css3动画之animation">
+<meta name="twitter:description" content="css3动画之animation的使用方法">
+<meta name="twitter:image" content="http://yoursite.com/images/reward.jpeg">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '6363030363597440000',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/02/13/css3动画之animation/"/>
+
+
+  <title> css3动画之animation | 胡荣玲个人博客 </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">胡荣玲个人博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                css3动画之animation
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-02-13T16:29:29+08:00" content="2017-02-13">
+              2017-02-13
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/css3/" itemprop="url" rel="index">
+                    <span itemprop="name">css3</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/02/13/css3动画之animation/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/13/css3动画之animation/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>css3动画之animation的使用方法<br><a id="more"></a><br>@keyframes规则用于创建动画。在 @keyframes 中规定某项CSS样式，就能创建由当前样式逐渐改为新样式的动画效果。通过animation相关动画属性完成整个CSS3动画效果  </p>
+<h2 id="1-keyframes-指定动画名称和动画效果"><a href="#1-keyframes-指定动画名称和动画效果" class="headerlink" title="1.@keyframes 指定动画名称和动画效果"></a>1.@keyframes 指定动画名称和动画效果</h2><p>@keyframes定义的动画名称用来被animation-name所使用。定义动画时，简单的动画可以直接使用关键字from和to，即从一种状态过渡到另一种状态<br>语法：<br><code>@keyframes &lt;identifier&gt; { &lt;keyframes-blocks&gt; }</code><br><code>&lt;keyframes-blocks&gt;：[ [ from | to | &lt;percentage&gt; ]{ sRules } ] [ [ , from | to | &lt;percentage&gt; ]{ sRules } ]</code><br>取值：  </p>
+<ul>
+<li><code>&lt;identifier&gt;：identifier定义一个动画名称</code>   </li>
+<li><code>&lt;keyframes-blocks&gt;：定义动画在每个阶段的样式，即帧动画</code><br>示例：  <blockquote>
+<p>@keyframes testanimations {<br>  from { transform: translate(0, 0); }<br>  20% { transform: translate(20px, 20px); }<br>  40% { transform: translate(40px, 0); }<br>  60% { transform: translate(60px, 20); }<br>  80% { transform: translate(80px, 0); }<br>  to { transform: translate(100px, 20px); }<br>}<br>/<em> 或者 </em>/<br>@keyframes testanimations{<br>  0% { transform: translate(0, 0); }<br>  20% { transform: translate(20px, 20px); }<br>  40% { transform: translate(40px, 0); }<br>  60% { transform: translate(60px, 20px); }<br>  80% { transform: translate(80px, 0); }<br>  100% { transform: translate(100px, 20px); }<br>}  </p>
+</blockquote>
+</li>
+</ul>
+<h2 id="2-animation-name-检索或设置对象所应用的动画名称"><a href="#2-animation-name-检索或设置对象所应用的动画名称" class="headerlink" title="2.animation-name 检索或设置对象所应用的动画名称"></a>2.animation-name 检索或设置对象所应用的动画名称</h2><p>必须与规则 @keyframes 配合使用，因为动画名称由@keyframes定义。如果提供多个属性值，以逗号进行分隔<br>语法：<br><code>animation-name：&lt;single-animation-name&gt;[,&lt;single-animation-name&gt;]</code><br><code>&lt;single-animation-name&gt; = none | &lt;identifier&gt;</code><br>取值：  </p>
+<ul>
+<li><code>none：不引用任何动画名称</code>  </li>
+<li><code>&lt;identifier&gt;：定义一个或多个动画名称(identifier标识)</code><br>示例：  <blockquote>
+<p>@keyframes slide{<br>  0%{transform:scale(0);opacity:0;}<br>  40%{transform:scale(1);opacity:1;}<br>  100%{opacity:1;}<br>}<br>@-webkit-keyframes slide{<br>  0%{-webkit-transform:scale(0);opacity:0;}<br>  40%{-webkit-transform:scale(1);opacity:1;}<br>  100%{opacity:1;}<br>}<br>.slide-box{<br>  animation-name: slide;<br>}  </p>
+</blockquote>
+</li>
+</ul>
+<h2 id="3-animation-duration-设置对象动画的持续时间"><a href="#3-animation-duration-设置对象动画的持续时间" class="headerlink" title="3.animation-duration 设置对象动画的持续时间"></a>3.animation-duration 设置对象动画的持续时间</h2><p>如果提供多个属性值，以逗号进行分隔。<br>语法：<br><code>animation-duration：&lt;time&gt;[,&lt;time&gt;]</code><br>取值：  </p>
+<ul>
+<li><code>&lt;time&gt;：指定对象动画的持续时间</code><br>示例：  <blockquote>
+<p>.slide-box{<br>  animation-duration: .8s;<br>}  </p>
+</blockquote>
+</li>
+</ul>
+<h2 id="4-animation-timing-function-设置对象动画的过渡类型"><a href="#4-animation-timing-function-设置对象动画的过渡类型" class="headerlink" title="4.animation-timing-function 设置对象动画的过渡类型"></a>4.animation-timing-function 设置对象动画的过渡类型</h2><p>如果提供多个属性值，以逗号进行分隔。<br>语法：<br><code>animation-timing-function：&lt;single-animation-timing-function&gt;[,&lt;single-animation-timing-function&gt;]</code><br><code>&lt;single-animation-timing-function&gt; = ease | linear | ease-in | ease-out | ease-in-out | step-start | step-end | steps(&lt;integer&gt;[, [ start | end ] ]?) | cubic-bezier(&lt;number&gt;, &lt;number&gt;, &lt;number&gt;, &lt;number&gt;)</code><br>取值：  </p>
+<ul>
+<li>linear：线性过渡。等同于贝塞尔曲线(0.0, 0.0, 1.0, 1.0)  </li>
+<li>ease：平滑过渡。等同于贝塞尔曲线(0.25, 0.1, 0.25, 1.0)  </li>
+<li>ease-in：由慢到快。等同于贝塞尔曲线(0.42, 0, 1.0, 1.0)  </li>
+<li>ease-out：由快到慢。等同于贝塞尔曲线(0, 0, 0.58, 1.0)  </li>
+<li>ease-in-out：由慢到快再到慢。等同于贝塞尔曲线(0.42, 0, 0.58, 1.0)  </li>
+<li>step-start：等同于 steps(1, start)  </li>
+<li>step-end：等同于 steps(1, end)  </li>
+<li>steps(<integer>[, [ start | end ] ]?)：接受两个参数的步进函数。第一个参数必须为正整数，指定函数的步数。第二个参数取值可以是start或end，指定每一步的值发生变化的时间点。第二个参数是可选的，默认值为end。  </integer></li>
+<li>cubic-bezier(<number>, <number>, <number>, <number>)：特定的贝塞尔曲线类型，4个数值需在[0, 1]区间内<br>示例：   <blockquote>
+<p>.slide-box{<br>animation-timing-function: ease-in;<br>}  </p>
+</blockquote>
+</number></number></number></number></li>
+</ul>
+<h2 id="5-animation-delay-设置对象动画的延迟时间"><a href="#5-animation-delay-设置对象动画的延迟时间" class="headerlink" title="5.animation-delay 设置对象动画的延迟时间"></a>5.animation-delay 设置对象动画的延迟时间</h2><p>如果提供多个属性值，以逗号进行分隔。<br>语法：<br><code>animation-delay：&lt;time&gt;[,&lt;time&gt;]</code><br>取值：  </p>
+<ul>
+<li><code>&lt;time&gt;：指定对象动画延迟的时间</code><br>示例：   <blockquote>
+<p>.slide-box{<br>  animation-delay: .5s;<br>}  </p>
+</blockquote>
+</li>
+</ul>
+<h2 id="6-animation-iteration-count-设置对象动画的循环次数"><a href="#6-animation-iteration-count-设置对象动画的循环次数" class="headerlink" title="6.animation-iteration-count 设置对象动画的循环次数"></a>6.animation-iteration-count 设置对象动画的循环次数</h2><p>如果提供多个属性值，以逗号进行分隔。<br>语法：<br><code>animation-iteration-count：&lt;single-animation-iteration-count&gt;[,&lt;single-animation-iteration-count&gt;]</code><br><code>&lt;single-animation-iteration-count&gt; = infinite | &lt;number&gt;</code><br>取值：  </p>
+<ul>
+<li>infinite：无限循环  </li>
+<li><number>：指定对象动画的具体循环次数<br>示例：  <blockquote>
+<p>.slide-box{<br>animation-iteration-count: infinite;/<em> 无限循环 </em>/<br>}  </p>
+</blockquote>
+</number></li>
+</ul>
+<h2 id="7-animation-direction-设置对象动画在循环中是否反向运动"><a href="#7-animation-direction-设置对象动画在循环中是否反向运动" class="headerlink" title="7.animation-direction 设置对象动画在循环中是否反向运动"></a>7.animation-direction 设置对象动画在循环中是否反向运动</h2><p>如果提供多个属性值，以逗号进行分隔。<br>语法：<br><code>animation-direction：&lt;single-animation-direction&gt;[,&lt;single-animation-direction&gt;]</code><br><code>&lt;single-animation-direction&gt; = normal | reverse | alternate | alternate-reverse</code><br>取值：  </p>
+<ul>
+<li>normal：正常方向  </li>
+<li>reverse：反方向运行  </li>
+<li>alternate：动画先正常运行再反方向运行，并持续交替运行  </li>
+<li>alternate-reverse：动画先反运行再正方向运行，并持续交替运行<br>示例：  <blockquote>
+<p>.slide-box{<br>animation-direction: reverse;/<em> 反方向运行循环 </em>/<br>}  </p>
+</blockquote>
+</li>
+</ul>
+<h2 id="8-animation-play-state-设置对象动画的状态"><a href="#8-animation-play-state-设置对象动画的状态" class="headerlink" title="8.animation-play-state 设置对象动画的状态"></a>8.animation-play-state 设置对象动画的状态</h2><p>如果提供多个属性值，以逗号进行分隔。<br>语法：<br><code>animation-play-state：&lt;single-animation-play-state&gt;[,&lt;single-animation-play-state&gt;]</code><br><code>&lt;single-animation-play-state&gt; = running | paused</code><br>取值：  </p>
+<ul>
+<li>running：运动  </li>
+<li>paused：暂停<br>示例：  <blockquote>
+<p>.slide-box{<br>animation-play-state: running;<br>}  </p>
+</blockquote>
+</li>
+</ul>
+<h2 id="9-animation-fill-mode-设置对象动画时间之外的状态"><a href="#9-animation-fill-mode-设置对象动画时间之外的状态" class="headerlink" title="9.animation-fill-mode 设置对象动画时间之外的状态"></a>9.animation-fill-mode 设置对象动画时间之外的状态</h2><p>如果提供多个属性值，以逗号进行分隔。<br>语法：<br><code>animation-fill-mode：&lt;single-animation-fill-mode&gt;[,&lt;single-animation-fill-mode&gt;]</code><br><code>&lt;single-animation-fill-mode&gt; = none | forwards | backwards | both</code><br>取值：  </p>
+<ul>
+<li>none：默认值。不设置对象动画之外的状态  </li>
+<li>forwards：设置对象状态为动画结束时的状态  </li>
+<li>backwards：设置对象状态为动画开始时的状态  </li>
+<li>both：设置对象状态为动画结束或开始的状态<br>示例：  <blockquote>
+<p>.slide-box{<br>animation-fill-mode: backwards;<br>}  </p>
+</blockquote>
+</li>
+</ul>
+<h1 id="10-animation-复合属性，设置对象所应用的动画特效"><a href="#10-animation-复合属性，设置对象所应用的动画特效" class="headerlink" title="10.animation 复合属性，设置对象所应用的动画特效"></a>10.animation 复合属性，设置对象所应用的动画特效</h1><p>如果提供多组属性值，以逗号进行分隔。<br>注意：如果只提供一个<code>&lt;time&gt;</code>参数，则为 &lt;’ animation-duration ‘&gt; 的值定义；如果提供二个<code>&lt;time&gt;</code>参数，则第一个为 &lt;’ animation-duration ‘&gt; 的值定义，第二个为 &lt;’ animation-delay ‘&gt; 的值定义。<br>语法：<br><code>animation：&lt;single-animation&gt;[,&lt;single-animation&gt;]</code><br><code>&lt;single-animation&gt; = &lt;single-animation-name&gt; || &lt;time&gt; || &lt;single-animation-timing-function&gt; || &lt;time&gt; || &lt;single-animation-iteration-count&gt; || &lt;single-animation-direction&gt; || &lt;single-animation-fill-mode&gt; || &lt;single-animation-play-state&gt;</code><br>取值：  </p>
+<ul>
+<li>&lt;’ animation-name ‘&gt;：检索或设置对象所应用的动画名称  </li>
+<li>&lt;’ animation-duration ‘&gt;：检索或设置对象动画的持续时间  </li>
+<li>&lt;’ animation-timing-function ‘&gt;：检索或设置对象动画的过渡类型  </li>
+<li>&lt;’ animation-delay ‘&gt;：检索或设置对象动画延迟的时间  </li>
+<li>&lt;’ animation-iteration-count ‘&gt;：检索或设置对象动画的循环次数  </li>
+<li>&lt;’ animation-direction ‘&gt;：检索或设置对象动画在循环中是否反向运动  </li>
+<li>&lt;’ animation-fill-mode ‘&gt;：检索或设置对象动画时间之外的状态  </li>
+<li>&lt;’ animation-play-state ‘&gt;：检索或设置对象动画的状态。w3c正考虑是否将该属性移除，因为动画的状态可以通过其它的方式实现，比如重设样式<br>示例：  <blockquote>
+<p>.slide-box{<br>-webkit-animation:animations 2s ease-out forwards;<br>animation:animations 2s ease-out forwards;<br>}  </p>
+</blockquote>
+</li>
+</ul>
+<p><div id="donate_guide" class="donate_bar center hidden"><a href="/images/reward.jpeg" title="微信打赏" class="fancybox" rel="article0"><img src="/images/reward.jpeg" title="微信打赏" height="164px" width="164px"></a> <div align="center">您的支持是对我最大的鼓励！</div></div> <script type="text/javascript">document.getElementById(‘btn_donate’).onclick = function(){$(‘#donate_board’).addClass(‘hidden’); $(‘#donate_guide’).removeClass(‘hidden’);}</script></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/css3/" rel="tag">#css3</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/02/13/CSS3中的2D变换/" rel="next" title="CSS3中的2D变换">
+                <i class="fa fa-chevron-left"></i> CSS3中的2D变换
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/02/13/css3过渡效果之transition/" rel="prev" title="css3过渡效果之transition">
+                css3过渡效果之transition <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/02/13/css3动画之animation/"
+           data-title="css3动画之animation" data-url="http://yoursite.com/2017/02/13/css3动画之animation/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="huhu" />
+          <p class="site-author-name" itemprop="name">huhu</p>
+          <p class="site-description motion-element" itemprop="description">喜欢我也没用，我只爱学习</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">26</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-keyframes-指定动画名称和动画效果"><span class="nav-number">1.</span> <span class="nav-text">1.@keyframes 指定动画名称和动画效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-animation-name-检索或设置对象所应用的动画名称"><span class="nav-number">2.</span> <span class="nav-text">2.animation-name 检索或设置对象所应用的动画名称</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-animation-duration-设置对象动画的持续时间"><span class="nav-number">3.</span> <span class="nav-text">3.animation-duration 设置对象动画的持续时间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-animation-timing-function-设置对象动画的过渡类型"><span class="nav-number">4.</span> <span class="nav-text">4.animation-timing-function 设置对象动画的过渡类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-animation-delay-设置对象动画的延迟时间"><span class="nav-number">5.</span> <span class="nav-text">5.animation-delay 设置对象动画的延迟时间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-animation-iteration-count-设置对象动画的循环次数"><span class="nav-number">6.</span> <span class="nav-text">6.animation-iteration-count 设置对象动画的循环次数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-animation-direction-设置对象动画在循环中是否反向运动"><span class="nav-number">7.</span> <span class="nav-text">7.animation-direction 设置对象动画在循环中是否反向运动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-animation-play-state-设置对象动画的状态"><span class="nav-number">8.</span> <span class="nav-text">8.animation-play-state 设置对象动画的状态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-animation-fill-mode-设置对象动画时间之外的状态"><span class="nav-number">9.</span> <span class="nav-text">9.animation-fill-mode 设置对象动画时间之外的状态</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#10-animation-复合属性，设置对象所应用的动画特效"><span class="nav-number"></span> <span class="nav-text">10.animation 复合属性，设置对象所应用的动画特效</span></a></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">huhu</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"hurongling"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>

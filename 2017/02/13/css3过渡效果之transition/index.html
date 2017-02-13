@@ -84,17 +84,17 @@
 
 
 
-<meta name="description" content="简单的介绍十一种css选择器">
+<meta name="description" content="css3过度效果之transition的使用方法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="css选择器">
-<meta property="og:url" content="http://yoursite.com/2017/02/13/css选择器/index.html">
+<meta property="og:title" content="css3过渡效果之transition">
+<meta property="og:url" content="http://yoursite.com/2017/02/13/css3过渡效果之transition/index.html">
 <meta property="og:site_name" content="胡荣玲个人博客">
-<meta property="og:description" content="简单的介绍十一种css选择器">
+<meta property="og:description" content="css3过度效果之transition的使用方法">
 <meta property="og:image" content="http://yoursite.com/images/reward.jpeg">
-<meta property="og:updated_time" content="2017-02-13T06:37:14.150Z">
+<meta property="og:updated_time" content="2017-02-13T09:11:46.311Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="css选择器">
-<meta name="twitter:description" content="简单的介绍十一种css选择器">
+<meta name="twitter:title" content="css3过渡效果之transition">
+<meta name="twitter:description" content="css3过度效果之transition的使用方法">
 <meta name="twitter:image" content="http://yoursite.com/images/reward.jpeg">
 
 
@@ -116,10 +116,10 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/13/css选择器/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/02/13/css3过渡效果之transition/"/>
 
 
-  <title> css选择器 | 胡荣玲个人博客 </title>
+  <title> css3过渡效果之transition | 胡荣玲个人博客 </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -233,7 +233,7 @@
             
             
               
-                css选择器
+                css3过渡效果之transition
               
             
           </h1>
@@ -245,7 +245,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-02-13T13:54:49+08:00" content="2017-02-13">
+            <time itemprop="dateCreated" datetime="2017-02-13T16:30:07+08:00" content="2017-02-13">
               2017-02-13
             </time>
           </span>
@@ -275,8 +275,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/02/13/css选择器/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/13/css选择器/" itemprop="commentsCount"></span>
+                <a href="/2017/02/13/css3过渡效果之transition/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/13/css3过渡效果之transition/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -299,26 +299,85 @@
       
 
       
-        <p>简单的介绍十一种css选择器<br><a id="more"></a></p>
-<h2 id="一、id选择器"><a href="#一、id选择器" class="headerlink" title="一、id选择器"></a>一、id选择器</h2><p>1.同一页面的id名称不可重复<br>2.id由#开头，不能以数字开头，名称不能与标签选择器相同<br>3.如果是为了设置样式，一般不会使用id，id是留给js使用的  </p>
-<h2 id="二、class选择器"><a href="#二、class选择器" class="headerlink" title="二、class选择器"></a>二、class选择器</h2><p>1.同一页面的class名称可重复<br>2.在html中，每个标签可以同时绑定多个类名class=”c1 c2”  </p>
-<h2 id="三、后代选择器"><a href="#三、后代选择器" class="headerlink" title="三、后代选择器"></a>三、后代选择器</h2><p>格式：标签1 标签2{属性：值;}<br>1.先找到标签1，再找标签2，再设置属性<br>2.有多种组合：标签-标签，id-标签，id-class，class-标签，id-id，class-class<br>3.后代选择器可以无限延伸，不止两层  </p>
-<h2 id="四、子元素选择器"><a href="#四、子元素选择器" class="headerlink" title="四、子元素选择器"></a>四、子元素选择器</h2><p>1.作用：找到指定标签中所有特定的直接子元素，然后设置属性<br>2.格式：标签1&gt;标签2{属性：值;}<br>3.子元素选择器只会查找到指定标签，不会影响到很里面的标签<br>4.有多种组合：标签-标签，id-标签，id-class，class-标签，id-id，class-class<br>5.子选择器可以通过&gt;一直延续下去，如：div&gt;ul&gt;li&gt;p{}  </p>
-<h2 id="五、交集选择器（没有连接符号）"><a href="#五、交集选择器（没有连接符号）" class="headerlink" title="五、交集选择器（没有连接符号）"></a>五、交集选择器（没有连接符号）</h2><p>1.作用：给所有选择器选中的标签中，相交的那部分标签设置属性<br>2.格式：选择器1选择器2{属性：值；}<br>3.选择器之间没有连接符号<br>4.id，标签，class可任意组合<br>5.交集选择器仅作为了解，实际开发中运用不多  </p>
-<h2 id="六、并集选择器"><a href="#六、并集选择器" class="headerlink" title="六、并集选择器"></a>六、并集选择器</h2><p>1.给所有选择器选中的标签设置属性<br>2.格式：选择器1，选择器2{属性：值；}<br>3.id，标签，class可任意组合  </p>
-<h2 id="七、兄弟选择器"><a href="#七、兄弟选择器" class="headerlink" title="七、兄弟选择器"></a>七、兄弟选择器</h2><p>1.只能选中同级关系的标签<br>2.相邻兄弟选择器：给指定选择器后面紧跟的那个选择器选中的标签设置属性。格式：选择器1+选择器2{属性：值；}<br>3.通用兄弟选择器：给指定选择器后面的所有选择器选中的所有标签设置属性。格式：选择器1~选择器2{属性：值；}  </p>
-<h2 id="八、序选择器"><a href="#八、序选择器" class="headerlink" title="八、序选择器"></a>八、序选择器</h2><p>格式1：p:first-child{color: red;}<br>作用1：选中同级别中的第n个标签，不区分类型  </p>
-<blockquote>
-<p>   first-child 选中同级别中的第一个标签<br>    last-child  选中同级别中的最后一个标签<br>    nth-child(n)选中同级别中的第n个标签<br>    nth-last-child(n)选中同级别中的倒数第n个标签<br>    only-child 选中父元素中唯一的子元素（例：只有一个p，不存在其他元素才可选中）<br>    only-of-type 选中父元素中唯一的制定元素（只存在一个p，可存在其他标签，就可选中）<br>    nth-child(odd)选中同级别中的奇数标签<br>    nth-child(even)选中同级别中的偶数标签<br>    nth-child(xn+y)选中同级别中的xn+y个标签，n从0开始自增，如：2n+1，3n+0等函数  </p>
+        <p>css3过度效果之transition的使用方法<br><a id="more"></a></p>
+<h2 id="1-transition-property-设置对象中的参与过渡的属性"><a href="#1-transition-property-设置对象中的参与过渡的属性" class="headerlink" title="1.transition-property 设置对象中的参与过渡的属性"></a>1.transition-property 设置对象中的参与过渡的属性</h2><p>默认值为：all。默认为所有可以进行过渡的css属性。如果提供多个属性值，以逗号进行分隔。<br>语法：<br><code>transition-property：none | &lt;single-transition-property&gt;[ ,&lt;single-transition-property&gt; ]</code><single-transition-property> = all | <ident>`<br>取值：  </ident></single-transition-property></p>
+<ul>
+<li>none：不指定过渡的css属性  </li>
+<li>all：所有可以进行过渡的css属性  </li>
+<li><ident>：指定要进行过渡的css属性<br>示例：  <blockquote>
+<style type="text/css">  
+ul li:hover{  
+-webkit-transition-property:border-color,background-color,color;  
+transition-property:border-color,background-color,color;  
+}  
+</style>  
+
 </blockquote>
-<p>格式2：p:first-of-type{color: red;}<br>作用2：选中级别中同类型的第n个标签<br>last-of-type,nth-of-type(n),nth-last-of-type(n)，nth-of-type(odd)，nth-of-type(even)  </p>
-<h2 id="九、属性选择器"><a href="#九、属性选择器" class="headerlink" title="九、属性选择器"></a>九、属性选择器</h2><p>1.根据指定的属性名称找到对应的标签，然后设置属性，如：<br>p[class]{font-size: 30px;}给有class属性的标签设置字体大小<br>p[class=”pa2”]<br>input[type=”password”]指定<code>&lt;input type=&quot;password&quot; name=&quot;&quot; id=&quot;&quot;&gt;</code><br>2.属性的取值以什么开头<br>[attribute|=value] css2中的用法<br>[attribute^=value] css3中的用法<br>3.属性的取值以什么结尾<br>[attribute$=value] css3中的用法<br>4.属性的取值是否包含某个特定的值<br>[attribute~=value] css2中的用法<br>[attribute*=value] css3中的用法<br>如：p[class^=pa]{……}  </p>
-<h2 id="十、通配符选择器"><a href="#十、通配符选择器" class="headerlink" title="十、通配符选择器"></a>十、通配符选择器</h2><p>1.格式：<em>{……}给当前页面所有标签设置属性，如：  
-</em>{margin: 0;padding:0;}<br>2.若当前页面标签较多，通配符选择器性能变差，企业开发中一般不使用  </p>
-<h2 id="十一、结构性伪类选择器"><a href="#十一、结构性伪类选择器" class="headerlink" title="十一、结构性伪类选择器"></a>十一、结构性伪类选择器</h2><p>1.root<br>:root{background:orange} 等同于html {background:orange;}<br>2.:not否定选择器，可以选择除某个元素之外的所有元素<br>如给表单中除submit按钮之外的input元素添加红色边框，CSS代码可以写成：  </p>
-<blockquote>
-<p>input:not([type=”submit”]){border:1px solid red;}  </p>
+</ident></li>
+</ul>
+<h2 id="2-transition-duration-设置对象过渡的持续时间"><a href="#2-transition-duration-设置对象过渡的持续时间" class="headerlink" title="2.transition-duration 设置对象过渡的持续时间"></a>2.transition-duration 设置对象过渡的持续时间</h2><p>如果提供多个属性值，以逗号进行分隔。<br>语法：<br><code>transition-duration：&lt;time&gt;[ ,&lt;time&gt; ]</code><br>取值：  </p>
+<ul>
+<li><time>：指定对象过渡的持续时间<br>示例：  <blockquote>
+<style type="text/css">  
+ul li:hover{  
+-webkit-transition-duration:.5s;  
+transition-duration:.5s;  
+}  
+</style>  
+
 </blockquote>
+</time></li>
+</ul>
+<h2 id="3-transition-timing-function-设置对象中过渡的动画类型"><a href="#3-transition-timing-function-设置对象中过渡的动画类型" class="headerlink" title="3.transition-timing-function 设置对象中过渡的动画类型"></a>3.transition-timing-function 设置对象中过渡的动画类型</h2><p>如果提供多个属性值，以逗号进行分隔。<br>语法：<br><code>transition-timing-function：&lt;single-transition-timing-function&gt;[,&lt;single-transition-timing-function&gt;]</code><br><code>&lt;single-transition-timing-function&gt; = ease | linear | ease-in | ease-out | ease-in-out | step-start | step-end | steps(&lt;integer&gt;[, [ start | end ] ]?) | cubic-bezier(&lt;number&gt;, &lt;number&gt;, &lt;number&gt;, &lt;number&gt;)</code><br>取值：  </p>
+<ul>
+<li>linear：线性过渡。等同于贝塞尔曲线(0.0, 0.0, 1.0, 1.0)  </li>
+<li>ease：平滑过渡。等同于贝塞尔曲线(0.25, 0.1, 0.25, 1.0)  </li>
+<li>ease-in：由慢到快。等同于贝塞尔曲线(0.42, 0, 1.0, 1.0)  </li>
+<li>ease-out：由快到慢。等同于贝塞尔曲线(0, 0, 0.58, 1.0)  </li>
+<li>ease-in-out：由慢到快再到慢。等同于贝塞尔曲线(0.42, 0, 0.58, 1.0)  </li>
+<li>step-start：等同于 steps(1, start)  </li>
+<li>step-end：等同于 steps(1, end)  </li>
+<li>steps(<integer>[, [ start | end ] ]?)：接受两个参数的步进函数。第一个参数必须为正整数，指定函数的步数。第二个参数取值可以是start或end，指定每一步的值发生变化的时间点。第二个参数是可选的，默认值为end  </integer></li>
+<li>cubic-bezier(<number>, <number>, <number>, <number>)：特定的贝塞尔曲线类型，4个数值需在[0, 1]区间内<br>示例：  <blockquote>
+<style type="text/css">  
+ul li:hover{  
+-webkit-transition-timing-function:ease-out;  
+transition-timing-function:ease-out;  
+}  
+</style>  
+
+</blockquote>
+</number></number></number></number></li>
+</ul>
+<h2 id="4-transition-delay-设置对象延迟过渡的时间"><a href="#4-transition-delay-设置对象延迟过渡的时间" class="headerlink" title="4.transition-delay 设置对象延迟过渡的时间"></a>4.transition-delay 设置对象延迟过渡的时间</h2><p>如果提供多个属性值，以逗号进行分隔。<br>语法：<br><code>transition-delay：&lt;time&gt;[ ,&lt;time&gt; ]</code><br>取值：  </p>
+<ul>
+<li><time>：指定对象过渡的延迟时间<br>示例：  <blockquote>
+<style type="text/css">  
+ul li:hover{  
+-webkit-transition-delay:.7s;  
+transition-delay:.7s;  
+}  
+</style>  
+
+</blockquote>
+</time></li>
+</ul>
+<h2 id="5-transition-复合属性，设置对象变换时的过渡效果"><a href="#5-transition-复合属性，设置对象变换时的过渡效果" class="headerlink" title="5.transition 复合属性，设置对象变换时的过渡效果"></a>5.transition 复合属性，设置对象变换时的过渡效果</h2><p>注意：如果只提供一个<time>参数，则为 &lt;’ transition-duration ‘&gt; 的值定义；如果提供二个<time>参数，则第一个为 &lt;’ transition-duration ‘&gt; 的值定义，第二个为 &lt;’ transition-delay ‘&gt; 的值定义可以为同一元素的多个属性定义过渡效果。<br>语法：<br><code>transition：&lt;single-transition&gt;[,&lt;single-transition&gt;]</code><br><code>&lt;single-transition&gt; = [ none | &lt;single-transition-property&gt; ] || &lt;time&gt; || &lt;single-transition-timing-function&gt; || &lt;time&gt;</code><br>取值：  </time></time></p>
+<ul>
+<li>&lt;’ transition-property ‘&gt;：检索或设置对象中的参与过渡的属性  </li>
+<li>&lt;’ transition-duration ‘&gt;：检索或设置对象过渡的持续时间  </li>
+<li>&lt;’ transition-timing-function ‘&gt;：检索或设置对象中过渡的动画类型  </li>
+<li>&lt;’ transition-delay ‘&gt;：检索或设置对象延迟过渡的时间<br>示例：  <blockquote>
+<style type="text/css">  
+ul li:hover{  
+-webkit-transition:background-color .5s ease-in;  
+transition:background-color .5s ease-in;  
+}  
+</style>  
+
+</blockquote>
+</li>
+</ul>
 <p><div id="donate_guide" class="donate_bar center hidden"><a href="/images/reward.jpeg" title="微信打赏" class="fancybox" rel="article0"><img src="/images/reward.jpeg" title="微信打赏" height="164px" width="164px"></a> <div align="center">您的支持是对我最大的鼓励！</div></div> <script type="text/javascript">document.getElementById(‘btn_donate’).onclick = function(){$(‘#donate_board’).addClass(‘hidden’); $(‘#donate_guide’).removeClass(‘hidden’);}</script></p>
 
       
@@ -351,16 +410,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/10/shell基础/" rel="next" title="shell基础">
-                <i class="fa fa-chevron-left"></i> shell基础
+              <a href="/2017/02/13/css3动画之animation/" rel="next" title="css3动画之animation">
+                <i class="fa fa-chevron-left"></i> css3动画之animation
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/02/13/CSS3中的取值和单位/" rel="prev" title="CSS3中的取值和单位">
-                CSS3中的取值和单位 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/02/13/CSS3中3D变换效果概述/" rel="prev" title="CSS3中3D变换效果概述">
+                CSS3中3D变换效果概述 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -387,8 +446,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/02/13/css选择器/"
-           data-title="css选择器" data-url="http://yoursite.com/2017/02/13/css选择器/">
+      <div class="ds-thread" data-thread-key="2017/02/13/css3过渡效果之transition/"
+           data-title="css3过渡效果之transition" data-url="http://yoursite.com/2017/02/13/css3过渡效果之transition/">
       </div>
     
   </div>
@@ -479,7 +538,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、id选择器"><span class="nav-number">1.</span> <span class="nav-text">一、id选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、class选择器"><span class="nav-number">2.</span> <span class="nav-text">二、class选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、后代选择器"><span class="nav-number">3.</span> <span class="nav-text">三、后代选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、子元素选择器"><span class="nav-number">4.</span> <span class="nav-text">四、子元素选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、交集选择器（没有连接符号）"><span class="nav-number">5.</span> <span class="nav-text">五、交集选择器（没有连接符号）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六、并集选择器"><span class="nav-number">6.</span> <span class="nav-text">六、并集选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#七、兄弟选择器"><span class="nav-number">7.</span> <span class="nav-text">七、兄弟选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#八、序选择器"><span class="nav-number">8.</span> <span class="nav-text">八、序选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#九、属性选择器"><span class="nav-number">9.</span> <span class="nav-text">九、属性选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十、通配符选择器"><span class="nav-number">10.</span> <span class="nav-text">十、通配符选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十一、结构性伪类选择器"><span class="nav-number">11.</span> <span class="nav-text">十一、结构性伪类选择器</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-transition-property-设置对象中的参与过渡的属性"><span class="nav-number">1.</span> <span class="nav-text">1.transition-property 设置对象中的参与过渡的属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-transition-duration-设置对象过渡的持续时间"><span class="nav-number">2.</span> <span class="nav-text">2.transition-duration 设置对象过渡的持续时间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-transition-timing-function-设置对象中过渡的动画类型"><span class="nav-number">3.</span> <span class="nav-text">3.transition-timing-function 设置对象中过渡的动画类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-transition-delay-设置对象延迟过渡的时间"><span class="nav-number">4.</span> <span class="nav-text">4.transition-delay 设置对象延迟过渡的时间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-transition-复合属性，设置对象变换时的过渡效果"><span class="nav-number">5.</span> <span class="nav-text">5.transition 复合属性，设置对象变换时的过渡效果</span></a></li></ol></div>
             
           </div>
         </section>
