@@ -91,7 +91,7 @@
 <meta property="og:site_name" content="胡荣玲个人博客">
 <meta property="og:description" content="css3过度效果之transition的使用方法">
 <meta property="og:image" content="http://yoursite.com/images/reward.jpeg">
-<meta property="og:updated_time" content="2017-02-13T09:11:46.311Z">
+<meta property="og:updated_time" content="2017-02-13T09:44:53.734Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="css3过渡效果之transition">
 <meta name="twitter:description" content="css3过度效果之transition的使用方法">
@@ -300,31 +300,19 @@
 
       
         <p>css3过度效果之transition的使用方法<br><a id="more"></a></p>
-<h2 id="1-transition-property-设置对象中的参与过渡的属性"><a href="#1-transition-property-设置对象中的参与过渡的属性" class="headerlink" title="1.transition-property 设置对象中的参与过渡的属性"></a>1.transition-property 设置对象中的参与过渡的属性</h2><p>默认值为：all。默认为所有可以进行过渡的css属性。如果提供多个属性值，以逗号进行分隔。<br>语法：<br><code>transition-property：none | &lt;single-transition-property&gt;[ ,&lt;single-transition-property&gt; ]</code><single-transition-property> = all | <ident>`<br>取值：  </ident></single-transition-property></p>
+<h2 id="1-transition-property-设置对象中的参与过渡的属性"><a href="#1-transition-property-设置对象中的参与过渡的属性" class="headerlink" title="1.transition-property 设置对象中的参与过渡的属性"></a>1.transition-property 设置对象中的参与过渡的属性</h2><p>默认值为：all。默认为所有可以进行过渡的css属性。如果提供多个属性值，以逗号进行分隔。<br>语法：<br><code>transition-property：none | &lt;single-transition-property&gt;[ ,&lt;single-transition-property&gt; ]</code><br><code>&lt;single-transition-property&gt; = all | &lt;IDENT&gt;</code><br>取值：  </p>
 <ul>
 <li>none：不指定过渡的css属性  </li>
 <li>all：所有可以进行过渡的css属性  </li>
 <li><ident>：指定要进行过渡的css属性<br>示例：  <blockquote>
-<style type="text/css">  
-ul li:hover{  
--webkit-transition-property:border-color,background-color,color;  
-transition-property:border-color,background-color,color;  
-}  
-</style>  
-
+<p>ul li:hover{<br>-webkit-transition-property:border-color,background-color,color;<br>transition-property:border-color,background-color,color;<br>}  </p>
 </blockquote>
 </ident></li>
 </ul>
 <h2 id="2-transition-duration-设置对象过渡的持续时间"><a href="#2-transition-duration-设置对象过渡的持续时间" class="headerlink" title="2.transition-duration 设置对象过渡的持续时间"></a>2.transition-duration 设置对象过渡的持续时间</h2><p>如果提供多个属性值，以逗号进行分隔。<br>语法：<br><code>transition-duration：&lt;time&gt;[ ,&lt;time&gt; ]</code><br>取值：  </p>
 <ul>
 <li><time>：指定对象过渡的持续时间<br>示例：  <blockquote>
-<style type="text/css">  
-ul li:hover{  
--webkit-transition-duration:.5s;  
-transition-duration:.5s;  
-}  
-</style>  
-
+<p>  ul li:hover{<br>-webkit-transition-duration:.5s;<br>transition-duration:.5s;<br>}  </p>
 </blockquote>
 </time></li>
 </ul>
@@ -339,26 +327,14 @@ transition-duration:.5s;
 <li>step-end：等同于 steps(1, end)  </li>
 <li>steps(<integer>[, [ start | end ] ]?)：接受两个参数的步进函数。第一个参数必须为正整数，指定函数的步数。第二个参数取值可以是start或end，指定每一步的值发生变化的时间点。第二个参数是可选的，默认值为end  </integer></li>
 <li>cubic-bezier(<number>, <number>, <number>, <number>)：特定的贝塞尔曲线类型，4个数值需在[0, 1]区间内<br>示例：  <blockquote>
-<style type="text/css">  
-ul li:hover{  
--webkit-transition-timing-function:ease-out;  
-transition-timing-function:ease-out;  
-}  
-</style>  
-
+<p> ul li:hover{<br>-webkit-transition-timing-function:ease-out;<br>transition-timing-function:ease-out;<br>}  </p>
 </blockquote>
 </number></number></number></number></li>
 </ul>
 <h2 id="4-transition-delay-设置对象延迟过渡的时间"><a href="#4-transition-delay-设置对象延迟过渡的时间" class="headerlink" title="4.transition-delay 设置对象延迟过渡的时间"></a>4.transition-delay 设置对象延迟过渡的时间</h2><p>如果提供多个属性值，以逗号进行分隔。<br>语法：<br><code>transition-delay：&lt;time&gt;[ ,&lt;time&gt; ]</code><br>取值：  </p>
 <ul>
 <li><time>：指定对象过渡的延迟时间<br>示例：  <blockquote>
-<style type="text/css">  
-ul li:hover{  
--webkit-transition-delay:.7s;  
-transition-delay:.7s;  
-}  
-</style>  
-
+<p>ul li:hover{<br>-webkit-transition-delay:.7s;<br>transition-delay:.7s;<br>}  </p>
 </blockquote>
 </time></li>
 </ul>
@@ -368,13 +344,7 @@ transition-delay:.7s;
 <li>&lt;’ transition-duration ‘&gt;：检索或设置对象过渡的持续时间  </li>
 <li>&lt;’ transition-timing-function ‘&gt;：检索或设置对象中过渡的动画类型  </li>
 <li>&lt;’ transition-delay ‘&gt;：检索或设置对象延迟过渡的时间<br>示例：  <blockquote>
-<style type="text/css">  
-ul li:hover{  
--webkit-transition:background-color .5s ease-in;  
-transition:background-color .5s ease-in;  
-}  
-</style>  
-
+<p>ul li:hover{<br>-webkit-transition:background-color .5s ease-in;<br>transition:background-color .5s ease-in;<br>}   </p>
 </blockquote>
 </li>
 </ul>
