@@ -1,0 +1,636 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="linux," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="在虚拟机上配置刚安装的centos6.3系统的网络">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux虚拟机网络配置">
+<meta property="og:url" content="http://yoursite.com/2017/02/13/linux虚拟机网络配置/index.html">
+<meta property="og:site_name" content="胡荣玲个人博客">
+<meta property="og:description" content="在虚拟机上配置刚安装的centos6.3系统的网络">
+<meta property="og:image" content="http://yoursite.com/images/reward.jpeg">
+<meta property="og:updated_time" content="2017-02-19T08:27:10.836Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="linux虚拟机网络配置">
+<meta name="twitter:description" content="在虚拟机上配置刚安装的centos6.3系统的网络">
+<meta name="twitter:image" content="http://yoursite.com/images/reward.jpeg">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '6363030363597440000',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/02/13/linux虚拟机网络配置/"/>
+
+
+  <title> linux虚拟机网络配置 | 胡荣玲个人博客 </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">胡荣玲个人博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                linux虚拟机网络配置
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-02-13T17:54:50+08:00" content="2017-02-13">
+              2017-02-13
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/linux/" itemprop="url" rel="index">
+                    <span itemprop="name">linux</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/02/13/linux虚拟机网络配置/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/13/linux虚拟机网络配置/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>在虚拟机上配置刚安装的centos6.3系统的网络<br><a id="more"></a></p>
+<h2 id="1-修改配置文件"><a href="#1-修改配置文件" class="headerlink" title="1.修改配置文件"></a>1.修改配置文件</h2><p>(1)/etc/sysconfig/network-scripts/ifcfg-eth0 网卡配置文件的内容  </p>
+<blockquote>
+<p>DEVICE=eth0     #网卡设备名称，此处的名称与文件名中的名字要相同<br>HWADDR=00:23:54:68:84:DA     #MAC地址<br>TYPE=Ethernet     #类型，类型为以太网<br>UUID=674a7aa6-8829-431b-84c8-b2daf6cfa7bc     #唯一识别码用于识别是否是同一台计算机，若一个局域网内存在多台同样UUID的计算机将无法正常上网<br>ONBOOT=yes     #是否随网络服务启动，eth0生效<br>NM_CONTROLLED=yes     #是否可以由Network Manager 图形管理工具托管<br>BOOTPROTO=static     #是否自动获取IP(none、static、dhcp)<br>IPADDR=192.168.0.37     #IP地址<br>NETMASK=255.255.255.0     #子网掩码<br>GATEWAY=192.168.0.1     #网关<br>DNS=192.168.0.1     #DNS<br>IPV6INIT=no     #IPv6是否启用<br>USERCTL=no     #不允许非root用户控制此网卡  </p>
+</blockquote>
+<p>(2)主机名修改文件/etc/sysconfig/network   </p>
+<blockquote>
+<p>NETWORKING=yes   #注意看这一行是不是yes，默认是yes<br> HOSTNAME=localhost.localdomain  </p>
+</blockquote>
+<p>(3)DNS配置文件/etc/resolv.conf<br>resolv.conf的关键字主要有四个，分别是：  </p>
+<ul>
+<li>nameserver    //最主要关键字,定义DNS服务器的IP地址,可定义多个，且只有当第一个nameserver没有反应时才查询下面的nameserver  </li>
+<li>domain       //定义本地域名，很多程序用到它，如邮件系统；当为没有域名的主机进行DNS查询时，也要用到。如果没有域名，主机名将被使用，删除所有在第一个点( .)前面的内容  </li>
+<li>search        //定义域名的搜索列表,当要查询没有域名的主机，主机将在由search声明的域中分别查找,domain和search不能共存；如果同时存在，后面出现的将会被使用  </li>
+<li>sortlist        //对返回的域名进行排序<br><strong>修改完文件记得service network restart重启网络服务</strong>  <h2 id="2-修改UUID-克隆机才需要修改"><a href="#2-修改UUID-克隆机才需要修改" class="headerlink" title="2.修改UUID(克隆机才需要修改)"></a>2.修改UUID(克隆机才需要修改)</h2>1)删除/etc/sysconfig/network-scripts/ifcfg-eth0中的MAC地址行<br>2)rm -rf /etc/udev/rules.d/70-persistent-net.rules删除网卡和MAC地址绑定文件<br>3)重启系统  <h2 id="3-设置虚拟机网络连接方式"><a href="#3-设置虚拟机网络连接方式" class="headerlink" title="3.设置虚拟机网络连接方式"></a>3.设置虚拟机网络连接方式</h2>虚拟机选择网络设置三种方式  </li>
+<li>桥接：相当于虚拟机与真实机利用真实的网卡进行通信，虚拟机与真实机在同一网段时可以使用，占用真实网段的一个ip地址，桥接可以和局域网通信也可以访问外网  </li>
+<li>NAT模式：真实机与虚拟机通信利用虚拟网卡，nat能访问外网，但不能和局域网内的计算机通信  </li>
+<li>仅主机模式:真实机与虚拟机通信利用虚拟网卡，仅主机模式指只能和自己本机通信<br><strong>在选择桥接模式之后，需要选择桥接的网卡（即需要确定虚拟机需要通过哪个真实网卡连接网络），一般的虚拟机都是自动桥接，但是这种方式不靠谱，所以你需要自己选择，如果你是通过有线接入网络，则选择有线桥接，若是通过无线接入网络，则通过无线接入。</strong>  </li>
+</ul>
+<p><div id="donate_guide" class="donate_bar center hidden"><a href="/images/reward.jpeg" title="微信打赏" class="fancybox" rel="article0"><img src="/images/reward.jpeg" title="微信打赏" height="164px" width="164px"></a> <div align="center">您的支持是对我最大的鼓励！</div></div> <script type="text/javascript">document.getElementById(‘btn_donate’).onclick = function(){$(‘#donate_board’).addClass(‘hidden’); $(‘#donate_guide’).removeClass(‘hidden’);}</script></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/linux/" rel="tag">#linux</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/02/13/CSS3中3D变换效果概述/" rel="next" title="CSS3中3D变换效果概述">
+                <i class="fa fa-chevron-left"></i> CSS3中3D变换效果概述
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/02/19/实现虚拟机与windows10互传文件/" rel="prev" title="实现虚拟机与windows10互传文件">
+                实现虚拟机与windows10互传文件 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/02/13/linux虚拟机网络配置/"
+           data-title="linux虚拟机网络配置" data-url="http://yoursite.com/2017/02/13/linux虚拟机网络配置/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="huhu" />
+          <p class="site-author-name" itemprop="name">huhu</p>
+          <p class="site-description motion-element" itemprop="description">喜欢我也没用，我只爱学习</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">31</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-修改配置文件"><span class="nav-number">1.</span> <span class="nav-text">1.修改配置文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-修改UUID-克隆机才需要修改"><span class="nav-number">2.</span> <span class="nav-text">2.修改UUID(克隆机才需要修改)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-设置虚拟机网络连接方式"><span class="nav-number">3.</span> <span class="nav-text">3.设置虚拟机网络连接方式</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">huhu</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"hurongling"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>

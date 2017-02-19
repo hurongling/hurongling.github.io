@@ -1,0 +1,645 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="linux," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="环境简述：通过xshell连接虚拟机，在xshell上进行的操作，采取的安装方式是rpm，安装软件：jdk-8u25-linux-x64.rpm参考">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在虚拟机centos6中安装与配置jdk8">
+<meta property="og:url" content="http://yoursite.com/2017/02/19/在虚拟机centos6中安装与配置jdk8/index.html">
+<meta property="og:site_name" content="胡荣玲个人博客">
+<meta property="og:description" content="环境简述：通过xshell连接虚拟机，在xshell上进行的操作，采取的安装方式是rpm，安装软件：jdk-8u25-linux-x64.rpm参考">
+<meta property="og:image" content="http://yoursite.com/images/reward.jpeg">
+<meta property="og:updated_time" content="2017-02-19T08:41:30.303Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="在虚拟机centos6中安装与配置jdk8">
+<meta name="twitter:description" content="环境简述：通过xshell连接虚拟机，在xshell上进行的操作，采取的安装方式是rpm，安装软件：jdk-8u25-linux-x64.rpm参考">
+<meta name="twitter:image" content="http://yoursite.com/images/reward.jpeg">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '6363030363597440000',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/02/19/在虚拟机centos6中安装与配置jdk8/"/>
+
+
+  <title> 在虚拟机centos6中安装与配置jdk8 | 胡荣玲个人博客 </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">胡荣玲个人博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                在虚拟机centos6中安装与配置jdk8
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-02-19T16:12:39+08:00" content="2017-02-19">
+              2017-02-19
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/操作/" itemprop="url" rel="index">
+                    <span itemprop="name">操作</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/02/19/在虚拟机centos6中安装与配置jdk8/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/19/在虚拟机centos6中安装与配置jdk8/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>环境简述：通过xshell连接虚拟机，在xshell上进行的操作，采取的安装方式是rpm，安装软件：jdk-8u25-linux-x64.rpm<br><a href="http://blog.csdn.net/czmchen/article/details/41047187" target="_blank" rel="external">参考</a><br><a id="more"></a><br><a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="external">jdk官网下载地址</a><br>下面根据我的实际操作展开：<br>首先检查自己系统里面是否默认安装了openJDK,如果安装了需要先卸载掉，之后开始下载jdk。我的虚拟机下载的是centos mini，所以没有自带<br>用windows10系统里的浏览器打开软件下载网页后，要记得选中Accept License Agreement才能下载<br>刚开始我的做法是右击下载链接，选择复制链接然后直接在xshell中输入wget <a href="http://download.ora" target="_blank" rel="external">http://download.ora</a>… /jdk-8u121-linux-x64.tar.gz<br>有没有发现这样做下载得很快？快就对了！因为这样一来它没有下全，等下软件也是不可用的<br>为次，我的做法是先在windows10下点击链接直接下载，下载完后再通过rz传到centos系统<br>如果你下载的是.tar.gz包，解压缩的时候$ tar -zxvf  *.tar.gz可能会遇到问题，这时有两种解决办法：  </p>
+<ol>
+<li>$ tar -xvf *.tar.gz  原因是这个压缩包没有用gzip格式压缩，所以不用加z指令  </li>
+<li>把下载下来的文件重命名为<em>.tar再tar –zxvf </em>.tar<br><strong>如果下载的是rpm,则把windows下载好的rpm包通过xshell传到/usr/local/，接着执行以下操作:</strong>  <blockquote>
+<p><code>[root@zck local]# rpm -ivh jdk-8u25-linux-x64.rpm</code>  </p>
+</blockquote>
+</li>
+</ol>
+<p>接着等待安装就好了，JDK默认安装在/usr/java中<br>执行以下操作，查看信息是否正常：  </p>
+<blockquote>
+<p><code>[root@localhost ~]# java</code><br><code>[root@localhost ~]# javac</code><br><code>[root@localhost ~]# java -version</code><br>java version “1.8.0_25”<br>Java(TM) SE Runtime Environment (build 1.8.0_25-b17)<br>Java HotSpot(TM) 64-Bit Server VM (build 25.25-b02, mixed mode)  </p>
+</blockquote>
+<p><strong>配置环境变量</strong><br>虽然我的机器安装完jdk-7-linux-x64.rpm后不用配置环境变量也可以正常执行javac、java –version操作，但后面因为要配置tomcat，Eclipse/NetBeans/Tomcat等软件就是通过搜索JAVA_HOME变量来找到并使用安装好的jdk，所以还是要进行配置，否则tomcat找不到jdk，尽管它们放在同一个文件下，操作如下：<br>修改系统环境变量文件  </p>
+<blockquote>
+<p>vi + /etc/profile  </p>
+</blockquote>
+<p>向文件里面追加以下内容：  </p>
+<blockquote>
+<p>JAVA_HOME=/usr/java/jdk1.8.0_25<br>JRE_HOME=/usr/java/jdk1.8.0_25/jre<br>PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin<br>CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib<br>export JAVA_HOME JRE_HOME PATH CLASSPATH  </p>
+</blockquote>
+<p>使修改生效  </p>
+<blockquote>
+<p><code>[root@localhost ~]# source /etc/profile   //使修改立即生效</code><br><code>[root@localhost ~]#        echo $PATH   //查看PATH值</code>  </p>
+</blockquote>
+<p>查看系统环境状态  </p>
+<blockquote>
+<p><code>[root@localhost ~]# echo $PATH</code><br>/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin:/usr/java/jdk1.8.0_25/bin:/usr/java/jdk1.8.0_25/jre/bin  </p>
+</blockquote>
+<p><div id="donate_guide" class="donate_bar center hidden"><a href="/images/reward.jpeg" title="微信打赏" class="fancybox" rel="article0"><img src="/images/reward.jpeg" title="微信打赏" height="164px" width="164px"></a> <div align="center">您的支持是对我最大的鼓励！</div></div> <script type="text/javascript">document.getElementById(‘btn_donate’).onclick = function(){$(‘#donate_board’).addClass(‘hidden’); $(‘#donate_guide’).removeClass(‘hidden’);}</script></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/linux/" rel="tag">#linux</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/02/19/实现虚拟机与windows10互传文件/" rel="next" title="实现虚拟机与windows10互传文件">
+                <i class="fa fa-chevron-left"></i> 实现虚拟机与windows10互传文件
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/02/19/在虚拟机centos6中安装与配置tomcat7/" rel="prev" title="在虚拟机centos6中安装与配置tomcat7">
+                在虚拟机centos6中安装与配置tomcat7 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/02/19/在虚拟机centos6中安装与配置jdk8/"
+           data-title="在虚拟机centos6中安装与配置jdk8" data-url="http://yoursite.com/2017/02/19/在虚拟机centos6中安装与配置jdk8/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="huhu" />
+          <p class="site-author-name" itemprop="name">huhu</p>
+          <p class="site-description motion-element" itemprop="description">喜欢我也没用，我只爱学习</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">31</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">huhu</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"hurongling"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/lib/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
