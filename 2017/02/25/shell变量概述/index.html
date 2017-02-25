@@ -91,7 +91,7 @@
 <meta property="og:site_name" content="胡荣玲个人博客">
 <meta property="og:description" content="介绍shell变量的分类及基本操作">
 <meta property="og:image" content="http://yoursite.com/images/reward.jpeg">
-<meta property="og:updated_time" content="2017-02-25T08:08:56.088Z">
+<meta property="og:updated_time" content="2017-02-25T08:49:51.293Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="shell变量概述">
 <meta name="twitter:description" content="介绍shell变量的分类及基本操作">
@@ -300,15 +300,11 @@
 
       
         <p>介绍shell变量的分类及基本操作<br><a id="more"></a></p>
-<p>##一、shell与其他语言的区别</p>
-<ol>
+<h2 id="一、shell与其他语言的区别"><a href="#一、shell与其他语言的区别" class="headerlink" title="一、shell与其他语言的区别"></a>一、shell与其他语言的区别</h2><ol>
 <li>不管是PHP ，还是JAVA ，它是用来编写应用程序的，或是网站； JAVA主要是实现服务端程序。而shel编程，它是一个脚本语言（所见即所得）。它不需要执行编译过程之后再执行；它是编译过程放在执行过程中，所以，执行起来要慢得多  </li>
 <li>SHELL，主要是帮助管理员，简化管理操作。比如 “批量生成文件、新用户，定时备份文件，定时检测系统等”  </li>
 </ol>
-<p>##二、shell变量的分类<br><strong>1.用户自定义变量</strong>   </p>
-<p> #为局部变量<br><strong>2.环境变量</strong>  </p>
-<h1 id="这种变量中主要保存的是和系统操作环境相关的数据，变量可以自定义，但是对系统生效的环境变量名和变量作用是固定的，为全局变量"><a href="#这种变量中主要保存的是和系统操作环境相关的数据，变量可以自定义，但是对系统生效的环境变量名和变量作用是固定的，为全局变量" class="headerlink" title="这种变量中主要保存的是和系统操作环境相关的数据，变量可以自定义，但是对系统生效的环境变量名和变量作用是固定的，为全局变量"></a>这种变量中主要保存的是和系统操作环境相关的数据，变量可以自定义，但是对系统生效的环境变量名和变量作用是固定的，为全局变量</h1><p><strong>3.位置参数变量</strong>  </p>
-<p> #这种变量主要是用来向脚本当中传递参数或数据的，变量名不能自定义，变量作用是固定的<br><strong>4.预定义变量</strong>  </p>
+<h2 id="二、shell变量的分类"><a href="#二、shell变量的分类" class="headerlink" title="二、shell变量的分类"></a>二、shell变量的分类</h2><p><strong>1.用户自定义变量</strong><br> 为局部变量<br><strong>2.环境变量</strong><br> 这种变量中主要保存的是和系统操作环境相关的数据，变量可以自定义，但是对系统生效的环境变量名和变量作用是固定的，为全局变量<br><strong>3.位置参数变量</strong><br> 这种变量主要是用来向脚本当中传递参数或数据的，变量名不能自定义，变量作用是固定的<br><strong>4.预定义变量</strong>  </p>
 <p> #是Bash中一景定义好的变量，变量名不能自定义，变量作用也是固定的<br><strong>注意：</strong>  </p>
 <ul>
 <li>在Bash中，变量的默认类型都是字符串类型。$a=1,$b=2,$c=$a+$b,echo $c，会输出1+2<br>解决方法：</li>
@@ -325,19 +321,19 @@
 </blockquote>
 </li>
 </ul>
-<p>##三、设置环境变量<br><code>export 变量名=变量值</code><br>或<br><code>变量名=变量值</code><br><code>Export 变量名</code>  </p>
-<p>##四、变量叠加的两种方法：<br><code>x=123</code><br><code>x=&quot;$x&quot;456</code><br><code>x=${x}789</code><br><code>echo $x</code>  为123456789<br>实用例子：PATH=”$PATH”:/root/sh  </p>
+<h2 id="三、设置环境变量"><a href="#三、设置环境变量" class="headerlink" title="三、设置环境变量"></a>三、设置环境变量</h2><p><code>export 变量名=变量值</code><br>或<br><code>变量名=变量值</code><br><code>Export 变量名</code>  </p>
+<h2 id="四、变量叠加的两种方法："><a href="#四、变量叠加的两种方法：" class="headerlink" title="四、变量叠加的两种方法："></a>四、变量叠加的两种方法：</h2><p><code>x=123</code><br><code>x=&quot;$x&quot;456</code><br><code>x=${x}789</code><br><code>echo $x</code>  为123456789<br>实用例子：PATH=”$PATH”:/root/sh  </p>
 <p>##五、变量的查看：<br>set  #查看系统中所有已经定义的变量<br>env   #查看环境变量<br>set -u 输入后再调用未声明变量时会报错，用来区分是未声明变量还是值为空的变量。例如：<br><code>set -u</code><br><code>echo $a</code>  </p>
 <p>##六、变量的删除：<br><code>unset 变量名</code>，而不是<code>$变量名</code>  </p>
 <p>##七、语系变量<br><code>locale -a | more</code>  #查看Linux支持的所有语系环境<br><code>echo $LANG</code>    #当前语系环境<br><code>echo $LC_ALL</code>  #整体语系环境  </p>
-<p>##八、位置参数变量<br>$n n为数字，$0代表命令本身，$1-$9代表第一到第九个参数，10以上的参数需要用大括号包含，如${10}<br>$<em> 代表命令行中的所有参数，$</em>把所有参数看成了一个整体<br>$@ 也代表命令行中的所有参数，$@把每个参数区分对待<br>$# 代表命令行中所有参数的个数<br><strong>$*与$@的区别</strong></p>
+<h2 id="八、位置参数变量"><a href="#八、位置参数变量" class="headerlink" title="八、位置参数变量"></a>八、位置参数变量</h2><p>$n n为数字，$0代表命令本身，$1-$9代表第一到第九个参数，10以上的参数需要用大括号包含，如${10}<br>$<em> 代表命令行中的所有参数，$</em>把所有参数看成了一个整体<br>$@ 也代表命令行中的所有参数，$@把每个参数区分对待<br>$# 代表命令行中所有参数的个数<br><strong>$*与$@的区别</strong></p>
 <blockquote>
 <p>for i in “$*”<br>do<br>    echo “The parameters is :$i”<br>done  </p>
 </blockquote>
 <p>for循环只会循环一次，如果改为for i in “$@”则会循环$#次  </p>
-<p>##九、预定义变量<br>$? 如果这个命令返回值为0，说明上个命令正确执行，如果非0说明上个命令执行不正确<br>$$ 返回当前进程PID号<br>$! 返回后台运行的最后一个进程的PID号  </p>
-<p>##十、接收键盘输入read<br><code>read  [选项][变量名]</code><br>-p “提示信息”<br>-t 秒数   #等待时间<br>-n 指定接受字符数<br>-s        #隐藏输入的数据<br><strong>read用法举例</strong><br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">#!/bin/bash</div><div class="line">read –p “please input your name:” –t 30 name</div><div class="line">echo $name</div><div class="line">echo –e “\n”  #换行</div><div class="line">read –p “please input your passwd:” –s passed</div><div class="line">read –p “please input your sex [M/F]” –n 1 sex</div><div class="line">echo $sex</div></pre></td></tr></table></figure></p>
-<p>##十一、declare声明变量类型<br><code>declare [+/-][选项] 变量名</code><br>选项<br><code>-</code> 给变量设定类型属性<br><code>+</code> 取消变量的类型属性<br><code>-a</code> 将变量声明为数组型<br><code>-i</code> 将变量声明为整数型    <code>declare –i c=$a+$b</code><br><code>-x</code> 将变量声明为环境变量  <code>declare –x test=123</code>和<code>export</code>作用相似，但其实是declare命令的作用<br><code>-r</code> 将变量声明为只读变量<br><code>-p</code> 显示指定变量的被声明的类型，没有指定变量则查询所有变量的属性  </p>
+<h2 id="九、预定义变量"><a href="#九、预定义变量" class="headerlink" title="九、预定义变量"></a>九、预定义变量</h2><p>$? 如果这个命令返回值为0，说明上个命令正确执行，如果非0说明上个命令执行不正确<br>$$ 返回当前进程PID号<br>$! 返回后台运行的最后一个进程的PID号  </p>
+<h2 id="十、接收键盘输入read"><a href="#十、接收键盘输入read" class="headerlink" title="十、接收键盘输入read"></a>十、接收键盘输入read</h2><p><code>read  [选项][变量名]</code><br>-p “提示信息”<br>-t 秒数   #等待时间<br>-n 指定接受字符数<br>-s        #隐藏输入的数据<br><strong>read用法举例</strong><br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">#!/bin/bash</div><div class="line">read –p “please input your name:” –t 30 name</div><div class="line">echo $name</div><div class="line">echo –e “\n”  #换行</div><div class="line">read –p “please input your passwd:” –s passed</div><div class="line">read –p “please input your sex [M/F]” –n 1 sex</div><div class="line">echo $sex</div></pre></td></tr></table></figure></p>
+<h2 id="十一、declare声明变量类型"><a href="#十一、declare声明变量类型" class="headerlink" title="十一、declare声明变量类型"></a>十一、declare声明变量类型</h2><p><code>declare [+/-][选项] 变量名</code><br>选项<br><code>-</code> 给变量设定类型属性<br><code>+</code> 取消变量的类型属性<br><code>-a</code> 将变量声明为数组型<br><code>-i</code> 将变量声明为整数型    <code>declare –i c=$a+$b</code><br><code>-x</code> 将变量声明为环境变量  <code>declare –x test=123</code>和<code>export</code>作用相似，但其实是declare命令的作用<br><code>-r</code> 将变量声明为只读变量<br><code>-p</code> 显示指定变量的被声明的类型，没有指定变量则查询所有变量的属性  </p>
 <p><div id="donate_guide" class="donate_bar center hidden"><a href="/images/reward.jpeg" title="微信打赏" class="fancybox" rel="article0"><img src="/images/reward.jpeg" title="微信打赏" height="164px" width="164px"></a> <div align="center">您的支持是对我最大的鼓励！</div></div> <script type="text/javascript">document.getElementById(‘btn_donate’).onclick = function(){$(‘#donate_board’).addClass(‘hidden’); $(‘#donate_guide’).removeClass(‘hidden’);}</script></p>
 
       
@@ -498,7 +494,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#这种变量中主要保存的是和系统操作环境相关的数据，变量可以自定义，但是对系统生效的环境变量名和变量作用是固定的，为全局变量"><span class="nav-number">1.</span> <span class="nav-text">这种变量中主要保存的是和系统操作环境相关的数据，变量可以自定义，但是对系统生效的环境变量名和变量作用是固定的，为全局变量</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、shell与其他语言的区别"><span class="nav-number">1.</span> <span class="nav-text">一、shell与其他语言的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、shell变量的分类"><span class="nav-number">2.</span> <span class="nav-text">二、shell变量的分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、设置环境变量"><span class="nav-number">3.</span> <span class="nav-text">三、设置环境变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、变量叠加的两种方法："><span class="nav-number">4.</span> <span class="nav-text">四、变量叠加的两种方法：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#八、位置参数变量"><span class="nav-number">5.</span> <span class="nav-text">八、位置参数变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#九、预定义变量"><span class="nav-number">6.</span> <span class="nav-text">九、预定义变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十、接收键盘输入read"><span class="nav-number">7.</span> <span class="nav-text">十、接收键盘输入read</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十一、declare声明变量类型"><span class="nav-number">8.</span> <span class="nav-text">十一、declare声明变量类型</span></a></li></ol></div>
             
           </div>
         </section>
