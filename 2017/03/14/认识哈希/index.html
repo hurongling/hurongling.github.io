@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="linux," />
+  <meta name="keywords" content="数据结构与算法," />
 
 
 
@@ -84,17 +84,17 @@
 
 
 
-<meta name="description" content="linux基础知识，关于linux的常用网络命令，查看网络状态ifconfig,禁用网卡ifdown,启用网卡ifup,查看端口命令netstat,查看路由表route,查看域名解析命令nslookup，及其他网络测试命令ping,telnet,traceroute,和下载命令wget,抓包命令tcpdump">
+<meta name="description" content="初步认识哈希作用及哈希冲突，没有相应代码的补充解释，后面补上">
 <meta property="og:type" content="article">
-<meta property="og:title" content="linux常用网络命令">
-<meta property="og:url" content="http://yoursite.com/2017/02/25/linux常用网络命令/index.html">
+<meta property="og:title" content="认识哈希">
+<meta property="og:url" content="http://yoursite.com/2017/03/14/认识哈希/index.html">
 <meta property="og:site_name" content="胡荣玲个人博客">
-<meta property="og:description" content="linux基础知识，关于linux的常用网络命令，查看网络状态ifconfig,禁用网卡ifdown,启用网卡ifup,查看端口命令netstat,查看路由表route,查看域名解析命令nslookup，及其他网络测试命令ping,telnet,traceroute,和下载命令wget,抓包命令tcpdump">
+<meta property="og:description" content="初步认识哈希作用及哈希冲突，没有相应代码的补充解释，后面补上">
 <meta property="og:image" content="http://yoursite.com/images/reward.jpeg">
-<meta property="og:updated_time" content="2017-02-25T08:50:35.376Z">
+<meta property="og:updated_time" content="2017-03-14T13:35:29.839Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="linux常用网络命令">
-<meta name="twitter:description" content="linux基础知识，关于linux的常用网络命令，查看网络状态ifconfig,禁用网卡ifdown,启用网卡ifup,查看端口命令netstat,查看路由表route,查看域名解析命令nslookup，及其他网络测试命令ping,telnet,traceroute,和下载命令wget,抓包命令tcpdump">
+<meta name="twitter:title" content="认识哈希">
+<meta name="twitter:description" content="初步认识哈希作用及哈希冲突，没有相应代码的补充解释，后面补上">
 <meta name="twitter:image" content="http://yoursite.com/images/reward.jpeg">
 
 
@@ -116,10 +116,10 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/02/25/linux常用网络命令/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/03/14/认识哈希/"/>
 
 
-  <title> linux常用网络命令 | 胡荣玲个人博客 </title>
+  <title> 认识哈希 | 胡荣玲个人博客 </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -233,7 +233,7 @@
             
             
               
-                linux常用网络命令
+                认识哈希
               
             
           </h1>
@@ -245,8 +245,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-02-25T15:17:52+08:00" content="2017-02-25">
-              2017-02-25
+            <time itemprop="dateCreated" datetime="2017-03-14T21:19:30+08:00" content="2017-03-14">
+              2017-03-14
             </time>
           </span>
 
@@ -259,8 +259,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/基础/" itemprop="url" rel="index">
-                    <span itemprop="name">基础</span>
+                  <a href="/categories/数据结构与算法/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构与算法</span>
                   </a>
                 </span>
 
@@ -275,8 +275,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/02/25/linux常用网络命令/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/25/linux常用网络命令/" itemprop="commentsCount"></span>
+                <a href="/2017/03/14/认识哈希/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/14/认识哈希/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -299,9 +299,11 @@
       
 
       
-        <p>linux基础知识，关于linux的常用网络命令，查看网络状态ifconfig,禁用网卡ifdown,启用网卡ifup,查看端口命令netstat,查看路由表route,查看域名解析命令nslookup，及其他网络测试命令ping,telnet,traceroute,和下载命令wget,抓包命令tcpdump<br><a id="more"></a></p>
-<h2 id="一、-网络查看命令"><a href="#一、-网络查看命令" class="headerlink" title="一、 网络查看命令"></a>一、 网络查看命令</h2><p>1）ifconfig: 查看和修改网络状态命令<br>2）ifdown：网卡设备名  #禁用该网卡设备<br>3）ifup：网卡设备名  #启动该网卡设备<br>4）netstat  选项<br>  -t  : 列出TCP协议端口<br>  -u  : 列出UDP协议端口<br>  -n  : 不使用域名与服务器，而使用IP地址和端口号<br>  -l  : 仅仅列出在监听状态服务<br>  -a  : 列出所有的网络连接<br>如 <code>netstat -tuln</code> 查看开了哪些端口，从而判断开了哪些服务<br><code>netstat -rn</code>  列出网关<br>其中ESTABLISHED中的Foreign Address表示的是已经和本机建立链接的主机，可以通过管道符进行查看数量。<code>netstat -an | grep ESTABLISHED | wc -l</code>统计estabished状态的连接数，看有谁链接到我们的服务器上<br>远程连接后，要注意正确关闭远程链接，而不能直接把ssh关了，用<code>logout</code>关闭即可<br>5）route  #查看路由列表（可以看到网关)<br>  <code>route add default gw 192.168.1.1</code>  #临时设定网关（一般不用）<br><strong>注意</strong><br>1）在一台服务器里，连内网的网卡是不能设置网关的，只有连接外网的网卡才能设置，而且这个网关是由运营商设置好,它告诉我们,我的下一级网络地址<br>2）随便设置一个网关是不行的，因为与外网通信时，要把消息转发到网关，网关负责把内网IP转换成功公网IP，随便设置则将找不到这个网关，导致呈现网络连接失败状态<br>6) nslookup域名解析命令<br><code>nslookup [主机名或IP]</code> #进行域名与IP地址解析<br><code>nslookup</code><br><code>&gt; server</code>   #查看本机DNS服务器  </p>
-<h2 id="二、网络测试命令"><a href="#二、网络测试命令" class="headerlink" title="二、网络测试命令"></a>二、网络测试命令</h2><p>1）<code>ping ip/域名 -c 次数</code>  #连通测试<br>2）<code>telnet [域名或IP][端口]</code>  #远程管理与端口探测命令 ，明文传递，不安全，未加密<br>因为远程管理不安全，所以很多计算机系统已经禁止使用telnet命令来进行远程管理，但是我们可以使用下面的工具来查看我们要访问的服务器的某个端口是不是开放的<code>telnet 192.168.0.252 80</code><br>如果连接成功，将会进入连接状态，按ctrl+]推出到telnet，再键入quit返回命令行状态<br>3) <code>traceroute ip/域名</code>  #路由路径跟踪命令<br>预先记录路由路径，等无法访问时可以使用这个命令判断到底是哪一个节点出故障，这个traceroute利用的ICMP协议，和ping是一样的<br>4)<code>wget url地址</code> linux中下载命令<br>5）tcpdump命令<br><code>tcpdump -i eth0  -nnx port 21</code>  #抓包命令<br>选项 ：<br>  -i : 指定网卡接口<br>  -nn:将数据包中的域名与服务转换为IP和端口<br>  -X ： 以十六进制和ASCII玛显示数据包内容<br>  port 指定监听的端口<br><a href="http://itindex.net/detail/36586-linux-tcpdump" target="_blank" rel="external">tcpdump的更多选项说明及用法</a><br><a href="./用tcpdump抓包并用wireshark分析-初步认识及环境搭建.md">这是介绍使用tcpdump使用方法的文章–用tcpdump抓包并用wireshark分析-初步认识及环境搭建</a></p>
+        <p>初步认识哈希作用及哈希冲突，没有相应代码的补充解释，后面补上<br><a id="more"></a>  </p>
+<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p><code>哈希</code>其实是随机存储的一种优化，先进行分类，然后查找时按照这个对象的分类去找。哈希的过程中需要使用哈希函数进行计算<br><code>哈希函数</code>是一种映射关系，根据数据的关键词 key ，通过一定的函数关系，计算出该元素存储位置的函数<br><code>哈希冲突</code>不同的key通过哈希函数，得到相同的值，造成哈希冲突  </p>
+<h2 id="哈希冲突的解决"><a href="#哈希冲突的解决" class="headerlink" title="哈希冲突的解决"></a>哈希冲突的解决</h2><p>常用的主要有两种方法解决冲突：<br>1.<strong>链接法（拉链法）</strong><br>拉链法解决冲突的做法是：<br>将所有关键字为同义词的结点链接在同一个单链表中<br>2.<strong>开放定址法</strong><br>当冲突发生时，使用某种探查(亦称探测)技术在散列表中寻找下一个空的散列地址，只要散列表足够大，空的散列地址总能找到<br><code>a.线性探查法</code><br>基本思想是：<br>探查时从地址 d 开始，首先探查 <code>T[d]</code>，然后依次探查<code>T[d+1]</code>，…，直到 <code>T[m-1]</code>，此后又循环到<code>T[0]</code>，<code>T[1]</code>，…，直到探查到 有空余地址 或者到 <code>T[d-1]</code>为止<br><code>b.二次探查法</code><br>基本思想是：<br>探查时从地址 d 开始，首先探查<code>T[d]</code>，然后依次探查<code>T[d+1^2]</code>，<code>T[d+2^2]</code>，<code>T[d+3^2]</code>,…，等，直到探查到 有空余地址或者到 <code>T[d-1]</code>为止。<br>缺点是无法探查到整个散列空间。<br><code>c.双重散列法</code><br>hi=(h(key)+i<em>h1(key)) ％ m，0 ≤ i ≤ m-1<br>基本思想是：<br>探查时从地址 d 开始，首先探查 <code>T[d]</code>，然后依次探查<code>T[d+h1(d)]</code>, `T[d + 2</em>h1(d)]`，…，等。<br>该方法使用了两个散列函数 h(key) 和 h1(key)，故也称为双散列函数探查法。  </p>
+<p>定义 h1(key) 的方法较多，但无论采用什么方法定义，都必须使 h1(key) 的值和 m 互素，才能使发生冲突的同义词地址均匀地分布在整个表中，否则可能造成同义词地址的循环计算。<br>双重散列法是开放定址法中最好的方法之一。  </p>
+<h2 id="影响产生冲突多少因素："><a href="#影响产生冲突多少因素：" class="headerlink" title="影响产生冲突多少因素："></a>影响产生冲突多少因素：</h2><p>哈希函数是否均匀；<br>处理冲突的方法；<br>哈希表的加载因子。  </p>
 <p><div id="donate_guide" class="donate_bar center hidden"><a href="/images/reward.jpeg" title="微信打赏" class="fancybox" rel="article0"><img src="/images/reward.jpeg" title="微信打赏" height="164px" width="164px"></a> <div align="center">您的支持是对我最大的鼓励！</div></div> <script type="text/javascript">document.getElementById(‘btn_donate’).onclick = function(){$(‘#donate_board’).addClass(‘hidden’); $(‘#donate_guide’).removeClass(‘hidden’);}</script></p>
 
       
@@ -325,7 +327,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/linux/" rel="tag">#linux</a>
+            <a href="/tags/数据结构与算法/" rel="tag">#数据结构与算法</a>
           
         </div>
       
@@ -334,16 +336,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/19/我理解的计算机的通信过程/" rel="next" title="我理解的计算机的通信过程">
-                <i class="fa fa-chevron-left"></i> 我理解的计算机的通信过程
+              <a href="/2017/03/06/mysql分组查询/" rel="next" title="mysql分组查询">
+                <i class="fa fa-chevron-left"></i> mysql分组查询
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/02/25/shell变量概述/" rel="prev" title="shell变量概述">
-                shell变量概述 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/03/14/ICMP报文及ping通信过程/" rel="prev" title="ICMP报文及ping通信过程">
+                ICMP报文及ping通信过程 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -370,8 +372,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/02/25/linux常用网络命令/"
-           data-title="linux常用网络命令" data-url="http://yoursite.com/2017/02/25/linux常用网络命令/">
+      <div class="ds-thread" data-thread-key="2017/03/14/认识哈希/"
+           data-title="认识哈希" data-url="http://yoursite.com/2017/03/14/认识哈希/">
       </div>
     
   </div>
@@ -462,7 +464,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、-网络查看命令"><span class="nav-number">1.</span> <span class="nav-text">一、 网络查看命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、网络测试命令"><span class="nav-number">2.</span> <span class="nav-text">二、网络测试命令</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概念"><span class="nav-number">1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#哈希冲突的解决"><span class="nav-number">2.</span> <span class="nav-text">哈希冲突的解决</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#影响产生冲突多少因素："><span class="nav-number">3.</span> <span class="nav-text">影响产生冲突多少因素：</span></a></li></ol></div>
             
           </div>
         </section>
